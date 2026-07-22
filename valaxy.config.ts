@@ -21,7 +21,6 @@ const safelist = [
   'i-ri-heart-fill',
   'i-ri-cloud-line',
   'i-ri-genderless-line',
-  'i-ri-women-line',
 ]
 
 /**
@@ -33,6 +32,24 @@ export default defineValaxyConfig<UserThemeConfig>({
   theme: 'yun',
 
   themeConfig: {
+    nav: [
+      { text: '文章', link: '/posts/', icon: 'i-ri-article-line' },
+      { text: '归档', link: '/archives/', icon: 'i-ri-archive-line' },
+      { text: '分类', link: '/categories/', icon: 'i-ri-folder-2-line' },
+      { text: '标签', link: '/tags/', icon: 'i-ri-price-tag-3-line' },
+      { text: '友链', link: '/links/', icon: 'i-ri-link' },
+      { text: '服务', link: '/services/', icon: 'i-ri-tools-line'},
+      { text: '关于我', link: '/about/', icon: 'i-ri-user-3-line' },
+      { text: '关于站点', link: '/about/site', icon: 'i-ri-file-list-line' },
+    ],
+
+    bg_image: {
+      enable: true,
+      url: 'https://freehost.490633.xyz/img/20260722224433721.avif',
+      dark: 'https://freehost.490633.xyz/img/20260722224433722.avif', // 深色模式
+      opacity: 0.7,
+    },
+
     banner: {
       enable: true,
       title: '凌渡冰点的小博客',
@@ -40,21 +57,15 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     pages: [
       {
-        name: '我的小伙伴们',
+        name: '友链',
         url: '/links/',
-        icon: 'i-ri-genderless-line',
+        icon: 'i-ri-link',
         color: 'dodgerblue',
-      },
-      {
-        name: '喜欢的女孩子',
-        url: '/girls/',
-        icon: 'i-ri-women-line',
-        color: 'hotpink',
       },
       {
         name: '关于我',
         url: '/about/',
-        icon: 'i-ri-heart-fill',
+        icon: 'i-ri-user-3-line',
         color: 'blue',
       },
       {
@@ -66,11 +77,10 @@ export default defineValaxyConfig<UserThemeConfig>({
     ],
 
     footer: {
-      since: 2016,
+      since: 2024,
       beian: {
         enable: true,
         icp: '萌ICP备20265536号',
-        police: '赣公网安备xxxxxx号',
       },
     },
   },
