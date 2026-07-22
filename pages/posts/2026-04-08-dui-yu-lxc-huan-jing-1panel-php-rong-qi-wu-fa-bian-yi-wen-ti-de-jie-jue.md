@@ -1,0 +1,45 @@
+---
+title: 对于LXC环境1Panel PHP容器无法编译问题的解决
+date: 2026-04-08
+categories:
+  - 探索
+  - 服务器
+---
+
+# 尝试解决
+
+我想使用 1Panel 部署 LNMP 套件，对于 Openresty,MySQL,Redis 来说比较简单，部署时在面板上手动修改 `docker-compose.yml` 中的 network 部分即可，但是 php 部署时使用编译部署，没法直接修改配置文件，我就卡在这一步上面（脑子一抽没想到进目录改），因为连不上网获取必要的编译资源。而我尝试换用宝塔面板部署，却反倒不习惯了。因为我平时习惯了使用 1Panel 面板了，转不过来。而且宝塔也需要编译安装，因为我的机器性能配置比较低，本地编译时经常 OOM 导致编译失败，遂放弃了本地编译。
+
+后来查询网络，发现了一个 PHP 静态编译文件，可以应对这种情况，于是我下载下来，但是不知 PHP 还要区分 PHP-CLI 和 PHP-FPM，能提供 Wordpress 运行的是 PHP-FPM,我安装的是 PHP-CLI，发现不能用，再寻找到了 PHP-FPM 的静态编译版本，但是当我终于配置好 php.ini，php-fpm.conf 之后<sup class="fn" data-fn="7f7bf948-00d8-4a62-8a9b-4c33dd942beb">[1](#7f7bf948-00d8-4a62-8a9b-4c33dd942beb)</sup>，配置好网站运行环境之后，我发现这个版本缺失了 mysqli 这个扩展，无法运行，我直接爆炸了，自行编译的话，我还需要学习，但是网站又急需快速恢复，想破脑子也想不出怎么办了。后来经过询问 AI 和看了一些官方文档之后，我想出了两个办法：
+
+1. 从别的服务器编译好之后转移过来再调整 docker-compose.yml。
+2. 等编译失败后进目录修改好配置参数 `docker-compose.yml`，再重新编译。
+
+# 实施方法
+
+我进行了两线操作，一边导出制作好的镜像，再连着所有映射目录下的文件一起打包下载，再传输过来<sup class="fn" data-fn="6a4e9421-464e-40ab-b615-9ec554455d9d">[2](#6a4e9421-464e-40ab-b615-9ec554455d9d)</sup>；
+
+[\[\[1Panel 离线版 - 1Panel 文档\]\]](https://1panel.cn/docs/v2/installation/package_installation/)
+
+> 使用上一步的 **镜像名称** 打包 PHP 镜像，在 `/opt/1panel/runtime/php/` 下执行：
+
+```
+docker save -o php-8.4.6.tar 1panel-php-fpm:8.4.6
+
+```
+
+> 压缩运行环境目录，在 `/opt/1panel/runtime/php/` 目录下执行：
+
+```
+tar -czvf php846.tar.gz 
+
+```
+
+另一边我直接编辑 php 的 docker-compose.yml 文件，修改网络模式为 host，然后保存重新部署。  
+在等待的过程中在另一台好的机器上进行文件导出，等我做完这一切之后，我返回源服务器查看，发现编译成功了，说明我的思路是对的，实施作业完成。
+
+所以另一种方法我没有测试，理论上可行。
+
+## 关于 LXC 容器
+
+这东西可把我害惨了，由于这个虚拟机技术不是完整虚拟一个系统环境，网络方面有很大限制，比如 docker 容器技术，由于 1Panel 默认使用网桥（bridge），在这个环境下会水土不服，容器网络必须使用 host 模式 `network_mode: host`，否则会无法联网，这使得我在很长时间里遇到一个困难：无法使用 1Panel Docker 部署 PHP。

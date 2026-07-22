@@ -1,9 +1,16 @@
 ---
-title: 我的小伙伴们
+title: 友链
 keywords: 链接
-description: 云游的小伙伴们
-links: https://friends.yunyoujun.cn/links.json
-random: true
+description: 凌渡冰点的小伙伴们
 ---
 
-<YunLinks :links="frontmatter.links" :random="frontmatter.random" />
+## 我的信息
+
+如果想要添加友链可以直接在评论区联系我，或者通过邮箱，如果愿意公开信息也可以发在评论区
+
+- **邮箱**: zeroice007@126.com
+- **站点名称**: 凌渡冰点的小博客
+- **站点地址**: https://zeroice.490633.xyz
+- **站长**: 凌渡冰点
+- **介绍**: 一个兴趣使然的个人小站，主要发一些日常和技术文章，偶尔分享点资源，写点心得经验
+- **站点图标**: https://freehost.490633.xyz/img/20260722153625185.avif

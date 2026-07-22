@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zeroice.490633.xyz/sitemap.xml

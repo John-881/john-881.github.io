@@ -2,6 +2,6 @@
 title: 关于站点
 ---
 
-Valaxy + valaxy-theme-yun Demo Site
+本站基于 [Valaxy](https://github.com/YunYouJun/valaxy) + [valaxy-theme-yun](https://github.com/YunYouJun/valaxy) 构建，部署于 Cloudflare Pages。
 
-- Default Theme: [valaxy-theme-yun](https://github.com/YunYouJun/valaxy/blob/main/packages/valaxy-theme-yun/)
+从 WordPress 迁移而来，文章均为个人原创，未经许可禁止转载。

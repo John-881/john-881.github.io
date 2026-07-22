@@ -19,6 +19,30 @@ node_modules
 
 components.d.ts
 
+# valaxy cache
+.valaxy
+
 # env (may contain secrets like VALAXY_ENCRYPT_PASSWORD)
 .env
 .env.*
+
+# valaxy fuse
+public/valaxy-fuse-list.json
+
+# valaxy rss
+public/凌渡冰点的小博客.xml
+
+# valaxy rss
+public/凌渡冰点的小博客.atom
+
+# valaxy rss
+public/凌渡冰点的小博客.json
+
+# valaxy rss
+public/feed.xml
+
+# valaxy rss
+public/atom.xml
+
+# valaxy rss
+public/feed.json

@@ -5,6 +5,23 @@ import { addonWaline } from 'valaxy-addon-waline'
 // add icons what you will need
 const safelist = [
   'i-ri-home-line',
+  'i-ri-archive-line',
+  'i-ri-archive-fill',
+  'i-ri-folder-2-line',
+  'i-ri-folder-2-fill',
+  'i-ri-price-tag-3-line',
+  'i-ri-price-tag-3-fill',
+  'i-ri-search-line',
+  'i-ri-sun-line',
+  'i-ri-moon-line',
+  'i-ri-arrow-up-s-line',
+  'i-ri-arrow-left-s-line',
+  'i-ri-arrow-right-s-line',
+  'i-ri-file-list-line',
+  'i-ri-heart-fill',
+  'i-ri-cloud-line',
+  'i-ri-genderless-line',
+  'i-ri-women-line',
 ]
 
 /**
@@ -34,6 +51,18 @@ export default defineValaxyConfig<UserThemeConfig>({
         icon: 'i-ri-women-line',
         color: 'hotpink',
       },
+      {
+        name: '关于我',
+        url: '/about/',
+        icon: 'i-ri-heart-fill',
+        color: 'blue',
+      },
+      {
+        name: '关于站点',
+        url: '/about/site',
+        icon: 'i-ri-file-list-line',
+        color: 'skyblue',
+      },
     ],
 
     footer: {
@@ -55,10 +84,19 @@ export default defineValaxyConfig<UserThemeConfig>({
   // 设置 valaxy-addon-waline 配置项
   addons: [
     addonWaline({
-      // Waline 配置项，参考 https://waline.js.org/reference/client/props.html
       serverURL: 'https://discuss.490633.xyz',
+      pageSize: 10,
+      reaction: true,
+      dark: 'html.dark',
+      requiredMeta: ['nick', 'mail'],
     }),
   ],
 
   unocss: { safelist },
+
+  vue: {
+    template: {
+      transformAssetUrls: false,
+    },
+  },
 })

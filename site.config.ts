@@ -1,13 +1,17 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
+  timezone: 'Asia/Shanghai',
   url: 'https://zeroice.490633.xyz/',
   lang: 'zh-CN',
   title: '凌渡冰点的小博客',
+  favicon: 'https://freehost.490633.xyz/img/20260722153625185.avif',
   author: {
     name: '凌渡冰点',
+    avatar: 'https://freehost.490633.xyz/img/20260722153625185.avif',
+    email: 'zeroice007@126.com',
   },
-  description: '一个兴趣使然的个人小站。',
+  description: '一个兴趣使然的个人小站，分享日常、技术教程、编程学习、玩机折腾等内容。',
   social: [
     {
       name: 'RSS',
@@ -51,4 +55,19 @@ export default defineSiteConfig({
     enable: true,
   },
 
+  /**
+   * 开启阅读统计
+   */
+  statistics: {
+    enable: true,
+    readTime: {
+      /**
+       * 阅读速度
+       */
+      speed: {
+        cn: 300,
+        en: 200,
+      },
+    },
+  },
 })

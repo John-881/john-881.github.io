@@ -80,6 +80,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/girls/': RouteRecordInfo<
+      '/girls/',
+      '/girls',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/links/': RouteRecordInfo<
       '/links/',
       '/links',
@@ -101,9 +108,226 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/posts/hello-valaxy': RouteRecordInfo<
-      '/posts/hello-valaxy',
-      '/posts/hello-valaxy',
+    '/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan': RouteRecordInfo<
+      '/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan',
+      '/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-10-27-ubuntu-server': RouteRecordInfo<
+      '/posts/2024-10-27-ubuntu-server',
+      '/posts/2024-10-27-ubuntu-server',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-11-05-wu-ti': RouteRecordInfo<
+      '/posts/2024-11-05-wu-ti',
+      '/posts/2024-11-05-wu-ti',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-11-06-c-yu-python-zhong-de-shu-xing': RouteRecordInfo<
+      '/posts/2024-11-06-c-yu-python-zhong-de-shu-xing',
+      '/posts/2024-11-06-c-yu-python-zhong-de-shu-xing',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-11-14-pygame-xue-xi-bi-ji-1': RouteRecordInfo<
+      '/posts/2024-11-14-pygame-xue-xi-bi-ji-1',
+      '/posts/2024-11-14-pygame-xue-xi-bi-ji-1',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-11-16-pygame-xue-xi-bi-ji-2': RouteRecordInfo<
+      '/posts/2024-11-16-pygame-xue-xi-bi-ji-2',
+      '/posts/2024-11-16-pygame-xue-xi-bi-ji-2',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-11-17-pygame-xue-xi-bi-ji-3': RouteRecordInfo<
+      '/posts/2024-11-17-pygame-xue-xi-bi-ji-3',
+      '/posts/2024-11-17-pygame-xue-xi-bi-ji-3',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-11-20-pygame-xue-xi-bi-ji-4': RouteRecordInfo<
+      '/posts/2024-11-20-pygame-xue-xi-bi-ji-4',
+      '/posts/2024-11-20-pygame-xue-xi-bi-ji-4',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-11-20-pygame-xue-xi-bi-ji-5': RouteRecordInfo<
+      '/posts/2024-11-20-pygame-xue-xi-bi-ji-5',
+      '/posts/2024-11-20-pygame-xue-xi-bi-ji-5',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1': RouteRecordInfo<
+      '/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1',
+      '/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-12-25-numpy-ku-xue-xi': RouteRecordInfo<
+      '/posts/2024-12-25-numpy-ku-xue-xi',
+      '/posts/2024-12-25-numpy-ku-xue-xi',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2024-12-25-python-xue-xi-ri-ji-0': RouteRecordInfo<
+      '/posts/2024-12-25-python-xue-xi-ri-ji-0',
+      '/posts/2024-12-25-python-xue-xi-ri-ji-0',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1': RouteRecordInfo<
+      '/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1',
+      '/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti': RouteRecordInfo<
+      '/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti',
+      '/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-01-14-fen-xi-suan-fa': RouteRecordInfo<
+      '/posts/2025-01-14-fen-xi-suan-fa',
+      '/posts/2025-01-14-fen-xi-suan-fa',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-01-15-fen-xi-fen-zhi-fa': RouteRecordInfo<
+      '/posts/2025-01-15-fen-xi-fen-zhi-fa',
+      '/posts/2025-01-15-fen-xi-fen-zhi-fa',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong': RouteRecordInfo<
+      '/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong',
+      '/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-01-31-gu-yong-wen-ti': RouteRecordInfo<
+      '/posts/2025-01-31-gu-yong-wen-ti',
+      '/posts/2025-01-31-gu-yong-wen-ti',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao': RouteRecordInfo<
+      '/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao',
+      '/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji': RouteRecordInfo<
+      '/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji',
+      '/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan': RouteRecordInfo<
+      '/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan',
+      '/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2025-10-29-python-jiao-xue-ji-lu': RouteRecordInfo<
+      '/posts/2025-10-29-python-jiao-xue-ji-lu',
+      '/posts/2025-10-29-python-jiao-xue-ji-lu',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai': RouteRecordInfo<
+      '/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai',
+      '/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa': RouteRecordInfo<
+      '/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa',
+      '/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou': RouteRecordInfo<
+      '/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou',
+      '/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-03-16-python-xue-xi-ri-ji-1': RouteRecordInfo<
+      '/posts/2026-03-16-python-xue-xi-ri-ji-1',
+      '/posts/2026-03-16-python-xue-xi-ri-ji-1',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue': RouteRecordInfo<
+      '/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue',
+      '/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin': RouteRecordInfo<
+      '/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin',
+      '/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia': RouteRecordInfo<
+      '/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia',
+      '/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan': RouteRecordInfo<
+      '/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan',
+      '/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1': RouteRecordInfo<
+      '/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1',
+      '/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/services/': RouteRecordInfo<
+      '/services/',
+      '/services',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -184,6 +408,14 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
+    'pages/girls/index.md': {
+      routes:
+        | '/girls/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
     'pages/links/index.md': {
       routes:
         | '/links/'
@@ -208,9 +440,257 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'pages/posts/hello-valaxy.md': {
+    'pages/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan.md': {
       routes:
-        | '/posts/hello-valaxy'
+        | '/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-10-27-ubuntu-server.md': {
+      routes:
+        | '/posts/2024-10-27-ubuntu-server'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-11-05-wu-ti.md': {
+      routes:
+        | '/posts/2024-11-05-wu-ti'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-11-06-c-yu-python-zhong-de-shu-xing.md': {
+      routes:
+        | '/posts/2024-11-06-c-yu-python-zhong-de-shu-xing'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-11-14-pygame-xue-xi-bi-ji-1.md': {
+      routes:
+        | '/posts/2024-11-14-pygame-xue-xi-bi-ji-1'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-11-16-pygame-xue-xi-bi-ji-2.md': {
+      routes:
+        | '/posts/2024-11-16-pygame-xue-xi-bi-ji-2'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-11-17-pygame-xue-xi-bi-ji-3.md': {
+      routes:
+        | '/posts/2024-11-17-pygame-xue-xi-bi-ji-3'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-11-20-pygame-xue-xi-bi-ji-4.md': {
+      routes:
+        | '/posts/2024-11-20-pygame-xue-xi-bi-ji-4'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-11-20-pygame-xue-xi-bi-ji-5.md': {
+      routes:
+        | '/posts/2024-11-20-pygame-xue-xi-bi-ji-5'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1.md': {
+      routes:
+        | '/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-12-25-numpy-ku-xue-xi.md': {
+      routes:
+        | '/posts/2024-12-25-numpy-ku-xue-xi'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2024-12-25-python-xue-xi-ri-ji-0.md': {
+      routes:
+        | '/posts/2024-12-25-python-xue-xi-ri-ji-0'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1.md': {
+      routes:
+        | '/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti.md': {
+      routes:
+        | '/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-01-14-fen-xi-suan-fa.md': {
+      routes:
+        | '/posts/2025-01-14-fen-xi-suan-fa'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-01-15-fen-xi-fen-zhi-fa.md': {
+      routes:
+        | '/posts/2025-01-15-fen-xi-fen-zhi-fa'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong.md': {
+      routes:
+        | '/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-01-31-gu-yong-wen-ti.md': {
+      routes:
+        | '/posts/2025-01-31-gu-yong-wen-ti'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao.md': {
+      routes:
+        | '/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji.md': {
+      routes:
+        | '/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan.md': {
+      routes:
+        | '/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2025-10-29-python-jiao-xue-ji-lu.md': {
+      routes:
+        | '/posts/2025-10-29-python-jiao-xue-ji-lu'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai.md': {
+      routes:
+        | '/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa.md': {
+      routes:
+        | '/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou.md': {
+      routes:
+        | '/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-03-16-python-xue-xi-ri-ji-1.md': {
+      routes:
+        | '/posts/2026-03-16-python-xue-xi-ri-ji-1'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue.md': {
+      routes:
+        | '/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin.md': {
+      routes:
+        | '/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia.md': {
+      routes:
+        | '/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan.md': {
+      routes:
+        | '/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1.md': {
+      routes:
+        | '/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/services/index.md': {
+      routes:
+        | '/services/'
       views:
         | never
       pathParamNames:
