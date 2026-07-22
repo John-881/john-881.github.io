@@ -1,6 +1,7 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
+  lang: 'zh-CN',
   timezone: 'Asia/Shanghai',
   url: 'https://zeroice.490633.xyz/',
   languages: ['zh-CN', 'en'],

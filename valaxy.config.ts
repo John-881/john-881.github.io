@@ -5,6 +5,7 @@ import { addonWaline } from 'valaxy-addon-waline'
 // add icons what you will need
 const safelist = [
   'i-ri-home-line',
+  'i-ri-article-line',
   'i-ri-archive-line',
   'i-ri-archive-fill',
   'i-ri-folder-2-line',
@@ -21,6 +22,17 @@ const safelist = [
   'i-ri-heart-fill',
   'i-ri-cloud-line',
   'i-ri-genderless-line',
+  'i-ri-link',
+  'i-ri-tools-line',
+  'i-ri-user-3-line',
+  'i-ri-eye-line',
+  'i-ri-chat-4-line',
+  'i-ri-rss-line',
+  'i-ri-github-line',
+  'i-ri-zhihu-line',
+  'i-ri-bilibili-line',
+  'i-ri-mail-line',
+  'i-ri-train-line',
 ]
 
 /**
@@ -88,17 +100,20 @@ export default defineValaxyConfig<UserThemeConfig>({
   siteConfig: {
     // 启用评论
     comment: {
-      enable: true
+      enable: true,
     },
   },
   // 设置 valaxy-addon-waline 配置项
   addons: [
     addonWaline({
       serverURL: 'https://discuss.490633.xyz',
+      lang: 'zh-CN',
       pageSize: 10,
       reaction: true,
       dark: 'html.dark',
       requiredMeta: ['nick', 'mail'],
+      pageview: true,
+      comment: true,
     }),
   ],
 
