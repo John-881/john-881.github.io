@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://freehost.490633.xyz/img/20260722153625185.avif">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.DGaDPKPV.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.BTQirQJB.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.Dk9JKhVE.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.SqDC-DRA.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.BHwonxou.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.BdSyV0Mv.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/@vueuse/motion.BypNt3oK.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.B62cWSQb.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.DA-2WGy8.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.B62cWSQb.js">
+<link rel="preload" href="/assets/none.DLM1AMsD.jpg" as="image">
+<link rel="preload" href="/assets/bg-img.kXdNMxcF.jpg" as="image">
+<link rel="preload" href="/assets/sidebar-bg-img.mp54gEws.webp" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2024-11-14-pygame-xue-xi-bi-ji-1.C0qogXkZ.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pygame 学习笔记(1) - 凌渡冰点的小博客</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap">
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="一个兴趣使然的个人小站，分享日常、技术教程、编程学习、玩机折腾等内容。">
+<meta property="og:description" content="一个兴趣使然的个人小站，分享日常、技术教程、编程学习、玩机折腾等内容。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="凌渡冰点的小博客">
+<meta property="og:title" content="Pygame 学习笔记(1)">
+<meta property="og:image" content="/images/2024/11/202411-65a30ca7.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zeroice.490633.xyz/">
+<link rel="icon" href="https://freehost.490633.xyz/img/20260722153625185.avif" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="theme-color" content="#fff">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!--[--><!--v-if--><!--v-if--><div class="yun-page-header-gradient"></div><div class="yun-nav-menu z-$yun-z-nav-menu fixed bg-transparent" data-v-1791e522><!--  --><div class="inline-flex justify-start items-center flex-1" data-v-1791e522><button type="button" class="vt-hamburger menu-btn sidebar-toggle leading-4 size-12 lg:hidden" aria-label="mobile navigation" aria-expanded="false" inline-flex cursor="pointer" hover="bg-white/80 dark:bg-black/80" z="$yun-z-menu-btn" data-v-1791e522><span class="vt-hamburger-container"><span class="vt-hamburger-top"></span><span class="vt-hamburger-middle"></span><span class="vt-hamburger-bottom"></span></span></button><a href="/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 data-v-1791e522><!--[--><div class="size-6 i-ri-home-4-line"></div><!--]--></a><div class="hidden lg:contents" data-v-1791e522><!--[--><a href="/posts/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="文章" data-v-1791e522><!--[--><div class="size-6 i-ri-article-line"></div><!--]--></a><a href="/archives/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="归档" data-v-1791e522><!--[--><div class="size-6 i-ri-archive-line"></div><!--]--></a><a href="/categories/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="分类" data-v-1791e522><!--[--><div class="size-6 i-ri-folder-2-line"></div><!--]--></a><a href="/tags/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="标签" data-v-1791e522><!--[--><div class="size-6 i-ri-price-tag-3-line"></div><!--]--></a><a href="/links/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="友链" data-v-1791e522><!--[--><div class="size-6 i-ri-link"></div><!--]--></a><a href="/services/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="服务" data-v-1791e522><!--[--><div class="size-6 i-ri-tools-line"></div><!--]--></a><a href="/about/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="关于我" data-v-1791e522><!--[--><div class="size-6 i-ri-user-3-line"></div><!--]--></a><a href="/about/site" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="关于站点" data-v-1791e522><!--[--><div class="size-6 i-ri-file-list-line"></div><!--]--></a><!--]--></div></div><div class="flex flex-1 flex-center" data-v-1791e522><div flex="~ center col h-full" class="nav-menu-title-container cursor-pointer" data-v-1791e522><!----><span class="font-light truncate">凌渡冰点的小博客</span></div></div><div class="inline-flex-center justify-end items-center flex-1" data-v-1791e522><!-- <template v-if="!app.isMobile && themeConfig.nav">
+          <template v-for="item in themeConfig.nav" :key="item.text">
+            <AppLink
+              v-if="'link' in item"
+              :to="item.link"
+              class="menu-btn inline-flex-center p-2 transition text-$va-c-text"
+              inline-flex cursor="pointer"
+              hover="bg-white/80 dark:bg-black/80"
+              z="$yun-z-menu-btn"
+            >
+              {{ item.text }}
+            </AppLink>
+            <template v-else-if="'items' in item" />
+          </template>
+        </template> --><button class="yun-icon-btn rounded-none! hidden sm:inline-flex" title="切换语言" style="color:var(--va-c-text);" data-v-1791e522><div i-ri-translate class="transition transform"></div></button><button class="yun-icon-btn yun-toggle-dark rounded-none!" title="切换深色模式" data-v-1791e522><div i="ri-sun-line dark:ri-moon-line"></div></button><!--[--><button class="yun-search-btn yun-icon-btn popup-trigger rounded-none! size-12 inline-flex justify-center items-center" text="xl $va-c-text" title="搜索"><div i-ri-search-line op-80 hover="op-100"></div></button><!----><!--]--></div></div><!----><!--v-if--><!----><!--[--><div class="yun-bg"></div><!--]--><!----><a href="#" class="back-to-top yun-icon-btn bg-$va-c-bg-soft shadow-md"><div class="size-8" i-ri-arrow-up-s-line></div><svg class="progress-circle-container" viewBox="0 0 100 100"><circle stroke-dasharray="301.59289474462014 301.59289474462014" stroke-dashoffset="301.59289474462014" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="progress-circle" cx="50" cy="50" r="48" fill="none"></circle></svg></a><!--]--><!--[--><!--]--><!----><!--]--><div class="min-h-screen flex flex-col"><div class="mt-12 md:mt-24 yun-layout-wrapper__content"><!--[--><div class="yun-layout-left gap-4 sticky top-$yun-margin-top w-80"><!--[--><div class="yun-card flex-center rounded-2 overflow-hidden p-4 min-h-sm" flex="~ col gap-1" min-h="100px" bg="$va-c-bg-light"><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center"><!--[--><div class="site-info gap-1 items-center text-center" flex="~ col" p="t-8"><a href="/about" class="site-author-avatar inline-flex-center"><div class="relative yun-author-avatar"><div class="absolute size-full avatar-bg bg-image-$yun-home-hero-image-background-image filter-blur-2xl op-30"></div><img class="rounded-full size-full bg-white dark:bg-white/20 p-1 m-0 absolute" src="https://freehost.490633.xyz/img/20260722153625185.avif" alt="avatar"><span class="site-author-status absolute" title="Coding...">🩵</span></div></a><a href="/about" class="site-author-name font-black font-serif text-$va-c-text op-80 hover:op-100 flex-center">凌渡冰点</a><a href="/about/site" class="site-name text-lg leading-loose">凌渡冰点的小博客</a><h4 class="site-subtitle block op-70" text="xs">一个兴趣使然的个人小站</h4><div class="site-description">一个兴趣使然的个人小站，分享日常、技术教程、编程学习、玩机折腾等内容。</div></div><div class="yun-gradient-line my-2 op-20"></div><nav class="site-nav" text-xl mt-2><a href="/archives/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="归档" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-archive-line"></div><div class="text-2xl icon-active i-ri-archive-fill"></div><span class="text-xs">归档</span></div><span class="count text-base text-black/80 dark:text-white/80">31</span></a><a href="/categories/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="分类" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-folder-2-line"></div><div class="text-2xl icon-active i-ri-folder-2-fill"></div><span class="text-xs">分类</span></div><span class="count text-base text-black/80 dark:text-white/80">5</span></a><a href="/tags/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="标签" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-price-tag-3-line"></div><div class="text-2xl icon-active i-ri-price-tag-3-fill"></div><span class="text-xs">标签</span></div><span class="count text-base text-black/80 dark:text-white/80">22</span></a></nav><div class="yun-gradient-line my-2 op-20"></div><div class="links-of-author"><!--[--><a class="links-of-author-item yun-icon-btn" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange;"><div class="i-ri-rss-line icon"></div></a><a class="links-of-author-item yun-icon-btn" rel="noopener" href="https://github.com/John-881" title="GitHub" target="_blank" style="color:#6e5494;"><div class="i-ri-github-line icon"></div></a><a class="links-of-author-item yun-icon-btn" rel="noopener" href="https://www.zhihu.com/people/bu-wan-mei-de-wo-81-92" title="知乎" target="_blank" style="color:#0084FF;"><div class="i-ri-zhihu-line icon"></div></a><a class="links-of-author-item yun-icon-btn" rel="noopener" href="https://space.bilibili.com/421681448" title="哔哩哔哩" target="_blank" style="color:#FF8EB3;"><div class="i-ri-bilibili-line icon"></div></a><a class="links-of-author-item yun-icon-btn" rel="noopener" href="mailto:it.007@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1;"><div class="i-ri-mail-line icon"></div></a><a class="links-of-author-item yun-icon-btn" rel="noopener" href="https://www.travellings.cn/go.html" title="Travelling" target="_blank" style="color:var(--va-c-text);"><div class="i-ri-train-line icon"></div></a><!--]--></div><div class="yun-gradient-line my-2 op-20"></div><div class="links flex-center"><!--[--><a href="/links/" class="va-link link-item yun-icon-btn" inline-flex title="友链" style="color:dodgerblue;"><!--[--><div class="i-ri-link icon size-6"></div><!--]--></a><a href="/about/" class="va-link link-item yun-icon-btn" inline-flex title="关于我" style="color:blue;"><!--[--><div class="i-ri-user-3-line icon size-6"></div><!--]--></a><a href="/about/site" class="va-link link-item yun-icon-btn" inline-flex title="关于站点" style="color:skyblue;"><!--[--><div class="i-ri-file-list-line icon size-6"></div><!--]--></a><!--]--></div><!--]--></div><!----></div><!--[--><!-- eslint-disable-next-line vue/no-lone-template empty --><template></template><!--]--><!--]--></div><main class="yun-main lt-md:w-full" flex="~ center"><!--[--><div class="content w-full md:w-3xl lg:w-2xl xl:w-2xl 2xl:w-4xl" flex="~ col grow" p="lt-md:0"><div class="yun-card flex-center rounded-2 overflow-hidden" flex="col" min-h="100px" bg="$va-c-bg-light" m="0"><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center"><!--[--><!----><div class="mt-8 mb-4"><!--[--><header class="post-header"><h1 p="2" text="2xl center" font="serif black" style="color:" class="post-title flex-center"><!----><span inline-flex class="leading-none">Pygame 学习笔记(1)</span></h1></header><!--]--></div><!--[--><!--[--><!--[--><!--[--><!----><div flex="~ center" text="sm" class="post-meta-col post-meta gap-4"><div class="post-time flex items-center gap-4"><span class="posted-time inline-flex-center gap-1" title="发表于2024-11-14 08:00:00"><div class="inline-block" i-ri-calendar-line></div><time class="op-80">2024-11-14</time></span><!----></div><!--[--><!--]--><div class="inline-flex-center gap-4"><div class="inline-flex-center post-counter gap-4"><span class="word-count inline-flex-center gap-1" title="本文字数"><div class="inline-block" i-ri-file-word-line></div><span class="op-80">1.9k</span></span><span class="reading-time inline-flex-center gap-1" title="阅读时长"><div i-ri-timer-line></div><time class="op-80">8m</time></span></div><div class="inline-flex gap-4" text="sm" h="5"><div inline-flex justify="center" items="center" title="阅读次数"><div inline-flex i-ri-eye-line></div><span ml-1 inline-flex class="waline-pageview-count op-80" data-path="/posts/2024-11-14-pygame-xue-xi-bi-ji-1"></span></div><div inline-flex justify="center" items="center" title="评论数"><div inline-flex i-ri-chat-4-line></div><span ml-1 inline-flex class="waline-comment-count op-80" data-path="/posts/2024-11-14-pygame-xue-xi-bi-ji-1"></span></div></div><!----></div></div><!--]--><!----><div class="inline-flex mt-2" text="sm" py="1"><!----><!----><div class="post-tags inline-flex" items="center" gap="1" flex="wrap 1" justify="end"><!--[--><a href="/tags/?tag=%E7%AE%97%E6%B3%95" class="transition post-tag inline-flex-center text-xs border-$va-c-divider" px-2 h="7" rounded-full border hover="bg-blue-500 text-white"><span>算法</span></a><!--]--></div></div><!--]--><!--]--><!--]--><div p="x-4 b-8" class="sm:px-6 lg:px-12 xl:px-16" w="full"><!--[--><!--]--><!--[--><!-- <Transition appear> --><article class="markdown-body"><!--[--><!----><!----><!--[--><!--]--><!--[--><h2 id="pygame的介绍" tabindex="-1">Pygame的介绍 <a class="header-anchor" href="#pygame的介绍" aria-label="Permalink to &quot;Pygame的介绍&quot;">​</a></h2><p>bing一下你就知道，这里就不过多阐述了。</p><h2 id="pygame的最基础框架" tabindex="-1">Pygame的最基础框架 <a class="header-anchor" href="#pygame的最基础框架" aria-label="Permalink to &quot;Pygame的最基础框架&quot;">​</a></h2><p>main.py</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>import pygame, sys</span></span>
+<span class="line"><span>from settings import *</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class Game:</span></span>
+<span class="line"><span>	def __init__(self):</span></span>
+<span class="line"><span>		pygame.init()#①</span></span>
+<span class="line"><span>		self.screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))#②</span></span>
+<span class="line"><span>		pygame.display.set_caption(&#39;Sprout land&#39;)#③</span></span>
+<span class="line"><span>		self.clock = pygame.time.Clock()#④</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	def run(self):</span></span>
+<span class="line"><span>		while True: </span></span>
+<span class="line"><span>			for event in pygame.event.get():</span></span>
+<span class="line"><span>				if event.type == pygame.QUIT:</span></span>
+<span class="line"><span>					pygame.quit()</span></span>
+<span class="line"><span>					sys.exit()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>			dt = self.clock.tick() / 1000</span></span>
+<span class="line"><span>			pygame.display.update()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if __name__ == &#39;__main__&#39;:</span></span>
+<span class="line"><span>	game = Game()</span></span>
+<span class="line"><span>	game.run()</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>settings.py</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>from pygame.math import Vector2</span></span>
+<span class="line"><span># screen</span></span>
+<span class="line"><span>SCREEN_WIDTH = 1280</span></span>
+<span class="line"><span>SCREEN_HEIGHT = 720</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>上图就是pygame的最简单的框架启动器，其中定义了一个game类，里面包含一个初始化器与run函数，初始化器中①是进行pygame自带的初始化，②是创建一个窗口，（窗口的长宽数据存放在settings文件中，标准pygame起手式（坏笑），其目的也是为了我们后期方便更改数据和进行维护），③是给窗口设置标题，④是启动pygame中的计时器。在run函数中，我们进行了一个用户按键的监测，监测用户是否点击了退出按钮，和计算每一帧的时间dt(秒)，以及调用刷新函数update。现在启动这个程序你就可以得到一个黑框框，虽然有点单调，但终归是迈出了第一步。</p><p><img src="/images/2024/11/202411-65a30ca7.webp" alt="">## 屏幕的刷新</p><p>接下来我们不能总盯着黑黑的框傻乐，让我们小小操作一下，接来下我们创造一个level.py文件，把我们刷新屏幕的程序写在里面以保证我们整体代码的整洁性。</p><p>level.py</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>import pygame</span></span>
+<span class="line"><span>from settings import *</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class Level:</span></span>
+<span class="line"><span>    def __init__(self):</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # get the display surface</span></span>
+<span class="line"><span>        self.display_surface = pygame.display.get_surface()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # sprite groups</span></span>
+<span class="line"><span>        self.all_sprites = pygame.sprite.Group()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    def run(self,dt):</span></span>
+<span class="line"><span>        self.display_surface.fill(&quot;black&quot;)</span></span>
+<span class="line"><span>        self.all_sprites.draw(self.display_surface)</span></span>
+<span class="line"><span>        self.all_sprites.update(dt)</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>在这里面中我们定义了一个Level类来控制屏幕的刷新，首先我们用get_surface函数获取当前显示界面，然后我们用Group函数创造一个精灵组来统一管理显示在此画面上的对象，如玩家，npc之类的。然后在run函数中使用fill函数给屏幕填充颜色，draw函数给当前显示界面绘画出精灵组的所有元素，这里由于我们的精灵组中并没有成员，所以屏幕还会是一片黑。update是精灵组的刷新函数，每过dt秒进行一次刷新。接下来我们回到main函数调用下刷新屏幕的函数即可。</p><p>main.py</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>import pygame, sys</span></span>
+<span class="line"><span>from settings import *</span></span>
+<span class="line"><span>from level import Level</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class Game:</span></span>
+<span class="line"><span>	def __init__(self):</span></span>
+<span class="line"><span>		pygame.init()</span></span>
+<span class="line"><span>		self.screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))</span></span>
+<span class="line"><span>		pygame.display.set_caption(&#39;Sprout land&#39;)</span></span>
+<span class="line"><span>		self.clock = pygame.time.Clock()</span></span>
+<span class="line"><span>		self.level = Level()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	def run(self):</span></span>
+<span class="line"><span>		while True: </span></span>
+<span class="line"><span>			for event in pygame.event.get():</span></span>
+<span class="line"><span>				if event.type == pygame.QUIT:</span></span>
+<span class="line"><span>					pygame.quit()</span></span>
+<span class="line"><span>					sys.exit()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>			dt = self.clock.tick() / 1000</span></span>
+<span class="line"><span>			self.level.run(dt)</span></span>
+<span class="line"><span>			pygame.display.update()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if __name__ == &#39;__main__&#39;:</span></span>
+<span class="line"><span>	game = Game()</span></span>
+<span class="line"><span>	game.run()</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p><img src="/images/2024/11/202411-65a30ca7.webp" alt="">好的，现在你可以接着对着黑框接着傻笑了。（坏笑）（如果不喜欢黑色的话，可自行调动参数。）可能你会有点疑惑，这一步似乎和第一步所展示出来的效果一样啊，为啥要这样做呢？（如果真这样想，那我可给难过了）。</p><h2 id="一个简单的player" tabindex="-1">一个简单的Player <a class="header-anchor" href="#一个简单的player" aria-label="Permalink to &quot;一个简单的Player&quot;">​</a></h2><p>接下来我们要开始添加一些主角了，并试图让它运动起来。老规矩，为了保证整体代码的整洁，我们也将创建一个新的文件来存放player的代码。</p><p>player.py</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>import pygame</span></span>
+<span class="line"><span>from settings import *</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class Player(pygame.sprite.Sprite):</span></span>
+<span class="line"><span>    def __init__(self,pos,group):</span></span>
+<span class="line"><span>        super().__init__(group)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        self.image = pygame.Surface((32,64))</span></span>
+<span class="line"><span>        self.image.fill(&quot;green&quot;)</span></span>
+<span class="line"><span>        self.rect = self.image.get_rect(center = pos)</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这里我们创造了一个Player类并使他继承于Sprite类（似乎我还没做继承，下次一定），super().__init__(group)是调用父类Sprite中初始化器中的group属性，然后我们用Surface函数给player加个小皮肤并填充绿色使其不会堕入黑暗，再用get_rect函数获取player的矩形，为后续做点小小的准备。接下来就让我们的Player显示出来吧。</p><p>level.py</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>import pygame</span></span>
+<span class="line"><span>from settings import *</span></span>
+<span class="line"><span>from player import Player</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class Level:</span></span>
+<span class="line"><span>    def __init__(self):</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # get the display surface</span></span>
+<span class="line"><span>        self.display_surface = pygame.display.get_surface()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # sprite groups</span></span>
+<span class="line"><span>        self.all_sprites = pygame.sprite.Group()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        self.setup()</span></span>
+<span class="line"><span>    def setup(self):</span></span>
+<span class="line"><span>        self.player = Player((640,360),self.all_sprites)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    def run(self,dt):</span></span>
+<span class="line"><span>        self.display_surface.fill(&quot;black&quot;)</span></span>
+<span class="line"><span>        self.all_sprites.draw(self.display_surface)</span></span>
+<span class="line"><span>        self.all_sprites.update(dt)</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>回到我们的level.py文件中将我们的Player添加进去进行刷新，创建一个setup函数，将我们的player实例放在里面进行管理，传入坐标参数与精灵组，这样只要我们实例化一下setup函数后就可以显示出我们的Player了。（这里关于Player的显示可能会有点小绕，注意这里是将player已经加入到精灵组以内了）</p><p><img src="/images/2024/11/202411-3400056c.webp" alt="">## 让Player运动起来</p><p>接下来步骤就简单明了，我们需要读取用户的按键输入并进行相应的反应。</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>import pygame</span></span>
+<span class="line"><span>from settings import *</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class Player(pygame.sprite.Sprite):</span></span>
+<span class="line"><span>    def __init__(self,pos,group):</span></span>
+<span class="line"><span>        super().__init__(group)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # general setup</span></span>
+<span class="line"><span>        self.image = pygame.Surface((32,64))</span></span>
+<span class="line"><span>        self.image.fill(&quot;green&quot;)</span></span>
+<span class="line"><span>        self.rect = self.image.get_rect(center = pos)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # movement attributes</span></span>
+<span class="line"><span>        self.direction = pygame.math.Vector2()</span></span>
+<span class="line"><span>        self.pos = pygame.math.Vector2(self.rect.center)</span></span>
+<span class="line"><span>        self.speed = 200</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    def input(self):</span></span>
+<span class="line"><span>        keys = pygame.key.get_pressed()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if keys[pygame.K_UP]:</span></span>
+<span class="line"><span>            self.direction.y = -1</span></span>
+<span class="line"><span>        elif keys[pygame.K_DOWN]:</span></span>
+<span class="line"><span>            self.direction.y = 1</span></span>
+<span class="line"><span>        else:</span></span>
+<span class="line"><span>            self.direction.y = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if keys[pygame.K_RIGHT]:</span></span>
+<span class="line"><span>            self.direction.x = 1</span></span>
+<span class="line"><span>        elif keys[pygame.K_LEFT]:</span></span>
+<span class="line"><span>            self.direction.x = -1</span></span>
+<span class="line"><span>        else:</span></span>
+<span class="line"><span>            self.direction.x = 0</span></span>
+<span class="line"><span>    def move(self,dt):</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # normalizing a vector</span></span>
+<span class="line"><span>        if self.direction.magnitude() &gt; 0:</span></span>
+<span class="line"><span>            self.direction = self.direction.normalize()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        #horizontal movement</span></span>
+<span class="line"><span>        self.pos.x += self.direction.x * self.speed * dt</span></span>
+<span class="line"><span>        self.rect.centerx = self.pos.x</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # vertical movement</span></span>
+<span class="line"><span>        self.pos.y += self.direction.y * self.speed * dt</span></span>
+<span class="line"><span>        self.rect.centery = self.pos.y</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    def update(self, dt):</span></span>
+<span class="line"><span>        self.input()</span></span>
+<span class="line"><span>        self.move(dt)</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这里我们需要增添向量来记录player的位置以及运动情况，Vector2函数就创建了一个二维向量，同时将Player的矩形中心也转换成二维向量，在来个速度，这些都显而易见。定义一个input函数来监测键盘的输入，get_pressed函数返回一个元组，表示当前所有键盘按键的状态（按下或未按下），你可以通过检查元组中的特定键位来确定哪个键被按下。（这句话复制来的），接下来就是move函数来控制Player的运动，这个也是显而易见。需要注意的是，normalize函数是将速度标准化的（要是没记错应该是这个词），因为当物体向左上移动的时候，根据勾股定理显然速度会加快，这里大概理解一下就得行，不加以深入，因为当传入参数为[0,0]时会报错，所以给进行个小判断，也不过多阐述，记住就好了。然后就是update刷新函数了。这里我一时没找到刷新函数在哪里调用了，我觉得应该是方法重写，由于继承了Sprite类，猜测update应该是对精灵的刷新函数进行了重写，每次进行精灵刷新的时候就会调用每个精灵中的update函数。</p><p><img src="/images/2024/11/202411-48bdd907.webp" alt=""><img src="/images/2024/11/202411-db644c2f.webp" alt="">## 写在最后</p><p>由于本人实力有限，此学习笔记会存在很多不足，只能做到对实例的一个简单过程回忆和剖析，并不能算作一个教程，如果跟着这个笔记走的话，可能要费很大的劲。这里将教学视频链接贴出<a href="https://www.bilibili.com/video/BV1ia411d7yW?spm_id_from=333.788.videopod.episodes&amp;vd_source=18d81eba7a49a9cf96b5b4e18a005d7f" target="_blank" rel="noreferrer">https://www.bilibili.com/video/BV1ia411d7yW?spm_id_from=333.788.videopod.episodes&amp;vd_source=18d81eba7a49a9cf96b5b4e18a005d7f</a></p><!--]--><!--]--><!----><!----></article><!-- </Transition> --><!--]--><!--[--><!--[--><!--[--><div class="yun-sponsor-container flex-center flex-col" m="t-6"><button class="sponsor-button yun-icon-btn shadow hover:shadow-md" title="打赏" text="red-400"><div class="mt-2px" i-ri-heart-fill></div></button><div m="y-4" class="qrcode-container qrcode flex-center flex-col"><div class="sponsor-description" mb="4" text="sm">这是关于赞助的一些描述</div><div class="flex justify-around"><!--[--><!--]--></div></div></div><ul class="post-copyright" m="y-4"><li class="post-copyright-author"><strong>本文作者：</strong><span>凌渡冰点</span></li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://zeroice.490633.xyz/posts/2024-11-14-pygame-xue-xi-bi-ji-1" target="_blank" title="本文链接">https://zeroice.490633.xyz/posts/2024-11-14-pygame-xue-xi-bi-ji-1</a></li><li class="post-copyright-license"><strong>版权声明：</strong><span>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 ">CC BY-NC-SA</a> 许可协议。</span></li></ul><!--]--><!--]--><!--]--></div><!--]--></div><!----></div><!--[--><!--]--><!--[--><div class="post-nav"><div class="post-nav-item"><a href="/posts/2024-11-16-pygame-xue-xi-bi-ji-2" class="post-nav-prev" title="Pygame学习笔记(2)"><div class="icon" i-ri-arrow-left-s-line></div><span class="title truncate" text="sm">Pygame学习笔记(2)</span></a></div><div class="post-nav-item"><a href="/posts/2024-11-06-c-yu-python-zhong-de-shu-xing" class="post-nav-next" title="C#与python中的属性"><span class="title truncate" text="sm">C#与python中的属性</span><div class="icon" i-ri-arrow-right-s-line></div></a></div></div><!--]--><!--[--><!--]--><!--[--><div class="yun-card flex-center rounded-2 overflow-hidden comment yun-comment sm:p-6 lg:px-12 xl:px-16" flex="col" min-h="100px" bg="$va-c-bg-light" w="full" p="4"><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center"><!--[--><!----><!--]--></div><!----></div><!--]--><!--[--><!-- eslint-disable-next-line vue/no-lone-template empty --><template class="mt-4 lg:hidden"></template><!--]--><!--[--><!--]--><!--[--><!--]--></div><!--]--></main><!--[--><button class="xl:hidden toc-btn shadow-md fixed yun-icon-btn z-20 bg-$va-c-bg-soft" opacity="75" right="4" bottom="19"><div i-ri-file-list-line></div></button><!----><aside flex="~ col" class="va-card yun-aside min-h-sm rounded-2" text="center" overflow="auto"><div class="w-full" flex="~ col" pb-2><!--[--><h2 m="t-6 b-2" font="serif black">文章目录</h2><div style="display:none;" data-v-d9db7c40><div class="content" data-v-d9db7c40><div class="outline-title" data-v-d9db7c40>本页</div><div class="outline-marker" data-v-d9db7c40></div><nav aria-labelledby="doc-outline-aria-label" data-v-d9db7c40><span id="doc-outline-aria-label" class="visually-hidden" data-v-d9db7c40> Table of Contents for current page </span><ul class="root va-toc relative z-1 css-i18n-toc" data-v-d9db7c40 data-v-0a3661f1><!--[--><!--]--></ul></nav></div></div><!--]--><div class="flex-grow"></div><!----></div></aside><!--]--><!--]--></div><footer flex="~ col" class="relative yun-footer va-footer px-4 py-4 pt-0 text-$va-c-text-light w-full mt-14" bg="white dark:$va-c-bg-soft" text="center sm"><div class="yun-cloud absolute top--10 left-0 right-0"><svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" fill="var(--yun-c-cloud)"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><div class="beian" m="y-2"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">萌ICP备20265536号</a><!----></div><div class="copyright flex justify-center items-center gap-2" p="1"><span> © <!--[-->2024 - <!--]--> 2026</span><a class="animate-pulse inline-flex" href="https://www.yunyoujun.cn/sponsors/" target="_blank" title="Sponsor YunYouJun"><div class="i-ri-cloud-line"></div></a><span>凌渡冰点</span></div><div class="powered" m="2"><span>由 <a href="https://github.com/YunYouJun/valaxy.git" target="_blank" rel="noopener">Valaxy</a> <span class="op-60">v0.28.11</span> 驱动</span><span mx-1>|</span><span><span>主题</span><span mx-1>-</span><a href="https://github.com/YunYouJun/valaxy.git" title="valaxy-theme-yun" target="_blank">Yun</a><span class="ml-1 op-60">v0.28.11</span></span></div><!--[--><!--]--><div class="yun-footer-gradient"></div></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"yun-app":{"bannerAnimationDone":false},"app":{"showLoading":true},"site":{},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://zeroice.490633.xyz/#identity","@type":"Person","name":"凌渡冰点","url":"https://zeroice.490633.xyz/","image":{"@id":"https://zeroice.490633.xyz/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/John-881","https://www.zhihu.com/people/bu-wan-mei-de-wo-81-92","https://space.bilibili.com/421681448","mailto:it.007@qq.com","https://www.travellings.cn/go.html"]},{"@id":"https://zeroice.490633.xyz/#website","@type":"WebSite","dateModified":"2024-11-14","datePublished":"2024-11-14","inLanguage":"zh-CN","name":"Pygame 学习笔记(1)","url":"https://zeroice.490633.xyz/","publisher":{"@id":"https://zeroice.490633.xyz/#identity"}},{"@id":"https://zeroice.490633.xyz/#webpage","@type":"WebPage","dateModified":"2024-11-13T16:00:00.000Z","datePublished":"2024-11-13T16:00:00.000Z","description":"一个兴趣使然的个人小站，分享日常、技术教程、编程学习、玩机折腾等内容。","name":"Pygame 学习笔记(1)","url":"https://zeroice.490633.xyz/","about":{"@id":"https://zeroice.490633.xyz/#identity"},"isPartOf":{"@id":"https://zeroice.490633.xyz/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://zeroice.490633.xyz/"]}]},{"@id":"https://zeroice.490633.xyz/#article","dateModified":"2024-11-13T16:00:00.000Z","datePublished":"2024-11-13T16:00:00.000Z","description":"一个兴趣使然的个人小站，分享日常、技术教程、编程学习、玩机折腾等内容。","headline":"Pygame 学习笔记(1)","inLanguage":"zh-CN","thumbnailUrl":"https://zeroice.490633.xyz/images/2024/11/202411-65a30ca7.webp","@type":["Article","BlogPosting"],"author":{"@id":"https://zeroice.490633.xyz/#/schema/person/1"},"image":{"@id":"https://zeroice.490633.xyz/#/schema/image/2"},"isPartOf":{"@id":"https://zeroice.490633.xyz/#webpage"},"mainEntityOfPage":{"@id":"https://zeroice.490633.xyz/#webpage"},"publisher":{"@id":"https://zeroice.490633.xyz/#identity"}},{"@id":"https://zeroice.490633.xyz/#/schema/person/1","@type":"Person","name":"凌渡冰点","url":"https://zeroice.490633.xyz/about/"},{"@id":"https://zeroice.490633.xyz/#/schema/image/1","@type":"ImageObject","contentUrl":"https://freehost.490633.xyz/img/20260722153625185.avif","inLanguage":"zh-CN","url":"https://freehost.490633.xyz/img/20260722153625185.avif"},{"@id":"https://zeroice.490633.xyz/#/schema/image/2","@type":"ImageObject","contentUrl":"https://zeroice.490633.xyz/images/2024/11/202411-65a30ca7.webp","inLanguage":"zh-CN","url":"https://zeroice.490633.xyz/images/2024/11/202411-65a30ca7.webp"}]}</script>
+  
+</body>
+</html>

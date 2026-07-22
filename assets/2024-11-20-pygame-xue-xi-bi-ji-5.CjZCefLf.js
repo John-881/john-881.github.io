@@ -1,0 +1,53 @@
+import{Bt as e,Ht as t,Q as n,U as r,W as i,er as a,qn as o,qt as s,yn as c}from"./framework.BTQirQJB.js";import{t as l}from"./theme.B62cWSQb.js";import"./chunks/vue-i18n.Dk9JKhVE.js";import{a as u,i as d}from"./chunks/vue-router.SqDC-DRA.js";var f={__name:`2024-11-20-pygame-xue-xi-bi-ji-5`,setup(f,{expose:p}){let m=o(JSON.parse(`{"title":"Pygame学习笔记（5）","description":"","frontmatter":{"title":"Pygame学习笔记（5）","date":"2024-11-20","tags":["算法"]},"headers":[],"relativePath":"pages/posts/2024-11-20-pygame-xue-xi-bi-ji-5.md"}`)),h=u(),g=d(),_=Object.assign(g.meta.frontmatter||{},m.value?.frontmatter||{});return h.currentRoute.value.data=m.value,t(`valaxy:frontmatter`,_),globalThis.$frontmatter=_,p({frontmatter:{title:`Pygame学习笔记（5）`,date:`2024-11-20`,tags:[`算法`]}}),(t,o)=>{let u=l;return e(),i(u,{frontmatter:a(_)},{"main-content-md":c(()=>[...o[0]||=[r(`h2`,{id:`碰撞`,tabindex:`-1`},[n(`碰撞 `),r(`a`,{class:`header-anchor`,href:`#碰撞`,"aria-label":`Permalink to "碰撞"`},`​`)],-1),r(`p`,null,`为了监测碰撞，我们需要给能够碰撞的元素添加一个碰撞箱。我们不使用原来获得的矩形，毕竟那个真的是太大了。先给我们的player添加。`,-1),r(`div`,{class:`language-`},[r(`button`,{title:`Copy code`,class:`copy`}),r(`span`,{class:`lang`}),r(`pre`,{class:`shiki shiki-themes github-light github-dark vp-code`},[r(`code`,{"v-pre":``},[r(`span`,{class:`line`},[r(`span`,null,`self.hitbox = self.rect.copy().inflate((-126,-70))`)])])]),r(`button`,{class:`code-block-unfold-btn`})],-1),r(`p`,null,`在player的初始化器中，我们将原来的矩形复制并用inflate方法给它缩小一些作为我们的碰撞箱。`,-1),r(`p`,null,`接下来给我们的精灵组中的元素也添加上碰撞箱，需要注意的是，我们的碰撞箱应当使用另一个精灵组来存贮。`,-1),r(`div`,{class:`language-`},[r(`button`,{title:`Copy code`,class:`copy`}),r(`span`,{class:`lang`}),r(`pre`,{class:`shiki shiki-themes github-light github-dark vp-code`},[r(`code`,{"v-pre":``},[r(`span`,{class:`line`},[r(`span`,null,`        # sprite groups`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.all_sprites = CameraGroup()`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.collision_sprites = pygame.sprite.Group()`)])])]),r(`button`,{class:`code-block-unfold-btn`})],-1),r(`p`,null,`在level的初始化器中我们添加个新的精灵组来贮存每个精灵的碰撞箱。`,-1),r(`div`,{class:`language-`},[r(`button`,{title:`Copy code`,class:`copy`}),r(`span`,{class:`lang`}),r(`pre`,{class:`shiki shiki-themes github-light github-dark vp-code`},[r(`code`,{"v-pre":``},[r(`span`,{class:`line`},[r(`span`,null,`#Fence`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        for x,y,surf in tmx_data.get_layer_by_name('Fence').tiles():`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`            Generic((x * TILE_SIZE,y * TILE_SIZE),surf,[self.all_sprites,self.collision_sprites])`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`#trees`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        for obj in tmx_data.get_layer_by_name('Trees'):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`            Tree((obj.x,obj.y),obj.image,[self.all_sprites,self.collision_sprites],obj.name)`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`#wildflowers`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        for obj in tmx_data.get_layer_by_name('Decoration'):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`            WildFlower((obj.x,obj.y),obj.image,[self.all_sprites,self.collision_sprites])`)])])]),r(`button`,{class:`code-block-unfold-btn`})],-1),r(`p`,null,`同时将我们的栅栏等元素添加进碰撞箱精灵组中。`,-1),r(`div`,{class:`language-`},[r(`button`,{title:`Copy code`,class:`copy`}),r(`span`,{class:`lang`}),r(`pre`,{class:`shiki shiki-themes github-light github-dark vp-code`},[r(`code`,{"v-pre":``},[r(`span`,{class:`line`},[r(`span`,null,`class Generic(pygame.sprite.Sprite):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`    def __init__(self,pos,surf,groups, z = LAYERS['main']):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        super().__init__(groups)`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.image = surf`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.rect = self.image.get_rect(topleft = pos)`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.z = z`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.hitbox = self.rect.copy().inflate(-self.rect.width *0.2,-self.rect.height * 0.75)`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`class WildFlower(Generic):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`    def __init__(self,pos,surf,groups):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        super().__init__(pos,surf,groups)`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.hitbox = self.rect.copy().inflate(-20,-self.rect.height * 0.9)`)])])]),r(`button`,{class:`code-block-unfold-btn`})],-1),r(`p`,null,`回到sprite中，我们给Generic类添加碰撞箱这一属性，同样将其缩放至一个合理的大小。对于花我们希望它的碰撞箱应该更小点，所以我们重新定义它的碰撞箱。现在我们有了碰撞箱就可以监测碰撞了。回到player中，首先我们将碰撞箱传入到我们的player中并初始化它。`,-1),r(`div`,{class:`language-`},[r(`button`,{title:`Copy code`,class:`copy`}),r(`span`,{class:`lang`}),r(`pre`,{class:`shiki shiki-themes github-light github-dark vp-code`},[r(`code`,{"v-pre":``},[r(`span`,{class:`line`},[r(`span`,null,`def collision(self,direction):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        for sprite in self.collision_sprites.sprites():`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`            if hasattr(sprite,'hitbox'):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                if sprite.hitbox.colliderect(self.hitbox):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                    if direction == 'horizontal':`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                        if self.direction.x > 0: # moving right`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                            self.hitbox.right = sprite.hitbox.left`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                        if self.direction.x < 0:#moving left`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                            self.hitbox.left = sprite.hitbox.right`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                        self.rect.centerx = self.hitbox.centerx`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                        self.pos.x = self.hitbox.centerx`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                    if direction == "vertical":`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                        if self.direction.y > 0: # moving down`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                            self.hitbox.bottom = sprite.hitbox.top`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                        if self.direction.y < 0:#moving up`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                            self.hitbox.top = sprite.hitbox.bottom`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                        self.rect.centery = self.hitbox.centery`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                        self.pos.y = self.hitbox.centery`)])])]),r(`button`,{class:`code-block-unfold-btn`})],-1),r(`p`,null,`我们定义一个碰撞方法，hasattr方法用于检测对象是否存在指定属性，这里我们检测我们的精灵是否含有hitbox这一属性。然后用colliderect方法监测player与碰撞精灵的碰撞箱是否重合（需要指出的是，这里如果边缘重合的话是不算碰撞的），接下来我们需要确定碰撞发生的方向，如果发生了碰撞我们就将玩家给移动到碰撞箱外部，在根据碰撞箱的位置给玩家位置进行更新。`,-1),r(`div`,{class:`language-`},[r(`button`,{title:`Copy code`,class:`copy`}),r(`span`,{class:`lang`}),r(`pre`,{class:`shiki shiki-themes github-light github-dark vp-code`},[r(`code`,{"v-pre":``},[r(`span`,{class:`line`},[r(`span`,null,`        #horizontal movement`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.pos.x += self.direction.x * self.speed * dt`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.hitbox.centerx = round(self.pos.x)`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.rect.centerx = self.hitbox.centerx`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.collision('horizontal')`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        # vertical movement`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.pos.y += self.direction.y * self.speed * dt`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.hitbox.centery = round(self.pos.y)`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.rect.centery = self.hitbox.centery`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        self.collision('vertical')`)])])]),r(`button`,{class:`code-block-unfold-btn`})],-1),r(`p`,null,`在move方法中我们进行碰撞监测，如此以来，我们就可以实现碰撞效果了。`,-1),r(`div`,{class:`language-`},[r(`button`,{title:`Copy code`,class:`copy`}),r(`span`,{class:`lang`}),r(`pre`,{class:`shiki shiki-themes github-light github-dark vp-code`},[r(`code`,{"v-pre":``},[r(`span`,{class:`line`},[r(`span`,null,`        # Player`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        for obj in tmx_data.get_layer_by_name('Player'):`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`            if obj.name == 'Start':`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`                self.player = Player((obj.x,obj.y),self.all_sprites,self.collision_sprites)`)])])]),r(`button`,{class:`code-block-unfold-btn`})],-1),r(`p`,null,`在level中的setup方法中我们更改下对玩家出生地的刷新，在地图中已经定义了一个刷新点，我们只需要读取获得即可。`,-1),r(`div`,{class:`language-`},[r(`button`,{title:`Copy code`,class:`copy`}),r(`span`,{class:`lang`}),r(`pre`,{class:`shiki shiki-themes github-light github-dark vp-code`},[r(`code`,{"v-pre":``},[r(`span`,{class:`line`},[r(`span`,null,`    #collion tiles`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`    for x,y,surf in tmx_data.get_layer_by_name('Collision').tiles():`)]),n(`
+`),r(`span`,{class:`line`},[r(`span`,null,`        Generic((x*TILE_SIZE,y*TILE_SIZE),pygame.Surface((TILE_SIZE,TILE_SIZE)),self.collision_sprites)`)])])]),r(`button`,{class:`code-block-unfold-btn`})],-1),r(`p`,null,`同样的，在地图中我们已经有了空气墙，也可通过相同的方法将其绘制出来，并将其添加至碰撞精灵组中进行碰撞的监测。（在示例代码中，我们重新绘制了一个表面，如果你直接用surf也是可以实现相同的效果的，或许这里存在着什么我没有考虑到的东西）`,-1)]]),"main-header":c(()=>[s(t.$slots,`main-header`)]),"main-header-after":c(()=>[s(t.$slots,`main-header-after`)]),"main-nav":c(()=>[s(t.$slots,`main-nav`)]),"main-content-before":c(()=>[s(t.$slots,`main-content-before`)]),"main-content":c(()=>[s(t.$slots,`main-content`)]),"main-content-after":c(()=>[s(t.$slots,`main-content-after`)]),"main-nav-before":c(()=>[s(t.$slots,`main-nav-before`)]),"main-nav-after":c(()=>[s(t.$slots,`main-nav-after`)]),comment:c(()=>[s(t.$slots,`comment`)]),footer:c(()=>[s(t.$slots,`footer`)]),aside:c(()=>[s(t.$slots,`aside`)]),"aside-custom":c(()=>[s(t.$slots,`aside-custom`)]),default:c(()=>[s(t.$slots,`default`)]),_:3},8,[`frontmatter`])}}};export{f as default};

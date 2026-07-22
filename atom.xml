@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://zeroice.490633.xyz/</id>
+    <title>凌渡冰点的小博客</title>
+    <updated>2026-07-22T15:48:20.012Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>凌渡冰点</name>
+        <email>zeroice007@126.com</email>
+        <uri>/about/</uri>
+    </author>
+    <link rel="alternate" href="https://zeroice.490633.xyz/"/>
+    <link rel="self" href="https://zeroice.490633.xyz/atom.xml"/>
+    <subtitle>一个兴趣使然的个人小站，分享日常、技术教程、编程学习、玩机折腾等内容。</subtitle>
+    <logo>https://freehost.490633.xyz/img/20260722153625185.avif</logo>
+    <icon>https://zeroice.490633.xyz/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2026 © 凌渡冰点</rights>
+    <entry>
+        <title type="html"><![CDATA[记一次immortalwrt的刷机和优化（1）]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1"/>
+        <updated>2026-07-12T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>这几天正好在家里，于是我就捣鼓了一下家里的路由器，我之前看网上推荐买了一个贝锐蒲公英 X3A，这个型号的路由器据说原系统也是根据 openwrt 定制而来的，加上了一些云管理的功能。</p>
+<p>但是这个系统</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1" target="_blank">https://zeroice.490633.xyz/posts/2026-07-12-ji-yi-ci-immortalwrt-de-shua-ji-he-you-hua-1</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-07-12T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MySQL8.4双主复制及服务器文件同步宕机切换]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan"/>
+        <updated>2026-05-26T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>这是一份极其详尽的 <strong>MySQL 8.4 双主复制 + WireGuard + Syncthing + Nginx 高可用架构配置手册</strong>，已整合所有踩坑经验、关键配置文件和命令。</p>
+<hr>
+<h1></h1>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan" target="_blank">https://zeroice.490633.xyz/posts/2026-05-26-mysql8-4-shuang-zhu-fu-zhi-ji-fu-wu-qi-wen-jian-tong-bu-dang-ji-qie-huan</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-05-26T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[垃圾佬日常（解决远控软件无声音）]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin"/>
+        <updated>2026-05-05T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>作为垃圾佬，我也捡了一台旧主机来折腾，我分别找来了 <strong>ASUS P8H61-M LX3 R2.0 主板</strong>、<strong>intel i5-2500 CPU</strong>、**1333Mhz 8GB （4+4GB 双</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin" target="_blank">https://zeroice.490633.xyz/posts/2026-05-05-la-ji-lao-ri-chang-jie-jue-yuan-kong-ruan-jian-wu-sheng-yin</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-05-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Valaxy——一个可爱的静态博客框架]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia"/>
+        <updated>2026-05-05T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>在网上冲浪总是能找到很多有意思的东西呢，这就找到了一个“静态博客框架”，之前我尝试过使用hexo，只需要用nodejs构建一下，只要会写markdown，根据文档写一下配置文件，就能轻松搭建起一个不</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia" target="_blank">https://zeroice.490633.xyz/posts/2026-05-05-valaxy-yi-ge-ke-ai-de-jing-tai-bo-ke-kuang-jia</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-05-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[对于LXC环境1Panel PHP容器无法编译问题的解决]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue"/>
+        <updated>2026-04-08T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h1>尝试解决</h1>
+<p>我想使用 1Panel 部署 LNMP 套件，对于 Openresty,MySQL,Redis 来说比较简单，部署时在面板上手动修改 <code>docker-compose.yml</code> 中的</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue" target="_blank">https://zeroice.490633.xyz/posts/2026-04-08-dui-yu-lxc-huan-jing-1panel-php-rong-qi-wu-fa-bian-yi-wen-ti-de-jie-jue</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-04-08T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Galgame杂谈（1）——《苍之彼方的四重奏》]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou"/>
+        <updated>2026-03-16T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>#苍之彼方的四重奏</p>
+<p>今天重温《苍之彼方的四重奏》的BGM，内心忽然涌起一股久违的动力。曾经，我也像许多人那样，浑浑噩噩地沉浸在二次元的世界里，把那些美好的故事当作逃避现实的港湾。但昨天，我似乎终</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou" target="_blank">https://zeroice.490633.xyz/posts/2026-03-16-galgame-za-tan-1-cang-zhi-bi-fang-de-si-chong-zou</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-03-16T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 学习日记(1)]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-03-16-python-xue-xi-ri-ji-1</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-03-16-python-xue-xi-ri-ji-1"/>
+        <updated>2026-03-16T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h1><strong>Python 学习</strong></h1>
+<p>Python&quot; 优雅 &quot;，&quot; 明确 &quot;，&quot; 简单 &quot;</p>
+<h2>Python 编程前期准备</h2>
+<p>Python 运行环境 (解释器，Windows 下):Python3.</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-03-16-python-xue-xi-ri-ji-1" target="_blank">https://zeroice.490633.xyz/posts/2026-03-16-python-xue-xi-ri-ji-1</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-03-16T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux中清空文件内容的方法]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa"/>
+        <updated>2026-03-15T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>在使用Linux的过程中，我经常有需要清空一个文件的内容的情况，比如日志文件占用过大，或者systemd服务文件重写，需要用命令清空，我逐渐在学习过程中掌握了一些方法来应对这些情况。在这里记录一下防</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa" target="_blank">https://zeroice.490633.xyz/posts/2026-03-15-linux-zhong-qing-kong-wen-jian-nei-rong-de-fang-fa</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-03-15T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[盘点一下2025年和之前的相关经历以及博客的由来]]></title>
+        <id>https://zeroice.490633.xyz/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai</id>
+        <link href="https://zeroice.490633.xyz/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai"/>
+        <updated>2026-01-02T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>引子</h2>
+<p>2025年是精彩的一年啊，短短的一年竟然可以发生那么多的事情，我经常感慨时间不够用。这一年我也不断在自己感兴趣的领域上精进，做出了和以前不一样的成果，在一些问题上理解的更深了。</p>
+<h2></h2>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai" target="_blank">https://zeroice.490633.xyz/posts/2026-01-02-pan-dian-yi-xia-2025-nian-he-zhi-qian-de-xiang-guan-jing-li-yi-ji-bo-ke-de-you-lai</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2026-01-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python-教学记录]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-10-29-python-jiao-xue-ji-lu</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-10-29-python-jiao-xue-ji-lu"/>
+        <updated>2025-10-29T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>本文主题：python列表，元组，字典与循环体系。<br>
+时间：2025/10/29，第一次修改于2025/10/30，完善循环语句部分。</p>
+<h2>列表</h2>
+<h3>列表的生成</h3>
+<p>基础理论不过多阐述，知</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-10-29-python-jiao-xue-ji-lu" target="_blank">https://zeroice.490633.xyz/posts/2025-10-29-python-jiao-xue-ji-lu</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-10-29T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[记一次wordpress的优化（指南]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan"/>
+        <updated>2025-09-10T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>在已经入坑了wordpress这么久的时间里，我也从开始的从手机ksweb部署网站，到玩客云部署casaos部署docker手动搭建LNMP，再到后来的1Panel部署docker集成openres</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan" target="_blank">https://zeroice.490633.xyz/posts/2025-09-10-ji-yi-ci-wordpress-de-you-hua-zhi-nan</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-09-10T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[玩客云（Onecloud）折腾记]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji"/>
+        <updated>2025-03-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>前记</h2>
+<p>我一直想拥有一个属于自己的个人服务器，看到在B站上很多人用玩客云刷Armbian把玩客云改造成个人服务器，于是攒钱买下来了一台玩客云，并且着手进行改造，先后把玩客云刷过Openwrt&amp;</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji" target="_blank">https://zeroice.490633.xyz/posts/2025-03-11-wan-ke-yun-onecloud-zhe-teng-ji</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-03-11T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[提升搜索效率的技巧]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao"/>
+        <updated>2025-02-25T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>在搜索中使用关键词搜索代替用一段自然语言搜索，需要使用者自行将语言精炼成关键词。</p>
+<h2><strong>使用一些特殊符号帮助更快定位搜索结果</strong></h2>
+<p>例如： 【+】：查找包含前面搜索词和带「+」号的所有关键词的</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao" target="_blank">https://zeroice.490633.xyz/posts/2025-02-25-ti-sheng-sou-suo-xiao-lv-de-ji-qiao</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-02-25T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[雇用问题]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-01-31-gu-yong-wen-ti</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-01-31-gu-yong-wen-ti"/>
+        <updated>2025-01-31T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>在新的一年里，你摇身一变成为了一个big boss，接下来你要雇佣一堆手下来给你干活，但是有了好的还会想要更好的，于是乎，你决定每天都进行面试，一旦面试到了新的更好的员工就把原来的员工换掉，为此你特</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-01-31-gu-yong-wen-ti" target="_blank">https://zeroice.490633.xyz/posts/2025-01-31-gu-yong-wen-ti</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-01-31T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[分治思想的运用]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong"/>
+        <updated>2025-01-16T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>写在开始</h2>
+<p>在本文我们将接触一些运用了分治思想的算法，进一步加深对分治法的理解，同时计算一些递归式。值得注意的是，分治思想在我们之后的学习中和生活的方方面面都有非常广泛的运用，还是很值得掌握的</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong" target="_blank">https://zeroice.490633.xyz/posts/2025-01-16-fen-zhi-si-xiang-de-yun-yong</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-01-16T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[分析分治法]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-01-15-fen-xi-fen-zhi-fa</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-01-15-fen-xi-fen-zhi-fa"/>
+        <updated>2025-01-15T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>经过了昨天的一小波插入算法的分析，相信你已经对计算时间复杂度有了一定的理解，接下来我们稍稍深入一点，开始研究下分治法下的算法该如何计算他的时间复杂度，首先我们从merge-sort算法开始。</p>
+<p>``</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-01-15-fen-xi-fen-zhi-fa" target="_blank">https://zeroice.490633.xyz/posts/2025-01-15-fen-xi-fen-zhi-fa</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-01-15T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[分析算法]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-01-14-fen-xi-suan-fa</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-01-14-fen-xi-suan-fa"/>
+        <updated>2025-01-14T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>说在开始</h2>
+<p>在本文中，我们将探讨下所谓的算法复杂到底是个什么玩意，以及各种奇奇怪怪的表示符号。</p>
+<h2>分析insertion sort算法</h2>
+<p>让我们从我们最早接触的插入算法开始，这里，我们不</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-01-14-fen-xi-suan-fa" target="_blank">https://zeroice.490633.xyz/posts/2025-01-14-fen-xi-suan-fa</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-01-14T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最大子数组问题]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti"/>
+        <updated>2025-01-11T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>本文我们将探讨下如何寻找一个数组的最大子数组。也就是找到其中的一个子数组，该子数组中的全部元素之和最大。前提是这个数组里面的数据有正有负，这样才有价值，不然全是正的很明显就是原本的那个数组。例如A=</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti" target="_blank">https://zeroice.490633.xyz/posts/2025-01-11-zui-da-zi-shu-zu-wen-ti</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-01-11T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[算法学习笔记（1）]]></title>
+        <id>https://zeroice.490633.xyz/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1</id>
+        <link href="https://zeroice.490633.xyz/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1"/>
+        <updated>2025-01-09T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>排序问题</h2>
+<p>直接开门见山，过多的废话不多说，当我们拿到一堆扑克牌的时候，如何将它从小到大依次排好，这就是我们要解决的问题。我们有两种方法，下文我们挨个阐述。</p>
+<h2>插入算法</h2>
+<p>第一种算法，插</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1" target="_blank">https://zeroice.490633.xyz/posts/2025-01-09-suan-fa-xue-xi-bi-ji-1</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2025-01-09T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Numpy库学习]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-12-25-numpy-ku-xue-xi</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-12-25-numpy-ku-xue-xi"/>
+        <updated>2024-12-25T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>安装，请在命令行中输入以下代码用于安装Numpy库，安装完后我们便可开始学习了。</p>
+<pre><code>pip install Numpy
+</code></pre>
+<h2>数组</h2>
+<p>在python中我们输入</p>
+<pre><code>impor</code></pre>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-12-25-numpy-ku-xue-xi" target="_blank">https://zeroice.490633.xyz/posts/2024-12-25-numpy-ku-xue-xi</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-12-25T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python学习日记（0）]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-12-25-python-xue-xi-ri-ji-0</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-12-25-python-xue-xi-ri-ji-0"/>
+        <updated>2024-12-25T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>学习了一段时间的Python了，现在基本上把基础部分学完了，开始进入爬虫的学习，不过因为对于库函数不够熟练，还是啃起来有点困难。</p>
+<p>我们先来回顾一下Python的基础</p>
+<h2>基础语法</h2>
+<p>Pytho</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-12-25-python-xue-xi-ri-ji-0" target="_blank">https://zeroice.490633.xyz/posts/2024-12-25-python-xue-xi-ri-ji-0</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-12-25T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[机器学习——逻辑回归项目（1）]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1"/>
+        <updated>2024-12-07T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>数据分析与预处理</h2>
+<p>当我们拿到一堆数据的时候，首先应该做的是对其进行分析与处理。</p>
+<pre><code>import pandas as pd
+data = pd.read_csv(&quot;creditcard</code></pre>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1" target="_blank">https://zeroice.490633.xyz/posts/2024-12-07-ji-qi-xue-xi-luo-ji-hui-gui-xiang-mu-1</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-12-07T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pygame学习笔记（4）]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-11-20-pygame-xue-xi-bi-ji-4</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-11-20-pygame-xue-xi-bi-ji-4"/>
+        <updated>2024-11-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>给场景添加一些别的地图元素</h2>
+<p>这里视频中用到了pytmx，即地图绘制器，这里我们直接使用作者绘制好的地图。首先要确保电脑中安装了pytmx库。随后回到level.py中，将库导入。</p>
+<pre><code></code></pre>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-11-20-pygame-xue-xi-bi-ji-4" target="_blank">https://zeroice.490633.xyz/posts/2024-11-20-pygame-xue-xi-bi-ji-4</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-11-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pygame学习笔记（5）]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-11-20-pygame-xue-xi-bi-ji-5</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-11-20-pygame-xue-xi-bi-ji-5"/>
+        <updated>2024-11-20T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>碰撞</h2>
+<p>为了监测碰撞，我们需要给能够碰撞的元素添加一个碰撞箱。我们不使用原来获得的矩形，毕竟那个真的是太大了。先给我们的player添加。</p>
+<pre><code>self.hitbox = self.re</code></pre>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-11-20-pygame-xue-xi-bi-ji-5" target="_blank">https://zeroice.490633.xyz/posts/2024-11-20-pygame-xue-xi-bi-ji-5</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-11-20T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pygame学习笔记(3)]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-11-17-pygame-xue-xi-bi-ji-3</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-11-17-pygame-xue-xi-bi-ji-3"/>
+        <updated>2024-11-17T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>让角色使用道具</h2>
+<p>在输入控制方法中添加一个空格键监测，让我们在按下空格键的时候可以播放玩家使用工具的动画。</p>
+<pre><code>if keys[pygame.K_SPACE]:
+    self.too</code></pre>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-11-17-pygame-xue-xi-bi-ji-3" target="_blank">https://zeroice.490633.xyz/posts/2024-11-17-pygame-xue-xi-bi-ji-3</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-11-17T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pygame学习笔记(2)]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-11-16-pygame-xue-xi-bi-ji-2</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-11-16-pygame-xue-xi-bi-ji-2"/>
+        <updated>2024-11-16T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>创建一个属于自己的角色吧</h2>
+<p>在昨天已经我们已经创造了一个可移动的小绿色方块，今天让我们更进一步。</p>
+<p><img src="https://zeroice.490633.xyz/images/2024/11/202411-176c6640.webp" alt="">![](/</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-11-16-pygame-xue-xi-bi-ji-2" target="_blank">https://zeroice.490633.xyz/posts/2024-11-16-pygame-xue-xi-bi-ji-2</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-11-16T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pygame 学习笔记(1)]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-11-14-pygame-xue-xi-bi-ji-1</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-11-14-pygame-xue-xi-bi-ji-1"/>
+        <updated>2024-11-14T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>Pygame的介绍</h2>
+<p>bing一下你就知道，这里就不过多阐述了。</p>
+<h2>Pygame的最基础框架</h2>
+<p><a href="http://main.py">main.py</a></p>
+<pre><code>import pygame, sys
+from settings</code></pre>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-11-14-pygame-xue-xi-bi-ji-1" target="_blank">https://zeroice.490633.xyz/posts/2024-11-14-pygame-xue-xi-bi-ji-1</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-11-14T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C#与python中的属性]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-11-06-c-yu-python-zhong-de-shu-xing</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-11-06-c-yu-python-zhong-de-shu-xing"/>
+        <updated>2024-11-06T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>C#中的属性</h2>
+<p>在C#中，属性是用于封装保护字段用的，它有访问器与设置器，当你在VS中输入prop之后可按tab按键快速创建一个属性。</p>
+<p>![](/images/2024/11/202411-</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-11-06-c-yu-python-zhong-de-shu-xing" target="_blank">https://zeroice.490633.xyz/posts/2024-11-06-c-yu-python-zhong-de-shu-xing</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-11-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[无题]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-11-05-wu-ti</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-11-05-wu-ti"/>
+        <updated>2024-11-05T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>面对对象？（我没有对象啊）</h2>
+<p>常常听闻这个编程语言，这个编程语言是一种面对对象的编程语言，可是学了半天还是找不到对象。（小声：看来程序猿注定一辈子只能与代码为伴吧）</p>
+<p>在我学习C++++的时候</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-11-05-wu-ti" target="_blank">https://zeroice.490633.xyz/posts/2024-11-05-wu-ti</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[蒲公英X3A救砖指南]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan"/>
+        <updated>2024-10-27T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>新手小白的个人经验</strong></p>
+<h2><strong>前言</strong></h2>
+<p>在给这个路由器救砖之前，我还曾经捣鼓过一台小米路由器3C，不过限于当时的技术和条件，没有设备和能力不足，最后刷成砖了，不过幸好是没有在使用的</p>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan" target="_blank">https://zeroice.490633.xyz/posts/2024-10-27-pu-gong-ying-x3a-jiu-zhuan-zhi-nan</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-10-27T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu server]]></title>
+        <id>https://zeroice.490633.xyz/posts/2024-10-27-ubuntu-server</id>
+        <link href="https://zeroice.490633.xyz/posts/2024-10-27-ubuntu-server"/>
+        <updated>2024-10-27T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>经历种种艰辛，终于把Ubuntu server 安装好了，在安装过程中我通过以下流程初步部署好了服务器</p>
+<h2>使用root用户登录ssh终端</h2>
+<pre><code>sudo passwd root
+sudo </code></pre>
+<br/><p>访问 <a href="https://zeroice.490633.xyz/posts/2024-10-27-ubuntu-server" target="_blank">https://zeroice.490633.xyz/posts/2024-10-27-ubuntu-server</a> 阅读全文。</p>]]></content>
+        <author>
+            <name>凌渡冰点</name>
+            <email>zeroice007@126.com</email>
+            <uri>/about/</uri>
+        </author>
+        <published>2024-10-27T00:00:00.000Z</published>
+    </entry>
+</feed>
