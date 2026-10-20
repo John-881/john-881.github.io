@@ -1,35 +1,44 @@
-# 网站迁移协议 v0.1_DSH
+# 凌渡冰点的博客（Valaxy）
 
-## 1. 协议概述
+从 WordPress 迁移而来的静态博客，基于 [Valaxy](https://valaxy.site/zh/) 1.2.0 + 主题 [Yun](https://valaxy.site/zh/themes/yun)，
+评论使用 Waline（Vercel + Neon PostgreSQL）。原始迁移协议见 [docs/migration-protocol.md](docs/migration-protocol.md)。
 
-本协议定义了网站迁移的基本原则、流程，旨在确保迁移过程的顺利进行，减少潜在风险，并保障数据的完整性和安全性。迁移涉及的各数据文件应遵守本协议的规定，确保迁移工作的高效和透明。
+## 常用命令
 
-## 2. 协议内容
+```bash
+pnpm install          # 安装依赖
+pnpm dev              # 本地预览，默认 http://localhost:4859/
+pnpm build            # 生成静态站点到 dist/（valaxy build --ssg）
+pnpm serve            # 预览 dist 产物
+pnpm rss              # 单独生成 RSS
+```
 
-### 2.1 协议主体
+写作：文章放 `pages/posts/*.md`，说说放 `pages/moments/YYYY-MM-DD-<标题>.md`。
+文章路由是 `/posts/<文件名>`（中文文件名即是中文 URL）。
 
-本协议的双方为网站迁移的发起方和接收方，DSH应按照本协议的规定，完成网站迁移工作。
-我正在将博客从 WordPress 迁移到 Valaxy。请帮我完成以下工作：
+## 目录
 
-1. 将 WordPress 导出的文章（XML/HTML）转换为 Markdown 文件，放入 Valaxy pages/posts 目录
-2. 为每篇文章生成正确的 Valaxy frontmatter（title、date、tags、categories）
-3. 创建 Valaxy 的 site.config.ts 和 valaxy.config.ts 配置文件
-4. 迁移图片和媒体文件到 public 目录，并更新文章中的引用路径
-5. 将 WordPress 的 HTML 内容转换为 Markdown 格式
+| 路径 | 说明 |
+| --- | --- |
+| `pages/posts/` | 31 篇迁移过来的文章 |
+| `pages/moments/` | 7 条说说（valaxy-addon-moments） |
+| `pages/` | 首页之外的自定义页面：about、links、comment、services、subscribe、archives、categories、tags |
+| `public/images/` | 455 个媒体文件，按 `<年>/<月>` 存放，对应转义前的 `/wp-content/uploads/` |
+| `scripts/` | 一次性迁移脚本（可重复执行、幂等），迁移完成后日常写作不需要它们 |
+| `waline-import/` | 评论导入产物（SQL / CSV）+ 官方建表脚本 |
+| `docs/` | 迁移说明与评论系统接入文档 |
+| `backup/` | 原始 WordPress 备份包（未纳入版本控制） |
+| `.work/` | 迁移过程中的勘察报告与验收脚本（未纳入版本控制） |
 
-### 2.2 协议目的
+## 上线前需要你自己做的三件事
 
-发起方：本目录下的"D:\Documents\Dev\zeroice-blog\website_blog.490633.xyz_20261019043000gycib.tar.gz"原件属于Wordpress体系，但是其过于臃肿，且大量占用VPS资源，随时间推移空间占用不断增加，我方逐渐不堪重负，需要耗费大量精力维护服务器，且资金负担较大（虽然因此学习了许多运维知识，也算是学有所获）；因此决定迁移到Valaxy架构，一种基于 Vue 与 Vite，用 Markdown 专注写作，自由定制属于你的博客的静态网站生成器。接收方：Valaxy框架
+1. **部署 Waline 服务端**：按 [docs/waline-setup.md](docs/waline-setup.md) 在 Vercel 建 Waline + Neon 数据库，导入 `waline-import/waline-comments.sql`，拿到服务地址后填进 `valaxy.config.ts` 的 `addonWaline({ serverURL })`（现在是占位 `https://your-waline.vercel.app`）。
+2. **改站点域名**：`site.config.ts` 的 `url` 现在是旧域名 `https://blog.490633.xyz`（带 TODO 注释），换成你最终使用的域名，否则 RSS 与 sitemap 里的绝对链接是错的。
+3. **部署静态站**：Vercel（Framework Preset 选 Other，Output Directory 填 `dist`，`vercel.json` 已备好）或任意静态托管。
 
-### 2.3 协议流程
+作者头像、简介、ICP 备案号也都留了 TODO，位置见 `site.config.ts` 与 `valaxy.config.ts`。
 
-1. 发起方提供网站迁移所需的原始数据，包括网站源代码、数据库备份等。
-2. 接收方确认接收数据，并制定迁移计划，包括迁移时间、迁移方式等。
-3. 发起方按照接收方的迁移计划，进行网站迁移工作，包括数据迁移、配置迁移等。
-4. 接收方完成网站迁移后，对迁移结果进行验证，确保网站正常运行。
-5. 发起方对迁移结果进行确认，对迁移工作用Token进行支付(^v^)。
+## 迁移情况
 
-### 3. 注意事项
-
-这是一个跨架构迁移项目，要注意兼容性，从动态网站转向静态网站，数据尽量完整迁移，评论区保留，我打算用Valaxy的Waline评论系统来实现评论功能,为此我查找了一些方案，最终选定在Vercel部署一个Waline评论系统，后续请编写文档指导我接入评论系统，并且评论数据也一并迁移过来，确保评论数据的完整性和可访问性。还有原本的Wordpress网站的文章、页面、分类、标签等数据也需要完整迁移到Valaxy架构下，确保网站内容的完整性和可访问性。我会提供网站备份和数据库备份，届时请你协助我完成迁移工作，确保网站在Valaxy架构下正常运行，并且评论系统能够正常使用。
-Valaxy文档网站：<https://valaxy.site/zh/>
+31 篇文章 / 5 个页面 / 7 条说说 / 7 个分类 / 22 个标签 / 7 条友链 / 53 条评论 / 455 个媒体文件已全部落地，
+未迁移项与已知降级逐项记录在 [docs/migration-notes.md](docs/migration-notes.md) 与 `.work/migration-report.md`。

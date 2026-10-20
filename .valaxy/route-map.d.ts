@@ -80,9 +80,72 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/comment/': RouteRecordInfo<
+      '/comment/',
+      '/comment',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/links/': RouteRecordInfo<
       '/links/',
       '/links',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/moments/': RouteRecordInfo<
+      '/moments/',
+      '/moments',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/moments/2025-09-01-累了困了': RouteRecordInfo<
+      '/moments/2025-09-01-累了困了',
+      '/moments/2025-09-01-%E7%B4%AF%E4%BA%86%E5%9B%B0%E4%BA%86',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/moments/2025-09-06-将要返校': RouteRecordInfo<
+      '/moments/2025-09-06-将要返校',
+      '/moments/2025-09-06-%E5%B0%86%E8%A6%81%E8%BF%94%E6%A0%A1',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/moments/2025-10-12-聊聊最近': RouteRecordInfo<
+      '/moments/2025-10-12-聊聊最近',
+      '/moments/2025-10-12-%E8%81%8A%E8%81%8A%E6%9C%80%E8%BF%91',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/moments/2025-11-14-测试一下Nginx Helper': RouteRecordInfo<
+      '/moments/2025-11-14-测试一下Nginx Helper',
+      '/moments/2025-11-14-%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8BNginx%20Helper',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/moments/2026-01-03-大改造！': RouteRecordInfo<
+      '/moments/2026-01-03-大改造！',
+      '/moments/2026-01-03-%E5%A4%A7%E6%94%B9%E9%80%A0%EF%BC%81',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/moments/2026-01-14-最近在研究的东西': RouteRecordInfo<
+      '/moments/2026-01-14-最近在研究的东西',
+      '/moments/2026-01-14-%E6%9C%80%E8%BF%91%E5%9C%A8%E7%A0%94%E7%A9%B6%E7%9A%84%E4%B8%9C%E8%A5%BF',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/moments/2026-03-25-出了点问题，但问题不大': RouteRecordInfo<
+      '/moments/2026-03-25-出了点问题，但问题不大',
+      '/moments/2026-03-25-%E5%87%BA%E4%BA%86%E7%82%B9%E9%97%AE%E9%A2%98%EF%BC%8C%E4%BD%86%E9%97%AE%E9%A2%98%E4%B8%8D%E5%A4%A7',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -101,9 +164,233 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/posts/hello-valaxy': RouteRecordInfo<
-      '/posts/hello-valaxy',
-      '/posts/hello-valaxy',
+    '/posts/分析分治法': RouteRecordInfo<
+      '/posts/分析分治法',
+      '/posts/%E5%88%86%E6%9E%90%E5%88%86%E6%B2%BB%E6%B3%95',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/垃圾佬日常（解决远控软件无声音）': RouteRecordInfo<
+      '/posts/垃圾佬日常（解决远控软件无声音）',
+      '/posts/%E5%9E%83%E5%9C%BE%E4%BD%AC%E6%97%A5%E5%B8%B8%EF%BC%88%E8%A7%A3%E5%86%B3%E8%BF%9C%E6%8E%A7%E8%BD%AF%E4%BB%B6%E6%97%A0%E5%A3%B0%E9%9F%B3%EF%BC%89',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/对于lxc环境1panel-php容器无法编译问题的解决': RouteRecordInfo<
+      '/posts/对于lxc环境1panel-php容器无法编译问题的解决',
+      '/posts/%E5%AF%B9%E4%BA%8Elxc%E7%8E%AF%E5%A2%831panel-php%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E7%BC%96%E8%AF%91%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/提升搜索效率的技巧': RouteRecordInfo<
+      '/posts/提升搜索效率的技巧',
+      '/posts/%E6%8F%90%E5%8D%87%E6%90%9C%E7%B4%A2%E6%95%88%E7%8E%87%E7%9A%84%E6%8A%80%E5%B7%A7',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/最大子数组问题': RouteRecordInfo<
+      '/posts/最大子数组问题',
+      '/posts/%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E9%97%AE%E9%A2%98',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/机器学习-逻辑回归项目（1）': RouteRecordInfo<
+      '/posts/机器学习-逻辑回归项目（1）',
+      '/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/玩客云（onecloud）折腾记': RouteRecordInfo<
+      '/posts/玩客云（onecloud）折腾记',
+      '/posts/%E7%8E%A9%E5%AE%A2%E4%BA%91%EF%BC%88onecloud%EF%BC%89%E6%8A%98%E8%85%BE%E8%AE%B0',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/盘点一下2025年和之前的相关经历以及博客的由来': RouteRecordInfo<
+      '/posts/盘点一下2025年和之前的相关经历以及博客的由来',
+      '/posts/%E7%9B%98%E7%82%B9%E4%B8%80%E4%B8%8B2025%E5%B9%B4%E5%92%8C%E4%B9%8B%E5%89%8D%E7%9A%84%E7%9B%B8%E5%85%B3%E7%BB%8F%E5%8E%86%E4%BB%A5%E5%8F%8A%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%94%B1%E6%9D%A5',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/算法学习笔记（1）': RouteRecordInfo<
+      '/posts/算法学习笔记（1）',
+      '/posts/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/蒲公英x3a救砖指南': RouteRecordInfo<
+      '/posts/蒲公英x3a救砖指南',
+      '/posts/%E8%92%B2%E5%85%AC%E8%8B%B1x3a%E6%95%91%E7%A0%96%E6%8C%87%E5%8D%97',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/记一次immortalwrt的刷机和优化（1）': RouteRecordInfo<
+      '/posts/记一次immortalwrt的刷机和优化（1）',
+      '/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1immortalwrt%E7%9A%84%E5%88%B7%E6%9C%BA%E5%92%8C%E4%BC%98%E5%8C%96%EF%BC%881%EF%BC%89',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/记一次wordpress的优化（指南': RouteRecordInfo<
+      '/posts/记一次wordpress的优化（指南',
+      '/posts/%E8%AE%B0%E4%B8%80%E6%AC%A1wordpress%E7%9A%84%E4%BC%98%E5%8C%96%EF%BC%88%E6%8C%87%E5%8D%97',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/雇用问题': RouteRecordInfo<
+      '/posts/雇用问题',
+      '/posts/%E9%9B%87%E7%94%A8%E9%97%AE%E9%A2%98',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/analysis-algorithm': RouteRecordInfo<
+      '/posts/analysis-algorithm',
+      '/posts/analysis-algorithm',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/c与python中的属性': RouteRecordInfo<
+      '/posts/c与python中的属性',
+      '/posts/c%E4%B8%8Epython%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/galgame杂谈（1）-《苍之彼方的四重奏》': RouteRecordInfo<
+      '/posts/galgame杂谈（1）-《苍之彼方的四重奏》',
+      '/posts/galgame%E6%9D%82%E8%B0%88%EF%BC%881%EF%BC%89-%E3%80%8A%E8%8B%8D%E4%B9%8B%E5%BD%BC%E6%96%B9%E7%9A%84%E5%9B%9B%E9%87%8D%E5%A5%8F%E3%80%8B',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/learning-the-numpy-library': RouteRecordInfo<
+      '/posts/learning-the-numpy-library',
+      '/posts/learning-the-numpy-library',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/linux中清空文件内容的方法': RouteRecordInfo<
+      '/posts/linux中清空文件内容的方法',
+      '/posts/linux%E4%B8%AD%E6%B8%85%E7%A9%BA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E7%9A%84%E6%96%B9%E6%B3%95',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/mysql8-4双主复制及服务器文件同步宕机切换': RouteRecordInfo<
+      '/posts/mysql8-4双主复制及服务器文件同步宕机切换',
+      '/posts/mysql8-4%E5%8F%8C%E4%B8%BB%E5%A4%8D%E5%88%B6%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%AE%95%E6%9C%BA%E5%88%87%E6%8D%A2',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/no-title': RouteRecordInfo<
+      '/posts/no-title',
+      '/posts/no-title',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/pygame-学习笔记1': RouteRecordInfo<
+      '/posts/pygame-学习笔记1',
+      '/posts/pygame-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/pygame学习笔记（4）': RouteRecordInfo<
+      '/posts/pygame学习笔记（4）',
+      '/posts/pygame%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%884%EF%BC%89',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/pygame学习笔记（5）': RouteRecordInfo<
+      '/posts/pygame学习笔记（5）',
+      '/posts/pygame%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/pygame学习笔记2': RouteRecordInfo<
+      '/posts/pygame学习笔记2',
+      '/posts/pygame%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/pygame学习笔记3': RouteRecordInfo<
+      '/posts/pygame学习笔记3',
+      '/posts/pygame%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/python-学习日记1': RouteRecordInfo<
+      '/posts/python-学习日记1',
+      '/posts/python-%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B01',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/python-教学记录': RouteRecordInfo<
+      '/posts/python-教学记录',
+      '/posts/python-%E6%95%99%E5%AD%A6%E8%AE%B0%E5%BD%95',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/python0': RouteRecordInfo<
+      '/posts/python0',
+      '/posts/python0',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/the-application-of-the-divide-and-conquer-approach': RouteRecordInfo<
+      '/posts/the-application-of-the-divide-and-conquer-approach',
+      '/posts/the-application-of-the-divide-and-conquer-approach',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/ubuntu-server': RouteRecordInfo<
+      '/posts/ubuntu-server',
+      '/posts/ubuntu-server',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/posts/valaxy-一个可爱的静态博客框架': RouteRecordInfo<
+      '/posts/valaxy-一个可爱的静态博客框架',
+      '/posts/valaxy-%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%88%B1%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/services/': RouteRecordInfo<
+      '/services/',
+      '/services',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
+    '/subscribe/': RouteRecordInfo<
+      '/subscribe/',
+      '/subscribe',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -184,9 +471,81 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
+    'pages/comment/index.md': {
+      routes:
+        | '/comment/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
     'pages/links/index.md': {
       routes:
         | '/links/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'node_modules/.pnpm/valaxy-addon-moments@0.1.4__d6f34c1ffe7351a9bfca6ca6d9313fd6/node_modules/valaxy-addon-moments/pages/moments/index.vue': {
+      routes:
+        | '/moments/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/moments/2025-09-01-累了困了.md': {
+      routes:
+        | '/moments/2025-09-01-累了困了'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/moments/2025-09-06-将要返校.md': {
+      routes:
+        | '/moments/2025-09-06-将要返校'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/moments/2025-10-12-聊聊最近.md': {
+      routes:
+        | '/moments/2025-10-12-聊聊最近'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/moments/2025-11-14-测试一下Nginx Helper.md': {
+      routes:
+        | '/moments/2025-11-14-测试一下Nginx Helper'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/moments/2026-01-03-大改造！.md': {
+      routes:
+        | '/moments/2026-01-03-大改造！'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/moments/2026-01-14-最近在研究的东西.md': {
+      routes:
+        | '/moments/2026-01-14-最近在研究的东西'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/moments/2026-03-25-出了点问题，但问题不大.md': {
+      routes:
+        | '/moments/2026-03-25-出了点问题，但问题不大'
       views:
         | never
       pathParamNames:
@@ -208,9 +567,265 @@ declare module 'vue-router/auto-routes' {
       pathParamNames:
         | never
     }
-    'pages/posts/hello-valaxy.md': {
+    'pages/posts/分析分治法.md': {
       routes:
-        | '/posts/hello-valaxy'
+        | '/posts/分析分治法'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/垃圾佬日常（解决远控软件无声音）.md': {
+      routes:
+        | '/posts/垃圾佬日常（解决远控软件无声音）'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/对于lxc环境1panel-php容器无法编译问题的解决.md': {
+      routes:
+        | '/posts/对于lxc环境1panel-php容器无法编译问题的解决'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/提升搜索效率的技巧.md': {
+      routes:
+        | '/posts/提升搜索效率的技巧'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/最大子数组问题.md': {
+      routes:
+        | '/posts/最大子数组问题'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/机器学习-逻辑回归项目（1）.md': {
+      routes:
+        | '/posts/机器学习-逻辑回归项目（1）'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/玩客云（onecloud）折腾记.md': {
+      routes:
+        | '/posts/玩客云（onecloud）折腾记'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/盘点一下2025年和之前的相关经历以及博客的由来.md': {
+      routes:
+        | '/posts/盘点一下2025年和之前的相关经历以及博客的由来'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/算法学习笔记（1）.md': {
+      routes:
+        | '/posts/算法学习笔记（1）'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/蒲公英x3a救砖指南.md': {
+      routes:
+        | '/posts/蒲公英x3a救砖指南'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/记一次immortalwrt的刷机和优化（1）.md': {
+      routes:
+        | '/posts/记一次immortalwrt的刷机和优化（1）'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/记一次wordpress的优化（指南.md': {
+      routes:
+        | '/posts/记一次wordpress的优化（指南'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/雇用问题.md': {
+      routes:
+        | '/posts/雇用问题'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/analysis-algorithm.md': {
+      routes:
+        | '/posts/analysis-algorithm'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/c与python中的属性.md': {
+      routes:
+        | '/posts/c与python中的属性'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/galgame杂谈（1）-《苍之彼方的四重奏》.md': {
+      routes:
+        | '/posts/galgame杂谈（1）-《苍之彼方的四重奏》'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/learning-the-numpy-library.md': {
+      routes:
+        | '/posts/learning-the-numpy-library'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/linux中清空文件内容的方法.md': {
+      routes:
+        | '/posts/linux中清空文件内容的方法'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/mysql8-4双主复制及服务器文件同步宕机切换.md': {
+      routes:
+        | '/posts/mysql8-4双主复制及服务器文件同步宕机切换'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/no-title.md': {
+      routes:
+        | '/posts/no-title'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/pygame-学习笔记1.md': {
+      routes:
+        | '/posts/pygame-学习笔记1'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/pygame学习笔记（4）.md': {
+      routes:
+        | '/posts/pygame学习笔记（4）'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/pygame学习笔记（5）.md': {
+      routes:
+        | '/posts/pygame学习笔记（5）'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/pygame学习笔记2.md': {
+      routes:
+        | '/posts/pygame学习笔记2'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/pygame学习笔记3.md': {
+      routes:
+        | '/posts/pygame学习笔记3'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/python-学习日记1.md': {
+      routes:
+        | '/posts/python-学习日记1'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/python-教学记录.md': {
+      routes:
+        | '/posts/python-教学记录'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/python0.md': {
+      routes:
+        | '/posts/python0'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/the-application-of-the-divide-and-conquer-approach.md': {
+      routes:
+        | '/posts/the-application-of-the-divide-and-conquer-approach'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/ubuntu-server.md': {
+      routes:
+        | '/posts/ubuntu-server'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/posts/valaxy-一个可爱的静态博客框架.md': {
+      routes:
+        | '/posts/valaxy-一个可爱的静态博客框架'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/services/index.md': {
+      routes:
+        | '/services/'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/subscribe/index.md': {
+      routes:
+        | '/subscribe/'
       views:
         | never
       pathParamNames:
