@@ -1,0 +1,14 @@
+# pnpm >=10.26 stores dependency build permissions here.
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: true
+  vue-demi: true
+
+minimumReleaseAgeExclude:
+  - '@valaxyjs/devtools@1.2.0'
+  - '@valaxyjs/utils@1.2.0'
+  - valaxy-theme-yun@1.2.0
+  - valaxy@1.2.0
+publicHoistPattern:
+  - '*'
+strictPeerDependencies: false
