@@ -4,6 +4,7 @@ date: '2024-11-20 20:11:34'
 categories: 未分类
 tags:
   - 算法
+ogImage: /og/default.png
 ---
 
 ## 碰撞

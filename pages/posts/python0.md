@@ -4,6 +4,7 @@ date: '2024-12-25 17:38:25'
 categories: 编程
 tags:
   - Python与人工智能
+ogImage: /og/default.png
 ---
 
 学习了一段时间的Python了，现在基本上把基础部分学完了，开始进入爬虫的学习，不过因为对于库函数不够熟练，还是啃起来有点困难。

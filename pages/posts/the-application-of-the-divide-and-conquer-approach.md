@@ -5,6 +5,7 @@ updated: '2026-04-07 16:23:17'
 categories: 未分类
 tags:
   - 算法
+ogImage: /og/default.png
 ---
 
 ## 写在开始

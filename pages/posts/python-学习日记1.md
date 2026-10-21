@@ -5,6 +5,7 @@ updated: '2026-03-16 23:24:15'
 categories: 编程
 tags:
   - 编程
+ogImage: /og/default.png
 ---
 
 # **Python 学习**

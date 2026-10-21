@@ -8,6 +8,7 @@ tags:
   - 优化
   - 部署
   - 技巧
+ogImage: /og/default.png
 ---
 
 在已经入坑了wordpress这么久的时间里，我也从开始的从手机ksweb部署网站，到玩客云部署casaos部署docker手动搭建LNMP，再到后来的1Panel部署docker集成openresty部署网站，还有使用免费主机部署，然而是差强人意，最后选择VPS frp + 本地部署网站，或者直接在VPS部署。由此，我总算是可以总结出一套wordpress的优化指南了。

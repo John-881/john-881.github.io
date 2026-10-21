@@ -5,6 +5,7 @@ updated: '2026-07-12 20:52:35'
 categories:
   - 探索
   - 服务器
+ogImage: /og/default.png
 ---
 
 # 尝试解决
@@ -20,7 +21,7 @@ categories:
 
 我进行了两线操作，一边导出制作好的镜像，再连着所有映射目录下的文件一起打包下载，再传输过来\[注2\]；
 
-[\[\[1Panel 离线版 - 1Panel 文档\]\]](https://1panel.cn/docs/v2/installation/package_installation/)
+[\[\[1Panel 离线版 - 1Panel 文档\]\]](https://docs.fit2cloud.com/1panel/installation/package-installation)
 
 > 使用上一步的 **镜像名称** 打包 PHP 镜像，在 `/opt/1panel/runtime/php/<PHP 运行环境名称>` 下执行：
 

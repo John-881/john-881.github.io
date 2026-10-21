@@ -5,6 +5,7 @@ categories: 玩机
 tags:
   - Onecloud
   - 玩客云
+ogImage: /og/default.png
 ---
 
 ## 前记
@@ -27,7 +28,7 @@ SSH软件(我推荐MobaXterm)
 
 买回来的时候商家给了我一些拆机工具和使用说明，获取到商家给的网址后，打开网址，发现是商家自己搭建的群晖服务器，我从上面下载了所需的工具和固件，就进行拆机，先拿撬棒从SD卡口撬开后面板，然后螺丝刀拧开后盖，最后将PCB板本体从外壳中拿出来。从工具包里拿出镊子，按照教程，用USB-A双公头线连接电脑接口和主板靠近HDMI的USB-A，短接主板背后的两个触点然后通电，电脑软件（USB\_Burning\_Tool）成功识别接口，导入需要刷入的IMG格式固件，点击开始
 
-![](/images/2025/03/1759852176-image-1024x720.png)
+![](../../media/2025/03/1759852176-image-1024x720.png)
 
 *示意图*
 
@@ -43,7 +44,7 @@ SSH软件(我推荐MobaXterm)
 
 接下来拔下电源，玩客云通过网线接到路由器上，重新连接电源，查看路由器后台找到Onecloud的IP，使用电脑ssh连接到玩客云（默认账号：root 默认密码：1234）
 
-![](/images/2025/03/1759852210-image-1024x591.png)
+![](../../media/2025/03/1759852210-image-1024x591.png)
 
 设定root密码，登录后会提示修改密码。修改你记得住的密码，提示选择1.bash   提示创建用户，我们直接按Ctrl+C取消。
 
@@ -74,7 +75,7 @@ apt install docker.io
 
 #### 安装1panel面板
 
-[在线安装 - 1Panel 文档](https://1panel.cn/docs/installation/online_installation/)
+[在线安装 - 1Panel 文档](https://docs.fit2cloud.com/1panel/installation/online-installation)
 
 ```
 #使用一键命令根据提示安装即可 下列是Ubuntu的安装命令
@@ -97,13 +98,13 @@ http://玩客云ip:端口/安全入口
 
 进入1Panel面板首先配置docker镜像加速，容器——>配置——>镜像加速，点击设置添加链接
 
-![](/images/2025/03/1759852239-image-1024x550.jpg)
+![](../../media/2025/03/1759852239-image-1024x550.jpg)
 
 #### 安装LNMP
 
 登录1panel面板后可以从应用商店安装以下四个应用
 
-![](/images/2025/03/1759852253-image-1024x439.jpg)
+![](../../media/2025/03/1759852253-image-1024x439.jpg)
 
 注：其中openresty和mysql首次安装会报错，但是别担心，跟着我的步骤走，就可以很快地解决问题
 
@@ -123,38 +124,38 @@ docker pull imzcc/openresty:1.21.4.1-7-alpine
 
 拉取完成后到1panel面板找到这两个镜像名称复制等下用
 
-![](/images/2025/03/1759852269-image-1024x551.png)
+![](../../media/2025/03/1759852269-image-1024x551.png)
 
 回到应用商店已安装的应用打开应用安装目录
 
 打开Openresty的应用目录
 
-![](/images/2025/03/1759852289-image.png)
+![](../../media/2025/03/1759852289-image-300x104.png)
 
-![](/images/2025/03/1759852296-image-1024x551.png)
+![](../../media/2025/03/1759852296-image-1024x551.png)
 
-![](/images/2025/03/1759852316-image-1024x551.png)
+![](../../media/2025/03/1759852316-image-1024x551.png)
 
 把上面的image: 后面的内容修改为刚刚复制的镜像名，如图，点击确认，并且需要清空waf.conf，因为新旧版waf不兼容，会导致应用无法启动
 
-![](/images/2025/03/1759852638-image-1024x551.png)
+![](../../media/2025/03/1759852638-image-1024x551.png)
 
 打开MySQL安装目录
 
 与前面步骤相同，不过只需要修改image: 后面的内容即可
 
-![](/images/2025/03/1759852419-image-1024x551.png)
+![](../../media/2025/03/1759852419-image-1024x551.png)
 
 <details class="wp-block-details"><summary>使用面板编排功能更方便，也是直接编辑docker-compose.yml</summary></details>
 
-![](https://freehost.490633.xyz/img/2025/03/11/67d050196f8e5.png)
+![](../../media/2025/03/67d050196f8e5.png)
 
 编辑完成后在应用商店重建应用就可以正常运行了
 
 最后一步  
 在应用商店安装PHP8，日志中显示done就表示构建完成了，可以在网站——>运行环境查看运行状态。
 
-![](/images/2025/03/1759852469-image-1024x551.png)
+![](../../media/2025/03/1759852469-image-1024x551.png)
 
 **以****上LNMP环境安装完成，可以部署你的网站了**
 

@@ -4,6 +4,7 @@ date: '2024-11-17 23:49:42'
 categories: 未分类
 tags:
   - 算法
+ogImage: /og/default.png
 ---
 
 ## 让角色使用道具

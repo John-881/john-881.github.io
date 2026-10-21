@@ -8,6 +8,7 @@ tags:
   - Ubuntu
   - 服务器
   - 部署
+ogImage: /og/default.png
 ---
 
 经历种种艰辛，终于把Ubuntu server 安装好了，在安装过程中我通过以下流程初步部署好了服务器

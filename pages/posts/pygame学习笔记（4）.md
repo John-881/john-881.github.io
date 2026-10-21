@@ -4,6 +4,7 @@ date: '2024-11-20 11:44:12'
 categories: 未分类
 tags:
   - 算法
+ogImage: /og/default.png
 ---
 
 ## 给场景添加一些别的地图元素

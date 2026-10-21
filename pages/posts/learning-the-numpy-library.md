@@ -5,6 +5,7 @@ updated: '2026-04-07 16:26:51'
 categories: 未分类
 tags:
   - 算法
+ogImage: /og/default.png
 ---
 
 安装，请在命令行中输入以下代码用于安装Numpy库，安装完后我们便可开始学习了。

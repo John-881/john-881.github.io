@@ -9,6 +9,7 @@ tags:
   - 部署
   - 日常
   - VPS
+ogImage: /og/default.png
 ---
 
 这是一份极其详尽的 **MySQL 8.4 双主复制 + WireGuard + Syncthing + Nginx 高可用架构配置手册**，已整合所有踩坑经验、关键配置文件和命令。
