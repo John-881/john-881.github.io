@@ -1,2 +1,14 @@
 node_modules
 dist
+
+# 构建镜像时用不到的目录：原始备份包（backup，421 MB）、迁移工作区（.work，493 MB）等。
+# 注意：.git 不能排除——valaxy 的 lastUpdated 依赖 git 提交时间，排除后会退化成文件 mtime。
+backup
+.work
+.agent-teams
+.github
+.vscode
+docs
+waline-import
+*.log
+.DS_Store

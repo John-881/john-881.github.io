@@ -5,10 +5,9 @@ command = "pnpm run build"
 [build.environment]
 NODE_VERSION = "22"
 
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+# 不要 SPA fallback：本站是 SSG 产物，dist 下每个路由都有实体 HTML（dist/about.html 等）。
+# 原来的 `/* -> /index.html 200` 会把任意 404 变成 200 首页，使 dist/404.html 永不可达（软 404）。
+# 未知路径交给 Netlify 默认行为：返回 dist/404.html（HTTP 404）。
 
 [[headers]]
 for = "/manifest.webmanifest"

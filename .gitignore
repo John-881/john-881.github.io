@@ -26,6 +26,7 @@ components.d.ts
 # migration workspace
 backup/
 .work/
+.agent-teams/
 
 # valaxy fuse
 public/valaxy-fuse-list.json

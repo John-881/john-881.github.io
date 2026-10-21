@@ -14,7 +14,7 @@
 1. 将 WordPress 导出的文章（XML/HTML）转换为 Markdown 文件，放入 Valaxy pages/posts 目录
 2. 为每篇文章生成正确的 Valaxy frontmatter（title、date、tags、categories）
 3. 创建 Valaxy 的 site.config.ts 和 valaxy.config.ts 配置文件
-4. 迁移图片和媒体文件到 public 目录，并更新文章中的引用路径
+4. 迁移图片和媒体文件到 public 目录，并更新文章中的引用路径（最终落地：媒体库放在仓库根 `media/`，正文用 `../../media/...` 相对引用，只产出一份 `dist/assets/` 哈希副本；仅说说 frontmatter 用图留在 `public/images/` 走 `/images/` 公共路径，见 README.md 目录表）
 5. 将 WordPress 的 HTML 内容转换为 Markdown 格式
 
 ### 2.2 协议目的
