@@ -112,3 +112,37 @@ if (data.status === "approved" && services.spam && await services.spam.check(dat
 - **6 条孤儿评论**（原所属文章已删）被放到 `/comment/` 并保持 `approved`。
   想隐藏它们见 `docs/waline-setup.md` 6.1 节。
 - **本文不记录部署结果**：Vercel 项目、Neon 数据库、域名绑定都还没做，做完再补。
+
+---
+
+## 6. 内容层最终形态与维护注意（迁移收尾时补）
+
+**媒体**：源站 455 个上传文件经迭代去重（剥 `-scaled(-N)?` 与 `-{W}x{H}` 到不动点）后为 `media/` 下 113 文件 / 7,503,774 B，
+正文用 `../../media/...` 相对引用（96 处），Vite 只产出一份 `dist/assets/` 哈希副本；`public/images/` 仅留说说 frontmatter 需要的
+`2025/12/68b55b4078002-1024x1024.jpg`（186,575 B，走 `/images/` 公共路径不参与打包）。dist 由改造前 20,849,383 B 降至约 10.59 MB，内容重复组 0。
+
+**分享卡**：`public/og/default.png`（1200x630、89,422 B）为全站唯一 og:image —— 48 篇 markdown 写 `ogImage`，
+无 .md 源的组件路由（`/`、`/posts`、`/moments`）靠 `site.config.ts` 的 `siteConfig.frontmatter.ogImage` 兜底；实测 dist 61/61 html 全部命中，0 条 `.svg`、0 条含 `/public/`。
+
+**验收口径**：`.work/verify.ps1` 共 39 条断言（posts 31 / moments 7 / `pages` 全树含 ogImage 的 md 48 / media 113 与精确字节数 / public/images 恰 1 个 / dist ≤11MB 且内容重复组 0 / dist/posts 32 html / dist 内无 `/public/` 前缀图片 / og:image 61/61 / 旧 1panel.cn 命中 0）。
+干净复现五步全绿：`node scripts/wp-media.mjs` → `node scripts/wp-convert.mjs` → `pnpm build` → `node .work/check-images.mjs` → `pwsh -File .work/verify.ps1`。sitemap 清洗后 50 唯一 loc、无 `/404`。
+
+**维护注意（重要）**
+
+- `scripts/wp-convert.mjs` 用 `rmSync` 全量重建 `pages/posts` 与 `pages/moments`，**会覆盖手工编辑**。要改正文请改数据层
+  （`scripts/lib/content-rules.mjs` 的 `OG_IMAGE` / `LINK_REWRITES`）或转换器本身，然后重跑；48 篇的 `ogImage` 与两条已下线深链现已上游化，重跑不再丢失。
+- 10 个页面级 md（`pages/about/*`、`archives`、`categories`、`tags`、`links`、`comment`、`services`、`subscribe`、`404`）不被转换器触碰：
+  新增页面级 md 时自行加 `ogImage: /og/default.png`，漏加会被 verify.ps1 的 48 计数断言拦住。
+- 图片必须放在 `media/<年>/<月>/` 下。Vite 会把根路径图片当模块 import，引用到不存在的文件会让构建直接失败
+  （`[UNRESOLVED_IMPORT]`）；源站即缺失的那张 `2025/03/1759852453-image-1024x551.png` 已按此规则删除并在 `.work/needs-review.md` 记录。
+
+**交付时仍未实测/未执行的事项**
+
+| 项 | 状态 |
+| --- | --- |
+| Netlify 的 404 行为 | 只做静态判定（本机无 netlify CLI）；部署后应 `curl -I https://<域名>/nonexistent` 确认返回 404 而非 SPA fallback 的 200 |
+| `docker build` | 未实跑（本机无 docker）；`package.json` 也没有 `packageManager` 字段 |
+| 作者头像 | `site.config.ts` 的 `author.avatar` 仍是占位的 `/favicon.svg`；ICP 备案开关保持关闭 |
+| Waline 服务端 | Vercel 项目、Neon 数据库、域名绑定均未创建，`addonWaline({ serverURL })` 仍是占位值，见 `docs/waline-setup.md` |
+
+> 上述未实测项不影响静态站点本体的可交付性：`pnpm build`（`valaxy build --ssg`）在干净工作区可复现通过，产物为 `dist/`。
