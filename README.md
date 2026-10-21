@@ -1,7 +1,10 @@
 # 凌渡冰点的博客（Valaxy）
 
 从 WordPress 迁移而来的静态博客，基于 [Valaxy](https://valaxy.site/zh/) 1.2.0 + 主题 [Yun](https://valaxy.site/zh/themes/yun)，
-评论使用 Waline（Vercel + Neon PostgreSQL）。原始迁移协议见 [docs/migration-protocol.md](docs/migration-protocol.md)。
+评论使用 Waline（Vercel + Neon PostgreSQL）。
+
+**日常怎么用这个站：看 [docs/使用说明书.md](docs/使用说明书.md)**（写给前端初学者的操作手册：怎么写文章、放图片、发说说、改配置、发布上线、常见报错）。
+原始迁移协议见 [docs/migration-protocol.md](docs/migration-protocol.md)。
 
 ## 常用命令
 
