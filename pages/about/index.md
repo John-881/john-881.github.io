@@ -1,5 +1,6 @@
 ---
 title: 关于我
+ogImage: /og/default.png
 ---
 
 我是凌渡冰点，这是「凌渡冰点的博客」。

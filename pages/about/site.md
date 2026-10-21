@@ -1,5 +1,6 @@
 ---
 title: 关于站点
+ogImage: /og/default.png
 ---
 
 「凌渡冰点的博客」是一个由 [Valaxy](https://github.com/YunYouJun/valaxy) 驱动的静态博客。

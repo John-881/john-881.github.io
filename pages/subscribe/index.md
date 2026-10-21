@@ -1,5 +1,6 @@
 ---
 title: 我的订阅
+ogImage: /og/default.png
 ---
 
 本页原先由 WordPress 插件（WP REST API Cache 的 `wpra-shortcode` 短代码）在服务端实时渲染订阅列表，

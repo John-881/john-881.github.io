@@ -10,7 +10,13 @@ export default defineSiteConfig({
 
   author: {
     name: '凌渡冰点',
-    // TODO: 头像与个人简介尚未提供，待用户补充后填入 avatar / intro。
+    // 不填 avatar / email / link 时会落回 Valaxy 默认值（https://valaxy.site/valaxy-logo.png、
+    // i@valaxy.site、https://valaxy.site），并直接出现在 RSS/atom/feed.json 与每页作者头像（alt="avatar"）里。
+    // TODO: 换成真实头像；intro 尚未提供。
+    avatar: '/favicon.svg',
+    email: 'zeroice007@126.com',
+    // TODO: 域名确定后与第 5 行的 url 一起替换。
+    link: 'https://blog.490633.xyz',
   },
 
   social: [
@@ -49,4 +55,8 @@ export default defineSiteConfig({
   orderBy: 'date',
   lastUpdated: true,
   favicon: '/favicon.svg',
+
+  // 组件路由（/、/posts、/moments 等没有 .md 源的页面）在 Valaxy 里只会拿到 siteConfig.frontmatter；
+  // 缺了它，这些页面的 og:image 会兜底成 siteConfig.favicon（/favicon.svg），与 48 篇 markdown 的分享卡不一致。
+  frontmatter: { ogImage: '/og/default.png' },
 })

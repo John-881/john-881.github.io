@@ -38,7 +38,7 @@ links:
     url: https://space.bilibili.com/421681448
     blog: 哔哩哔哩
     desc: ''
-    avatar: ''
+ogImage: /og/default.png
 ---
 
 ## 我的信息
@@ -51,8 +51,10 @@ links:
 - 站点地址（URL）：<https://blog.490633.xyz>
 - 站长：凌渡冰点
 - 介绍：一个兴趣使然的个人小站，主要发一些日常和技术文章，偶尔分享点资源，写点心得经验
-- 站点图标：<https://blog.490633.xyz/wp-content/uploads/2025/10/cropped-1759894997-679b7cb60d8de.jpg>
-- RSS：<https://blog.490633.xyz/feed/>
+- 站点图标：<https://blog.490633.xyz/favicon.svg>
+- RSS：<https://blog.490633.xyz/atom.xml>
+
+<!-- TODO: 这里的域名仍是待替换的旧域名，与 site.config.ts 的 url 同步替换；路径 /favicon.svg 与 /atom.xml 已按本站真实路由写死（原 /wp-content/uploads/... 与 /feed/ 在本站不存在）。 -->
 
 ## 小伙伴们
 
