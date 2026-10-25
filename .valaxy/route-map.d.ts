@@ -150,6 +150,13 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
+    '/nav/': RouteRecordInfo<
+      '/nav/',
+      '/nav',
+      Record<never, never>,
+      Record<never, never>,
+      | never
+    >,
     '/page/[page]': RouteRecordInfo<
       '/page/[page]',
       '/page/:page',
@@ -546,6 +553,14 @@ declare module 'vue-router/auto-routes' {
     'pages/moments/2026-03-25-出了点问题，但问题不大.md': {
       routes:
         | '/moments/2026-03-25-出了点问题，但问题不大'
+      views:
+        | never
+      pathParamNames:
+        | never
+    }
+    'pages/nav/index.md': {
+      routes:
+        | '/nav/'
       views:
         | never
       pathParamNames:

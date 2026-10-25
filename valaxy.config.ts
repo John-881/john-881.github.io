@@ -28,6 +28,18 @@ const safelist = [
   'i-ri-rss-line',
   // site.config.ts social
   'i-ri-bilibili-line',
+  // 导航页 pages/nav/index.md 正文卡片
+  'i-ri-compass-3-line',
+  'i-ri-user-3-line',
+  'i-ri-book-2-line',
+  'i-ri-quill-pen-line',
+  'i-ri-image-line',
+  'i-ri-tools-line',
+  'i-ri-file-transfer-line',
+  'i-ri-music-2-line',
+  'i-ri-speed-up-line',
+  'i-ri-earth-line',
+  'i-ri-mail-line',
   // 模板默认
   'i-ri-home-line',
 ]
@@ -93,7 +105,25 @@ export default defineValaxyConfig<UserThemeConfig>({
       title: '凌渡冰点的博客',
     },
 
+    nav: [
+      { text: '首页', link: '/', icon: 'i-ri-home-line' },
+      { text: '导航', link: '/nav/', icon: 'i-ri-compass-3-line' },
+      { text: '文章', link: '/posts/', icon: 'i-ri-article-line' },
+      { text: '时光轴', link: '/archives/', icon: 'i-ri-archive-line' },
+      { text: '分类', link: '/categories/', icon: 'i-ri-folder-2-line' },
+      { text: '标签', link: '/tags/', icon: 'i-ri-price-tag-3-line' },
+      { text: '友链', link: '/links/', icon: 'i-ri-links-line' },
+      { text: '留言板', link: '/comment/', icon: 'i-ri-chat-3-line' },
+      { text: '服务', link: '/services/', icon: 'i-ri-service-line' },
+    ],
+
     pages: [
+      {
+        name: '导航',
+        url: '/nav/',
+        icon: 'i-ri-compass-3-line',
+        color: 'coral',
+      },
       {
         name: '文章',
         url: '/posts/',
@@ -136,13 +166,12 @@ export default defineValaxyConfig<UserThemeConfig>({
         icon: 'i-ri-service-line',
         color: 'slateblue',
       },
-      {
-        name: '我的订阅',
-        url: '/subscribe/',
-        icon: 'i-ri-tv-2-line',
-        color: 'crimson',
-      },
     ],
+
+    notice: {
+      enable: true,
+      content: '欢迎来到凌渡冰点的博客！',
+    },
 
     menu: {
       custom: {

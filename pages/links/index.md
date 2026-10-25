@@ -34,10 +34,11 @@ links:
     blog: 卡尔白的纸箱📦
     desc: 这里存着卡尔白的过去、现在和未来
     avatar: https://avatars.githubusercontent.com/u/191684279
-  - name: 哔哩哔哩
-    url: https://space.bilibili.com/421681448
-    blog: 哔哩哔哩
-    desc: ''
+  - name: 知海图书馆
+    url: https://www.zhihailib.com/
+    blog: 知海图书馆
+    desc: 干净的中文电子书站，可按书名、作者、出版社、ISBN 精确找书，能在线读，没有弹窗广告，还有按阶段整理的导读书单。
+    avatar: https://www.zhihailib.com/wp-content/uploads/2025/04/favicon_z.png
 ogImage: /og/default.png
 ---
 
