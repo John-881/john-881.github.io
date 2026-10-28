@@ -32,13 +32,23 @@ const CSV_HEADERS = [
   'pid', 'rid', 'status', 'ua', 'url', 'createdAt', 'updatedAt',
 ];
 // mysql.js:6  return field === 'objectId' ? 'id' : field;  -> pk column is id
-// The camelCase columns keep their case in the official waline.pgsql, so they MUST be double-quoted
-// here: PostgreSQL folds unquoted identifiers to lower case.
-const PG_COLUMNS = ['id', 'user_id', 'comment', '"insertedAt"', 'ip', 'link', 'mail', 'nick',
-  'pid', 'rid', 'status', 'ua', 'url', '"createdAt"', '"updatedAt"'];
-const COUNTER_COLUMNS = ['id', 'time', 'url', '"createdAt"', '"updatedAt"'];
+//
+// These are *database* column names, and on PostgreSQL they are lowercase.
+// The official assets/waline.pgsql declares the three time columns UNQUOTED
+// (`insertedAt timestamp(0) ...`), so PostgreSQL stores them as `insertedat`
+// / `createdat` / `updatedat`. Waline's runtime agrees: postgresql.js
+// lowercases the field list, the where keys and the three time keys before
+// querying, and mapKeys() destructures `{ insertedat, createdat, updatedat }`
+// on the way back. Quoting them as "insertedAt" in an INSERT asks for a
+// camelCase column that does not exist -> SQLSTATE 42703.
+const PG_COLUMNS = ['id', 'user_id', 'comment', 'insertedat', 'ip', 'link', 'mail', 'nick',
+  'pid', 'rid', 'status', 'ua', 'url', 'createdat', 'updatedat'];
+const COUNTER_COLUMNS = ['id', 'time', 'url', 'createdat', 'updatedat'];
 
-const PAGE_ROUTE = '/comment/';
+// 留言板评论落库的 url。必须与 Waline 前端实际发出的查询 path 一致，否则一条都匹配不上：
+// 浏览器停在 /comment/，但 @waline/client 请求的是 ?path=%2Fcomment（尾斜杠被剥掉，实测抓到的请求）。
+// 文章路由 /posts/<slug> 本来就没有尾斜杠，不受影响。
+const PAGE_ROUTE = '/comment';
 const POSTS_PREFIX = '/posts/';
 const MESSAGE_BOARD_TITLE = '留言板';
 
@@ -198,9 +208,24 @@ function readSlugSource() {
 
 // ---------------------------------------------------------------- argon emoji shortcodes
 // Argon (the WordPress theme this blog used) renders {{name}} as an emoji image.
-// Waline renders ":name:" as an image from the configured emoji packs.
-// Pack membership was read from @waline/emojis@1.1.0/{bilibili,alus,tieba,weibo}/info.json.
+// Pack membership and file naming come from @waline/emojis@1.1.0/<pack>/info.json:
+//   bilibili prefix "bb_" png | alus "alus_" png | tieba "tieba_" png | weibo "weibo_" png
+//
+// Waline does not expand ":name:" when it renders a stored comment. The client expands the
+// shortcode into an <img> while you type and the server just stores/returns that HTML, so the
+// import has to write the same markup. Proof, from the Vercel SQL log of a comment whose emoji
+// was picked through the UI:
+//   INSERT INTO wl_comment ("comment",insertedat,...,url) VALUES (E'<img class="wl-emoji"
+//     src="https://unpkg.com/@waline/emojis@1.1.0/bilibili/bb_doge.png" alt="bb_doge">',...
+// Leaving ":doge:" in the text instead shows as literal ":doge:".
 const EMOJI_TARGET = { doge: 'doge', liulei: 'sob', dianzan: 'thumbsup' };
+const EMOJI_CDN = 'https://unpkg.com/@waline/emojis@1.1.0';
+const EMOJI_PACK_META = {
+  bilibili: { prefix: 'bb_', type: 'png' },
+  alus: { prefix: 'alus_', type: 'png' },
+  tieba: { prefix: 'tieba_', type: 'png' },
+  weibo: { prefix: 'weibo_', type: 'png' },
+};
 const EMOJI_PACKS = {
   bilibili: ['doge', 'sob', 'thumbsup', 'grievance', 'heart_eyes', 'cry'],
   alus: ['sob', 'thumbsup'],
@@ -222,8 +247,10 @@ function convertEmoji(text) {
   const out = String(text === null || text === undefined ? '' : text).replace(/\{\{([^{}]+)\}\}/g, (whole, name) => {
     const hit = resolveEmoji(name);
     if (!hit) { seen.push({ code: name, mapped: null }); return whole; }
-    seen.push({ code: name, mapped: hit.pack + '/' + hit.name });
-    return ':' + hit.name + ':';
+    const meta = EMOJI_PACK_META[hit.pack];
+    const file = meta.prefix + hit.name;
+    seen.push({ code: name, mapped: hit.pack + '/' + file + '.' + meta.type });
+    return `<img class="wl-emoji" src="${EMOJI_CDN}/${hit.pack}/${file}.${meta.type}" alt="${file}">`;
   });
   return { text: out, seen };
 }
@@ -237,6 +264,17 @@ function qn(v) {
   const n = Number(v);
   if (!Number.isFinite(n)) throw new Error('not a number: ' + v);
   return String(Math.trunc(n));
+}
+// 顶层评论的 pid / rid 必须落 NULL，不能落 0。
+// 依据是 Vercel 函数日志里列表接口的实际 SQL：
+//   SELECT * FROM wl_comment WHERE ( url = E'/...' ) AND ( status NOT IN (E'waiting',E'spam') )
+//     AND ( rid IS NULL ) ORDER BY sticky DESC NULLS LAST,insertedat DESC,id DESC LIMIT 10
+// 判别顶层用的是 `rid IS NULL`，写成 0 的行既进不了列表、又不影响 COUNT(*)（那条不带 rid 条件），
+// 表现就是「评论数正常、评论区恒空」。JS 侧 0 与 null 都是 falsy，前端渲染不受影响。
+function qnNullable(v) {
+  const n = Number(v);
+  if (!Number.isFinite(n)) throw new Error('not a number: ' + v);
+  return n === 0 ? 'NULL' : String(Math.trunc(n));
 }
 // ---------------------------------------------------------------- main
 function buildRows(comments, posts) {
@@ -353,14 +391,21 @@ function renderSql(rows) {
   lines.push('-- Target: @waline/vercel PostgreSQL storage (PG_PREFIX default wl_), official assets/waline.pgsql schema.');
   lines.push('-- Column order follows @waline/vercel@1.43.4 src/service/storage/github.js CSV_HEADERS.Comment;');
   lines.push('-- objectId maps to the primary key column id (src/service/storage/mysql.js:6).');
-  lines.push('-- Run AFTER the official waline.pgsql schema import.');
+  lines.push('-- Column NAMES are the PostgreSQL ones: the three time columns are unquoted in the');
+  lines.push('-- official waline.pgsql, so PostgreSQL folds them to insertedat/createdat/updatedat.');
+  lines.push('-- Never quote them as "insertedAt" here -> column "insertedAt" does not exist (42703).');
+  lines.push('-- Top-level pid/rid are NULL, not 0: the list API filters `rid IS NULL`, so 0 rows would');
+  lines.push('-- show a correct comment count with a permanently empty comment list.');
+  lines.push('-- Run AFTER the waline.pgsql schema import.');
+  lines.push('-- Safe to re-run: every INSERT carries ON CONFLICT (id) DO NOTHING.');
   lines.push('');
   lines.push('BEGIN;');
   lines.push('');
   for (const r of rows) {
     const vals = [qn(r.id), 'NULL', q(r.comment), q(r.insertedAt), q(r.ip), q(r.link), q(r.mail), q(r.nick),
-      qn(r.pid), qn(r.rid), q(r.status), q(r.ua), q(r.url), q(r.createdAt), q(r.updatedAt)];
-    lines.push('INSERT INTO ' + TABLE + ' (' + PG_COLUMNS.join(', ') + ') VALUES (' + vals.join(', ') + ');');
+      qnNullable(r.pid), qnNullable(r.rid), q(r.status), q(r.ua), q(r.url), q(r.createdAt), q(r.updatedAt)];
+    lines.push('INSERT INTO ' + TABLE + ' (' + PG_COLUMNS.join(', ') + ') VALUES (' + vals.join(', ') + ')');
+    lines.push('  ON CONFLICT (id) DO NOTHING;');
   }
   lines.push('');
   lines.push('-- keep the BIGSERIAL in sync with the explicit ids above');
@@ -443,10 +488,12 @@ function main() {
     const lines = [];
     lines.push('-- Generated by scripts/wp-comments-to-waline.mjs --with-view-counts -- do not edit by hand.');
     lines.push('-- wl_Counter rows: one per published post, time = legacy wp_postmeta.views.');
+    lines.push('-- Column names are the PostgreSQL ones (lowercase); safe to re-run: ON CONFLICT (id) DO NOTHING.');
     lines.push(''); lines.push('BEGIN;'); lines.push('');
     for (const c of counters) {
       lines.push('INSERT INTO ' + COUNTER_TABLE + ' (' + COUNTER_COLUMNS.join(', ') + ') VALUES (' +
-        [qn(c.id), qn(c.time), q(c.url), q(c.createdAt), q(c.updatedAt)].join(', ') + ');');
+        [qn(c.id), qn(c.time), q(c.url), q(c.createdAt), q(c.updatedAt)].join(', ') + ')');
+      lines.push('  ON CONFLICT (id) DO NOTHING;');
     }
     lines.push(''); lines.push('COMMIT;'); lines.push('');
     fs.writeFileSync(path.join(OUT_DIR, 'waline-counters.sql'), lines.join('\n'), 'utf8');
