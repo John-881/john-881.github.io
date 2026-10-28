@@ -48,14 +48,12 @@ ogImage: /og/default.png
 
 这是我的邮箱 <kbd>zeroice007@126.com</kbd>
 
-- 站点名称：凌渡冰点的博客
-- 站点地址（URL）：<https://blog.490633.xyz>
+- 站点名称：凌渡冰点的主页
+- 站点地址（URL）：<https://www.490633.xyz>
 - 站长：凌渡冰点
 - 介绍：一个兴趣使然的个人小站，主要发一些日常和技术文章，偶尔分享点资源，写点心得经验
-- 站点图标：<https://blog.490633.xyz/favicon.svg>
-- RSS：<https://blog.490633.xyz/atom.xml>
-
-<!-- TODO: 这里的域名仍是待替换的旧域名，与 site.config.ts 的 url 同步替换；路径 /favicon.svg 与 /atom.xml 已按本站真实路由写死（原 /wp-content/uploads/... 与 /feed/ 在本站不存在）。 -->
+- 站点图标：<https://www.490633.xyz/favicon.svg>
+- RSS：<https://www.490633.xyz/atom.xml>
 
 ## 小伙伴们
 

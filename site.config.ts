@@ -1,11 +1,10 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
-  // TODO: 上线前替换为最终域名（用户尚未确定新域名，先沿用旧站域名）。
-  url: 'https://blog.490633.xyz',
+  url: 'https://www.490633.xyz',
   lang: 'zh-CN',
   timezone: 'Asia/Shanghai',
-  title: '凌渡冰点的博客',
+  title: '凌渡冰点的主页',
   description: '一个兴趣使然的个人小站',
 
   author: {
@@ -16,7 +15,7 @@ export default defineSiteConfig({
     avatar: '/favicon.svg',
     email: 'zeroice007@126.com',
     // TODO: 域名确定后与第 5 行的 url 一起替换。
-    link: 'https://blog.490633.xyz',
+    link: 'https://www.490633.xyz',
   },
 
   social: [

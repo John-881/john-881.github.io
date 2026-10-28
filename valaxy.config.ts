@@ -102,11 +102,10 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     banner: {
       enable: true,
-      title: '凌渡冰点的博客',
+      title: '凌渡冰点的主页',
     },
 
     nav: [
-      { text: '首页', link: '/', icon: 'i-ri-home-line' },
       { text: '导航', link: '/nav/', icon: 'i-ri-compass-3-line' },
       { text: '文章', link: '/posts/', icon: 'i-ri-article-line' },
       { text: '时光轴', link: '/archives/', icon: 'i-ri-archive-line' },
@@ -170,7 +169,7 @@ export default defineValaxyConfig<UserThemeConfig>({
 
     notice: {
       enable: true,
-      content: '欢迎来到凌渡冰点的博客！',
+      content: '欢迎来到凌渡冰点的主页！',
     },
 
     menu: {
@@ -194,18 +193,34 @@ export default defineValaxyConfig<UserThemeConfig>({
   },
 
   addons: [
-    // TODO: 上线前替换为真实的 Waline 服务端地址（当前为占位地址，评论功能在替换前不可用）。
     addonWaline({
-      serverURL: 'https://your-waline.vercel.app',
+      // 已绑定自有域名（docs/waline-setup.md 第 8 节）。换 serverURL 等于换评论库：
+      // 将来若改成别的地址，必须让新服务端指向同一个 Neon 库，否则旧评论不会跟过来。
+      serverURL: 'https://waline.490633.xyz',
+      // 文章元信息（YunPostMeta → YunWalineMeta）里挂评论数。
+      // 刻意不开 pageview：旧站 wp_postmeta.views 没有导入（docs/migration-notes.md 2.4），
+      // 开了会让 31 篇文章都显示从 0 起步的阅读量。
+      comment: true,
       // 中文界面。WalineOptions 继承 @waline/client 的 WalineInitOptions，含 lang?: string。
       // 实际渲染时 WalineClient.vue 的 :lang 绑定的是 vue-i18n 的 locale，
       // 显式写出这一项是为了让意图在配置里有据可查。
       lang: 'zh-CN',
-      // 旧站 Argon 表情短代码被映射成 :doge: / :sob: / :thumbsup:，三者属于 bilibili 表情包，
-      // 前端不加载该表情包就会退化成裸文本。
+      // 访客可用昵称+邮箱直接评论（@waline/client 默认值，写出以与 docs 第 7 节对齐）。
+      login: 'enable',
+      // 旧站 Argon 表情短代码在导入时已经被展开成 <img class="wl-emoji">（见生成器注释），
+      // 这里配的包只服务于评论框的表情选择器。
+      // getEmojis(cdn, types, emoji) 会把 types 与 emoji 两组拼起来：默认 types 是
+      // ['bilibili','qq','weibo']，既与下面的 bilibili 重复出一个页签，又是没有版本号的
+      // `//unpkg.com/@waline/emojis/<type>/`（跟着 unpkg 的 latest 漂）。所以 types 留空，
+      // 5 个包全部钉死在 1.1.0，与导入正文里写死的 @waline/emojis@1.1.0 同源。
+      types: [],
       // getEmojis() 会把数组元素拼成 `${emoji}/`，所以元素要写成不带结尾斜杠的完整地址。
       emoji: [
         'https://unpkg.com/@waline/emojis@1.1.0/bilibili',
+        'https://unpkg.com/@waline/emojis@1.1.0/tieba',
+        'https://unpkg.com/@waline/emojis@1.1.0/alus',
+        'https://unpkg.com/@waline/emojis@1.1.0/qq',
+        'https://unpkg.com/@waline/emojis@1.1.0/weibo',
       ],
     }),
     addonMoments({

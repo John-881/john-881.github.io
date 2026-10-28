@@ -3,7 +3,7 @@ title: 导航
 ogImage: /og/default.png
 ---
 
-这里是「凌渡冰点」的导航页：把我常用的入口都收在一处，方便自己和来访的朋友一键跳转。本站地址 <https://blog.490633.xyz>（备用域名 <https://zeroice-blog.490633.xyz>）。
+这里是「凌渡冰点」的导航页：把我常用的入口都收在一处，方便自己和来访的朋友一键跳转。本站地址 <https://www.490633.xyz>（备用域名 <https://zeroice-blog.490633.xyz>）。
 
 <div class="nav-page">
 <div class="nav-section">
