@@ -29,7 +29,7 @@ pnpm rss              # 单独生成 RSS
 | `media/` | 113 个媒体文件（7,503,774 B，已去重：每图只保留一份中等品质），按 `<年>/<月>` 存放，对应转义前的 `/wp-content/uploads/`；正文以 `../../media/...` 相对引用，Vite 单次处理、只产出一份 `dist/assets/` 哈希副本 |
 | `public/images/` | 只保留说说 frontmatter 需要的那 1 个文件（`2025/12/68b55b4078002-1024x1024.jpg`，186,575 B），走 `/images/` 公共路径，不参与打包 |
 | `scripts/` | 一次性迁移脚本（可重复执行、幂等），迁移完成后日常写作不需要它们 |
-| `waline-import/` | 评论导入产物（SQL / CSV）+ 官方建表脚本 |
+| `waline-import/` | 评论导入产物（SQL / CSV）+ 官方建表脚本 + 库重建脚本 `reset.sql`（破坏性） |
 | `docs/` | 迁移说明与评论系统接入文档 |
 | `backup/` | 原始 WordPress 备份包（未纳入版本控制） |
 | `.work/` | 迁移过程中的勘察报告与验收脚本（未纳入版本控制） |

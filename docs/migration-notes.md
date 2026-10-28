@@ -28,7 +28,7 @@
 | 导入后状态分布 | `approved` 53 条 |
 | 楼中楼 | 31 条 `comment_parent <> 0`，`pid`/`rid` 引用闭合 |
 | 唯一 id | 直接沿用 `comment_ID`，因此父引用天然可解析 |
-| 目标路由 | `/posts/<slug>`（7 篇），`/comment/`（留言板 + 6 条孤儿评论） |
+| 目标路由 | `/posts/<slug>`（7 篇），`/comment`（留言板 + 6 条孤儿评论；落库路径不带尾斜杠，页面地址是 `/comment/`） |
 
 ### 2.1 状态映射的依据
 
@@ -46,11 +46,21 @@ if (data.status === "approved" && services.spam && await services.spam.check(dat
 
 ### 2.2 表与列
 
-建表脚本用官方 `assets/waline.pgsql`（已存为 `waline-import/waline.pgsql`，2275 字节）。要点：
+建表脚本用官方 `assets/waline.pgsql`（已存为 `waline-import/waline.pgsql`，6913 字节；相对官方只多加了索引与 `IF NOT EXISTS` 幂等，列定义逐字一致）。要点：
 
 - 表名是小写：`wl_comment` / `wl_counter` / `wl_users`；每个表配一个序列 `wl_*_seq`，主键 `id` 的默认值是 `NEXTVAL('wl_comment_seq')`。
-- 驼峰列名 `insertedAt` / `createdAt` / `updatedAt` 在库里**保留大小写**，所以导入 SQL 里必须写成 `"insertedAt"`；
-  PostgreSQL 会把未加引号的标识符折叠成小写，写错就报 column does not exist。
+- 三个时间列在库里是**全小写** `insertedat` / `createdat` / `updatedat`：官方 DDL 故意**不加引号**声明 `insertedAt timestamp(0) ...`，
+  PostgreSQL 会把未加引号的标识符折叠成小写。导入 SQL 里也必须不加引号；写成 `"insertedAt"` 会报
+  `column "insertedAt" of relation "wl_comment" does not exist (SQLSTATE 42703)` —— 首次导入就踩过这条。
+  驼峰只是 Waline JS 侧的字段名，驱动 `postgresql.js` 查询前 `toLowerCase()`、读回后 `mapKeys` 还原。
+  完整证据链与反向案例（issue #884）见 `waline-import/waline.pgsql` 头部注释。
+- 生成的 `waline-comments.sql` 每条 INSERT 都带 `ON CONFLICT (id) DO NOTHING`，包在 `BEGIN; ... COMMIT;` 里，可安全重复执行。
+- **顶层评论的 `pid` / `rid` 落 `NULL`，不落 `0`**（2026-10-27 修正）。列表接口按 `rid IS NULL` 判别顶层，
+  落 `0` 的行进不了列表，但同请求里不带该条件的 `COUNT(*)` 照常返回，症状是「评论数正常、评论区永远空白」。
+  证据是 Vercel 函数日志里的原始 SQL；详见 `docs/waline-setup.md` 6.3。期望分布 22 顶层 + 31 楼中楼。
+- 要彻底清库重来用 `waline-import/reset.sql`（删除前快照 → `DROP TABLE` + `DROP SEQUENCE` → 两条「应当 0 行」的确认）。
+  序列必须单独删：它们是 `CREATE SEQUENCE` 独立对象、不被 `DROP TABLE` 带走，残留会让重跑 DDL 的 `IF NOT EXISTS` 静默跳过。
+  注意它会连 `wl_users`（后台账号）一起删。
 - 生成器结尾执行 `ALTER SEQUENCE wl_comment_seq RESTART WITH 61;`，让新评论从 61 开始编号，
   与 Waline 自身 `postgresql.js:setSeqId` 的做法一致。
 
@@ -58,14 +68,25 @@ if (data.status === "approved" && services.spam && await services.spam.check(dat
 
 旧站是 Argon 主题，评论正文里的 `{{name}}` 被渲染成表情图。本批数据只有 3 处，全部完成映射：
 
-| 原文 | 次数 | 转成 | 依据 |
+| 原文 | 次数 | 转成（写进 `comment` 的字面量） | 依据 |
 | --- | --- | --- | --- |
-| `{{doge}}` | 1 | `:doge:` | `@waline/emojis@1.1.0/bilibili/info.json` 的 items 含 `doge` |
-| `{{liulei}}` | 1 | `:sob:` | `liulei`（流泪）在 bilibili 表情包里没有同名项，取语义最近的 `sob` |
-| `{{dianzan}}` | 1 | `:thumbsup:` | `dianzan`（点赞）同理，取 `thumbsup` |
+| `{{doge}}` | 1 | `<img class="wl-emoji" src="…/@waline/emojis@1.1.0/bilibili/bb_doge.png" alt="bb_doge">` | bilibili 包 `prefix: "bb_"`、`type: "png"`、items 含 `doge` |
+| `{{liulei}}` | 1 | 同上，`bb_sob.png` | `liulei`（流泪）在 bilibili 包里无同名项，取语义最近的 `sob` |
+| `{{dianzan}}` | 1 | 同上，`bb_thumbsup.png` | `dianzan`（点赞）同理，取 `thumbsup` |
 
-**状态：已干净映射，无残留**。前提是前端 `addonWaline.emoji` 配了 bilibili 表情包；
-不配的话这 3 处会显示成裸文本（`docs/waline-setup.md` 第 7 节与附录 A 已写明）。
+**为什么不是写 `:doge:` 短代码**（2026-10-27 定论）：Waline 的渲染路径不认库里的短代码——客户端是在你**输入时**
+把 `:name:` 展开成 `<img>`，服务端只存和回吐这段 HTML。证据是 Vercel 日志里一条通过表情选择器提交的评论：
+
+```sql
+INSERT INTO wl_comment ("comment",insertedat,…,url) VALUES (E'<img class="wl-emoji" src="https://unpkg.com/@waline/emojis@1.1.0/bilibili/bb_doge.png" alt="bb_doge">',…
+```
+
+所以导入必须写同一段 `<img>`；早期版本写 `:doge:` 的那 3 行，在页面上就是裸文本
+（注意 `alt`/文件名带包前缀 `bb_`，所以连 `:bb_doge:` 这种"正确"短代码也不会被二次展开）。
+
+**状态**：3 处映射目标都存在于 bilibili 包，无未解析残留。老库里那 3 行还是 `:doge:` 文本的，
+用 `docs/waline-setup.md` 附录 A 的三条 `replace()` 更新一次即可；前端 `addonWaline.emoji` 只影响表情选择器，
+不再决定这 3 处能否显示。
 
 ### 2.4 浏览量（可选，默认不导入）
 
@@ -109,9 +130,18 @@ if (data.status === "approved" && services.spam && await services.spam.check(dat
   搜索引擎里的旧链接会 404，这是既定决策，不做重定向。
 - **评论跟着文章走**：评论的 `url` 字段存的是文章的新路由，所以文章 slug 一旦改动，那条评论就对不上了。
   改 slug 时必须同步 `UPDATE wl_comment SET url = ...`。
-- **6 条孤儿评论**（原所属文章已删）被放到 `/comment/` 并保持 `approved`。
+- **6 条孤儿评论**（原所属文章已删）被放到 `/comment` 并保持 `approved`。
   想隐藏它们见 `docs/waline-setup.md` 6.1 节。
-- **本文不记录部署结果**：Vercel 项目、Neon 数据库、域名绑定都还没做，做完再补。
+- **留言板落库路径是 `/comment`，不带尾斜杠**：浏览器停在 `/comment/`，而 `@waline/client` 发出的查询是
+  `?path=%2Fcomment`（实测抓到的请求）。存成 `/comment/` 时 `count` 查得到、列表一条不显示，
+  2026-10-27 已把生成器里的 `PAGE_ROUTE` 改正；老库用 `UPDATE wl_comment SET url = '/comment' WHERE url = '/comment/';` 修正。
+- **部署状态（2026-10-27 补记）**：Waline 服务端已上线 `https://waline.490633.xyz`（自有域名指向 Vercel，
+  数据库是 Vercel Storage 里的 Neon PostgreSQL），建表与 53 条评论导入完成。
+  浏览器实测复验通过：`/posts/玩客云（onecloud）折腾记` 3 条含楼中楼引用正常渲染，
+  留言板 `/comment/` 渲染 24 张卡片，`.wl-empty` 不再出现，`comment: true` 的评论数挂件出数。
+  主站 `site.config.ts` 的 `url` 定为 `https://www.490633.xyz`，`valaxy.config.ts` 的 `serverURL` 已填真实地址。
+  3 处 Argon 表情已按附录 A 的写法更新进库并复验：`bb_doge.png` / `bb_sob.png` / `bb_thumbsup.png` 均以
+  `img.wl-emoji` 渲染（naturalWidth 96），页面不再有 `:doge:` 之类裸文本。**数据层与显示层均已闭环**。
 
 ---
 
