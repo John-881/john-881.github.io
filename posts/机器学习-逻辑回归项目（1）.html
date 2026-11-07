@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.BOdGZ0Ag.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.XKyaHtl9.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.CjdSPkFv.js">
+  <link rel="modulepreload" crossorigin href="/assets/reka-ui.CVRMFFNl.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.qU7AkdCC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.8e84d6cC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.CgVXZjRC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.D5Tmsjui.js">
+  <link rel="modulepreload" crossorigin href="/assets/medium-zoom.DPWCrKpi.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/@vueuse/motion.ChwBA6vB.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Dt3khUt3.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.BxnaRx5o.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CSNJ5ogk.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Dt3khUt3.js">
+<link rel="preload" href="/assets/none.DLM1AMsD.jpg" as="image">
+<link rel="preload" href="/assets/bg-img.kXdNMxcF.jpg" as="image">
+<link rel="preload" href="/assets/sidebar-bg-img.mp54gEws.webp" as="image">
+<link rel="modulepreload" crossorigin href="/assets/机器学习-逻辑回归项目（1）.CG6Ay4kN.js">
+<link rel="preload" href="/assets/1733289370-屏幕截图-2024-12-04-131649-768x212.Dt__ODXm.png" as="image">
+<link rel="preload" href="/assets/1733543047-屏幕截图-2024-12-07-114338-1024x500.E5EovaWs.png" as="image">
+<link rel="preload" href="/assets/1733543615-屏幕截图-2024-12-07-115317-1024x177.Bszmmnpo.png" as="image">
+<link rel="preload" href="/assets/1733544371-屏幕截图-2024-12-07-120552-768x244.BBAPjh-M.png" as="image">
+<link rel="preload" href="/assets/1733545703-屏幕截图-2024-12-07-122803-1-300x128.DWEmmXKx.png" as="image">
+<link rel="preload" href="/assets/1733546112-屏幕截图-2024-12-07-123458-1024x562.iokqx_6W.png" as="image">
+<link rel="preload" href="/assets/1733546871-屏幕截图-2024-12-07-124737-300x163.MR1wdxc2.png" as="image">
+<link rel="preload" href="/assets/1733547018-屏幕截图-2024-12-07-125004-1024x642.Dlr5u7vo.png" as="image">
+<link rel="preload" href="/assets/1733547054-屏幕截图-2024-12-07-125043-1024x436.BxSerwEy.png" as="image">
+<link rel="preload" href="/assets/1733547333-屏幕截图-2024-12-07-125457-1-1024x225.YxK3vbY9.png" as="image">
+<link rel="preload" href="/assets/1733548093-屏幕截图-2024-12-07-130804-1024x439.BvjaN4fr.png" as="image">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>机器学习——逻辑回归项目（1） - 凌渡冰点的主页</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap">
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="一个兴趣使然的个人小站">
+<meta property="og:description" content="一个兴趣使然的个人小站">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="凌渡冰点的主页">
+<meta property="og:title" content="机器学习——逻辑回归项目（1）">
+<meta property="og:image" content="https://www.490633.xyz/og/default.png">
+<meta property="og:image:alt" content="机器学习——逻辑回归项目（1）">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="一个兴趣使然的个人小站">
+<meta name="twitter:image" content="https://www.490633.xyz/og/default.png">
+<meta name="twitter:title" content="机器学习——逻辑回归项目（1）">
+<link rel="icon" href="/favicon-32x32.png" type="image/png">
+<meta name="generator" content="Valaxy 1.2.0">
+<link rel="canonical" href="https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89">
+<meta name="theme-color" content="#fff">
+<meta name="msapplication-TileColor" content="#fff">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!--[--><!--v-if--><div class="yun-page-header-gradient"></div><div class="yun-nav-menu z-$yun-z-nav-menu fixed bg-transparent" data-v-10432b09><!--  --><div class="inline-flex justify-start items-center flex-1" data-v-10432b09><button type="button" class="vt-hamburger menu-btn sidebar-toggle leading-4 size-12 lg:hidden!" aria-label="mobile navigation" aria-expanded="false" inline-flex cursor="pointer" hover="bg-white/80 dark:bg-black/80" z="$yun-z-menu-btn" data-v-10432b09><span class="vt-hamburger-container"><span class="vt-hamburger-top"></span><span class="vt-hamburger-middle"></span><span class="vt-hamburger-bottom"></span></span></button><a href="/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 data-v-10432b09><!--[--><div class="size-6 i-ri-home-4-line"></div><!--]--></a><div class="hidden lg:contents" data-v-10432b09><!--[--><a href="/nav/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="导航" data-v-10432b09><!--[--><div class="size-6 i-ri-compass-3-line"></div><!--]--></a><a href="/posts/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="文章" data-v-10432b09><!--[--><div class="size-6 i-ri-article-line"></div><!--]--></a><a href="/archives/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="时光轴" data-v-10432b09><!--[--><div class="size-6 i-ri-archive-line"></div><!--]--></a><a href="/categories/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="分类" data-v-10432b09><!--[--><div class="size-6 i-ri-folder-2-line"></div><!--]--></a><a href="/tags/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="标签" data-v-10432b09><!--[--><div class="size-6 i-ri-price-tag-3-line"></div><!--]--></a><a href="/links/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="友链" data-v-10432b09><!--[--><div class="size-6 i-ri-links-line"></div><!--]--></a><a href="/comment/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="留言板" data-v-10432b09><!--[--><div class="size-6 i-ri-chat-3-line"></div><!--]--></a><a href="/services/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="服务" data-v-10432b09><!--[--><div class="size-6 i-ri-service-line"></div><!--]--></a><!--]--></div></div><div class="flex flex-1 flex-center" data-v-10432b09><div flex="~ center col h-full" class="nav-menu-title-container cursor-pointer" data-v-10432b09><!----><span class="font-light truncate">凌渡冰点的主页</span></div></div><div class="inline-flex-center justify-end items-center flex-1" data-v-10432b09><!-- <template v-if="!app.isMobile && themeConfig.nav">
+          <template v-for="item in themeConfig.nav" :key="item.text">
+            <AppLink
+              v-if="'link' in item"
+              :to="item.link"
+              class="menu-btn inline-flex-center p-2 transition text-$va-c-text"
+              inline-flex cursor="pointer"
+              hover="bg-white/80 dark:bg-black/80"
+              z="$yun-z-menu-btn"
+            >
+              {{ item.text }}
+            </AppLink>
+            <template v-else-if="'items' in item" />
+          </template>
+        </template> --><button class="yun-icon-btn rounded-none! hidden sm:inline-flex" title="切换语言" style="color:var(--va-c-text);" data-v-10432b09><div i-ri-translate class="transition transform"></div></button><button type="button" class="yun-icon-btn yun-toggle-dark rounded-none!" title="切换深色模式" aria-label="切换深色模式" data-v-10432b09><div i="ri-sun-line dark:ri-moon-line"></div></button><!--[--><button class="yun-search-btn yun-icon-btn yun-search-action popup-trigger" title="搜索"><div i-ri-search-line aria-hidden="true"></div></button><!--[--><!--v-if--><!--]--><!--]--></div></div><!----><!--v-if--><!----><!--[--><div class="yun-bg"></div><!--]--><!----><button type="button" class="back-to-top yun-icon-btn" aria-label="回到顶部" title="回到顶部" tabindex="-1" aria-hidden="true" style="--yun-back-top-progress:0deg;"><div class="back-to-top-arrow" i-ri-arrow-up-s-line aria-hidden="true"></div></button><!--]--><!--[--><!--]--><!----><!--]--><div class="min-h-screen flex flex-col"><!----><div class="mt-12 md:mt-24 yun-layout-wrapper-content yun-layout-wrapper__content"><!--[--><div class="yun-layout-left gap-4 sticky top-$yun-margin-top w-80"><!--[--><!--[--><div class="yun-card flex-center overflow-hidden p-4 min-h-sm" flex="~ col gap-1" min-h="100px" bg="$va-c-bg-light" data-v-17447266><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center" data-v-17447266><!--[--><div class="site-info gap-1 items-center text-center" flex="~ col" p="t-8"><a href="/about" class="site-author-avatar inline-flex-center"><div class="relative yun-author-avatar"><div class="absolute size-full avatar-bg bg-image-$yun-home-hero-image-background-image filter-blur-2xl op-30"></div><img class="rounded-full size-full bg-white dark:bg-white/20 p-1 m-0 absolute" src="/avatar.webp" alt="avatar"><span class="site-author-status absolute" title="在写代码">🩵</span></div></a><a href="/about" class="site-author-name font-black font-serif text-$va-c-text op-80 hover:op-100 flex-center">凌渡冰点</a><a href="/about/site" class="site-name text-lg leading-loose">凌渡冰点的主页</a><h4 class="site-subtitle block op-70" text="xs">Next Generation Static Blog Framework.</h4><div class="site-description">一个兴趣使然的个人小站</div></div><div class="yun-gradient-line my-2 op-20"></div><nav class="site-nav" text-xl mt-2><a href="/archives/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="归档" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-archive-line"></div><div class="text-2xl icon-active i-ri-archive-fill"></div><span class="text-xs">归档</span></div><span class="count text-base text-black/80 dark:text-white/80">31</span></a><a href="/categories/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="分类" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-folder-2-line"></div><div class="text-2xl icon-active i-ri-folder-2-fill"></div><span class="text-xs">分类</span></div><span class="count text-base text-black/80 dark:text-white/80">5</span></a><a href="/tags/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="标签" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-price-tag-3-line"></div><div class="text-2xl icon-active i-ri-price-tag-3-fill"></div><span class="text-xs">标签</span></div><span class="count text-base text-black/80 dark:text-white/80">22</span></a></nav><div class="yun-gradient-line my-2 op-20"></div><div class="links-of-author"><!--[--><a class="links-of-author-item yun-icon-btn" rel="noopener" href="https://space.bilibili.com/421681448" title="哔哩哔哩" target="_blank" style="color:#FF8EB3;"><div class="i-ri-bilibili-line icon"></div></a><a class="links-of-author-item yun-icon-btn" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange;"><div class="i-ri-rss-line icon"></div></a><!--]--></div><div class="yun-gradient-line my-2 op-20"></div><div class="links flex-center"><!--[--><a href="/nav/" class="va-link link-item yun-icon-btn" inline-flex title="导航" style="color:coral;"><!--[--><div class="i-ri-compass-3-line icon size-6"></div><!--]--></a><a href="/posts/" class="va-link link-item yun-icon-btn" inline-flex title="文章" style="color:var(--va-c-primary);"><!--[--><div class="i-ri-article-line icon size-6"></div><!--]--></a><a href="/archives/" class="va-link link-item yun-icon-btn" inline-flex title="时光轴" style="color:deepskyblue;"><!--[--><div class="i-ri-archive-line icon size-6"></div><!--]--></a><a href="/categories/" class="va-link link-item yun-icon-btn" inline-flex title="分类" style="color:orange;"><!--[--><div class="i-ri-folder-2-line icon size-6"></div><!--]--></a><a href="/tags/" class="va-link link-item yun-icon-btn" inline-flex title="标签" style="color:mediumseagreen;"><!--[--><div class="i-ri-price-tag-3-line icon size-6"></div><!--]--></a><a href="/links/" class="va-link link-item yun-icon-btn" inline-flex title="友链" style="color:dodgerblue;"><!--[--><div class="i-ri-links-line icon size-6"></div><!--]--></a><a href="/comment/" class="va-link link-item yun-icon-btn" inline-flex title="留言板" style="color:hotpink;"><!--[--><div class="i-ri-chat-3-line icon size-6"></div><!--]--></a><a href="/services/" class="va-link link-item yun-icon-btn" inline-flex title="服务" style="color:slateblue;"><!--[--><div class="i-ri-service-line icon size-6"></div><!--]--></a><!--]--></div><!--]--></div><!----></div><!--[--><!--
+    Empty placeholder, meant to be overridden by the user (see demo/yun/components/YunAdBoard.vue).
+    `v-if="false"` renders a comment node instead of a real element: this avoids the SSR hydration
+    crash a raw `<template>` causes (#711), while still adding no gap to the parent flex layout,
+    which an empty `<div>` would (ab57216f).
+  --><!----><!--]--><!--]--><!--]--></div><!----><main class="yun-main lt-md:w-full" flex="~ center"><!--[--><div class="content w-full md:w-3xl lg:w-2xl xl:w-2xl 2xl:w-4xl" flex="~ col grow" p="lt-md:0"><div class="yun-card flex-center overflow-hidden" flex="col" min-h="100px" bg="$va-c-bg-light" m="0" data-v-17447266><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center" data-v-17447266><!--[--><!----><div class="mt-8 mb-4"><!--[--><header class="post-header"><h1 p="2" text="2xl center" font="serif black" style="color:" class="post-title flex-center"><!----><span inline-flex class="leading-none">机器学习——逻辑回归项目（1）</span></h1></header><!--]--></div><!--[--><!--[--><!--[--><!--[--><!----><div flex="~ center" text="sm" class="post-meta-col post-meta gap-4"><div class="post-time flex items-center gap-4"><span class="posted-time inline-flex-center gap-1" title="发表于2024-12-07 20:50:59"><div class="inline-block" i-ri-calendar-line></div><time class="op-80">2024-12-07</time></span><span class="edited-time inline-flex-center gap-1" title="更新于2026-11-07 23:40:59"><div i-ri-calendar-2-line></div><time class="op-80">2026-11-07</time></span></div><!--[--><!--]--><div class="inline-flex-center gap-4"><div class="inline-flex-center post-counter gap-4"><span class="word-count inline-flex-center gap-1" title="本文字数"><div class="inline-block" i-ri-file-word-line></div><span class="op-80">2.2k</span></span><span class="reading-time inline-flex-center gap-1" title="阅读时长"><div i-ri-timer-line></div><time class="op-80">12m</time></span></div><div class="inline-flex gap-4" text="sm" h="5"><!----><div inline-flex justify="center" items="center" title="评论数"><div inline-flex i-ri-chat-4-line></div><span ml-1 inline-flex class="waline-comment-count op-80" data-path="/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89"></span></div></div><!----></div></div><!--]--><!----><div class="inline-flex mt-2" text="sm" py="1"><a href="/categories?category=%E6%9C%AA%E5%88%86%E7%B1%BB" class="transition post-category inline-flex-center text-xs border-$va-c-divider" px-2 h="7" border rounded-full hover="bg-blue-500 text-white"><div m="x-1" inline-flex i-ri-folder-2-line></div><span>未分类</span></a><span mx="2"></span><div class="post-tags inline-flex" items="center" gap="1" flex="wrap 1" justify="end"><!--[--><a href="/tags/?tag=%E7%AE%97%E6%B3%95" class="transition post-tag inline-flex-center text-xs border-$va-c-divider" px-2 h="7" rounded-full border hover="bg-blue-500"><span>算法</span></a><!--]--></div></div><!--]--><!--]--><!--]--><div p="x-4 b-8" class="sm:px-6 lg:px-12 xl:px-16" w="full"><!--[--><!--]--><!--[--><!-- <Transition appear> --><article class="markdown-body"><!--[--><!----><!----><!--[--><!--]--><!--[--><h2 id="数据分析与预处理" tabindex="-1">数据分析与预处理 <a class="header-anchor" href="#数据分析与预处理" aria-label="Permalink to &quot;数据分析与预处理&quot;">​</a></h2><p>当我们拿到一堆数据的时候，首先应该做的是对其进行分析与处理。</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>import pandas as pd</span></span>
+<span class="line"><span>data = pd.read_csv(&quot;creditcard.csv&quot;)#读取数据</span></span>
+<span class="line"><span>print(data.head())#显示数据,默认前五行</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这里不建议使用excel开打数据，因为数据一般而言都是成千上万条，打开所需的时间太久了，我们直接使用pandas库来进行读取和显示前五条数据进行一个简单的分析。</p><figure><img src="/assets/1733289370-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-04-131649-768x212.Dt__ODXm.png" alt="" loading="lazy" decoding="async"></figure><p>这里我们可以看到这个数据的大概模样，可以得知此数据集一共有31列，其中有30列是特征列，Amount为贷款的金额，Class为分类结果，0为交易正常，1为异常。</p><p>接下来我们要检查一下这里面所存在多少异常值。</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>import matplotlib.pyplot as plt</span></span>
+<span class="line"><span>#异常值的找寻</span></span>
+<span class="line"><span>count_classes = pd.value_counts(data[&#39;Class&#39;], sort = True).sort_index()</span></span>
+<span class="line"><span>count_classes.plot(kind = &#39;bar&#39;)</span></span>
+<span class="line"><span>plt.title(&quot;Fraud class histogram&quot;)</span></span>
+<span class="line"><span>plt.xlabel(&#39;Class&#39;)</span></span>
+<span class="line"><span>plt.ylabel(&#39;Frequency&#39;)</span></span>
+<span class="line"><span>plt.show()</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>由于数据太多，这里我们使用画图进行数据统计与分析。</p><p>value_counts()是一个计数函数，统计数据的数量。</p><p>参数data[&#39;Class&#39;]指的是统计Class这一列以下的数据。</p><p>参数sort是是否进行排序处理。</p><p>sort_index()为引索排序，这里是按照行引索升序排列，使得他们还是从上向下进行排序（0，1，2…)，而非乱序（2，1，0…）</p><p>count_classes.plot()是画图函数，传入的kind是所需绘图的类型，这里的‘bar’是指绘制条形图</p><p>plt.title()绘制图的标题。</p><p>plt.xlabel()为x轴坐标的标签，同理ylable即为y轴的标签。</p><p>plt.show()将所绘制的图在屏幕上展示出来。</p><figure><img src="/assets/1733543047-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-114338-1024x500.E5EovaWs.png" alt="" loading="lazy" decoding="async"></figure><p>于是乎得到了这一张图，看起来好像没有异常值，其实是有的，只是太少了。</p><h2 id="特征标准化" tabindex="-1">特征标准化 <a class="header-anchor" href="#特征标准化" aria-label="Permalink to &quot;特征标准化&quot;">​</a></h2><figure><img src="/assets/1733289370-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-04-131649-768x212.Dt__ODXm.png" alt="" loading="lazy" decoding="async"></figure><p>这里我们能看到v1-v28列的数值都是较小的，而amount列的数据相比之下就大的太多了，这样的话，会使得amount在模型中所占的权重过大，但我们并不希望这样，所以我们进行一下数据标准化操作，使模型对他们一视同仁。</p><figure><img src="/assets/1733543615-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-115317-1024x177.Bszmmnpo.png" alt="" loading="lazy" decoding="async"></figure><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>from sklearn.preprocessing import StandardScaler</span></span>
+<span class="line"><span>data[&#39;normAmount&#39;] = StandardScaler().fit_transform(data[&quot;Amount&quot;].values.reshape(-1,1))</span></span>
+<span class="line"><span>data = data.drop([&#39;Time&#39;,&#39;Amount&#39;],axis=1)</span></span>
+<span class="line"><span>print(data.head())</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>首先导入标准化库，然后使用标准化库中的fit_transform()函数来进行处理（这个函数先会寻找数据的均值等特征值，然后再进行标准化处理）。</p><p>data[&#39;Amount&#39;]参数指的是我们对Amount这列数据进行处理，后面跟的.values.reshape(-1,1)指的是将Amount列的数据转换成一列数据。</p><p>data.drop（）函数用处删除数据，这里我们删除time和amount列，axis=1代表删除的是列</p><figure><img src="/assets/1733544371-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-120552-768x244.BBAPjh-M.png" alt="" loading="lazy" decoding="async"></figure><p>这下我们变化后的normAmount就和前面的数据相差无几了。</p><h2 id="样本不平均的处理方法" tabindex="-1">样本不平均的处理方法 <a class="header-anchor" href="#样本不平均的处理方法" aria-label="Permalink to &quot;样本不平均的处理方法&quot;">​</a></h2><p>这里可以看到我们class为0和为1的数量相差太大，这里有两种解决办法，一为下采样，一为过采样。</p><h2 id="下采样" tabindex="-1">下采样 <a class="header-anchor" href="#下采样" aria-label="Permalink to &quot;下采样&quot;">​</a></h2><p>假设我们的class为0的样本只有1000个，为1的样本有10000个，那么我们取样的时候，为0的样本取1000个，为1的样本也只取其中的1000。这样就保证了两类数据的比例平均。</p><h2 id="过采样" tabindex="-1">过采样 <a class="header-anchor" href="#过采样" aria-label="Permalink to &quot;过采样&quot;">​</a></h2><p>这时候我们就增加一些class为0的样本，使其和为1的样本数一样多，怎么增加呢？捏造数据。</p><h2 id="下采样方案" tabindex="-1">下采样方案 <a class="header-anchor" href="#下采样方案" aria-label="Permalink to &quot;下采样方案&quot;">​</a></h2><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>X = data.loc[:, data.columns != &#39;Class&#39;]#读取除Class列之外的所有列</span></span>
+<span class="line"><span>y = data.loc[:, data.columns == &quot;Class&quot;]#读取Class列</span></span>
+<span class="line"><span>number_records_fraud = len(data[data.Class == 1])#统计异常数据数量</span></span>
+<span class="line"><span>fraud_indices = np.array(data[data.Class == 1].index)#将异常值放入数组</span></span>
+<span class="line"><span>normal_indices = data[data.Class == 0].index#储存正常值的索引</span></span>
+<span class="line"><span>random_normal_indices = np.random.choice(normal_indices, number_records_fraud, replace = False)#从正常值引索数组中抽取异常值个数的数为一个新列表，replac = false为不取相同数据</span></span>
+<span class="line"><span>random_normal_indices = np.array(random_normal_indices)#转换为np中的数组</span></span>
+<span class="line"><span>under_sample_indices = np.concatenate([fraud_indices,random_normal_indices])#拼接两个数组</span></span>
+<span class="line"><span>under_sample_data = data.iloc[under_sample_indices,:]#读取这些行的数据</span></span>
+<span class="line"><span>X_undersample = under_sample_data.loc[:, under_sample_data.columns != &#39;Class&#39;]</span></span>
+<span class="line"><span>y_undersample = under_sample_data.loc[:, under_sample_data.columns == &quot;Class&quot;]</span></span>
+<span class="line"><span>print(&quot;正常样本所占整体比例：&quot;, len(under_sample_data[under_sample_data.Class==0])/len(under_sample_data))</span></span>
+<span class="line"><span>print(&quot;异常样本所占整体比例:&quot;,len(under_sample_data[under_sample_data.Class == 1])/len(under_sample_data))</span></span>
+<span class="line"><span>print(&quot;下采样策略总体样本数量:&quot;,len(under_sample_data))</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>data.loc（）函数是读取列表中的数据，参数中第一个：指的是读取全部行。</p><p>这里我们将除class列之外的所有数据作为特征值，class列的值作为预测值。</p><p>np.random.choice（）函数的第一个参数为从哪一个数组里抽取，第二个为抽取的数量，第三个为是否取相同的数据。</p><figure><img src="/assets/1733545703-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-122803-1-300x128.DWEmmXKx.png" alt="" loading="lazy" decoding="async"></figure><h2 id="交叉验证" tabindex="-1">交叉验证 <a class="header-anchor" href="#交叉验证" aria-label="Permalink to &quot;交叉验证&quot;">​</a></h2><figure><img src="/assets/1733546112-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-123458-1024x562.iokqx_6W.png" alt="" loading="lazy" decoding="async"></figure><p>将训练集划分为多份，每次取其中一份作为验证集，如此下来，对所有的结果取平均，就是模型的评估值。建模的时候有训练集，验证集，测试集。训练集就是用来训练模型的，验证用于验证模型的，测试集用于检测模型成效的。交叉验证就是用于评估检测模型的。</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>#导入数据集切分模块</span></span>
+<span class="line"><span>from sklearn.model_selection import train_test_split</span></span>
+<span class="line"><span>#对于特征值与预测值划分训练集与测试集</span></span>
+<span class="line"><span>X_train, X_test, y_train, y_test = train_test_split(X,y,test_size = 0.3, random_state = 0)</span></span>
+<span class="line"><span>print(&quot;\n原始训练集包括样本数量：&quot;,len(X_train))</span></span>
+<span class="line"><span>print(&quot;原始测试集包含样本数量：&quot;, len(X_test))</span></span>
+<span class="line"><span>print(&quot;原始样本总数：&quot;, len(X_train)+len(X_test))</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#下采样数据集进行划分</span></span>
+<span class="line"><span>X_train_undersample,X_test_undersample,y_train_undersample,y_test_undersample = train_test_split(X_undersample, y_undersample, test_size = 0.3, random_state = 0)</span></span>
+<span class="line"><span>print(&quot;\n下采样训练集包含样本数量：&quot;, len(X_train_undersample))</span></span>
+<span class="line"><span>print(&quot;下采样训练测试集包含样本数量：&quot;,len(X_test_undersample))</span></span>
+<span class="line"><span>print(&quot;下采样样本总数：&quot;, len(X_train_undersample)+len(X_test_undersample))</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>train_test_split（）函数用于划分训练与测试集，参数为特征值数组，预测值数组，test_size测试集划分比例，random_state随机种子。</p><figure><img src="/assets/1733546871-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-124737-300x163.MR1wdxc2.png" alt="" loading="lazy" decoding="async"></figure><h2 id="模型评估方法" tabindex="-1">模型评估方法 <a class="header-anchor" href="#模型评估方法" aria-label="Permalink to &quot;模型评估方法&quot;">​</a></h2><figure><img src="/assets/1733547018-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-125004-1024x642.Dlr5u7vo.png" alt="" loading="lazy" decoding="async"></figure><figure><img src="/assets/1733547054-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-125043-1024x436.BxSerwEy.png" alt="" loading="lazy" decoding="async"></figure><h2 id="正则化惩罚" tabindex="-1">正则化惩罚 <a class="header-anchor" href="#正则化惩罚" aria-label="Permalink to &quot;正则化惩罚&quot;">​</a></h2><p>简单而言就是在模型迭代的过程中，不断调整模型的不同参数的占比，以防止出现过拟合现象，使模型的预测效果更好。</p><figure><img src="/assets/1733547333-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-125457-1-1024x225.YxK3vbY9.png" alt="" loading="lazy" decoding="async"></figure><p>a系数是惩罚力度，a越大，惩罚力度越大。</p><h2 id="逻辑回归模型" tabindex="-1">逻辑回归模型 <a class="header-anchor" href="#逻辑回归模型" aria-label="Permalink to &quot;逻辑回归模型&quot;">​</a></h2><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>#逻辑回归模型</span></span>
+<span class="line"><span>from sklearn.model_selection import KFold</span></span>
+<span class="line"><span>from sklearn.linear_model import LogisticRegression</span></span>
+<span class="line"><span>from sklearn.metrics import recall_score</span></span>
+<span class="line"><span>def printing_Kfold_scores(X_train_date, y_train_data):</span></span>
+<span class="line"><span>    fold = KFold(5,shuffle=False)</span></span>
+<span class="line"><span>    #定义不同的正则化惩罚力度</span></span>
+<span class="line"><span>    c_param_range = [0.01,0.1,1,10,100]</span></span>
+<span class="line"><span>    #显示结果用的表格</span></span>
+<span class="line"><span>    results_table = pd.DataFrame(index = range(len(c_param_range),2),columns = [&quot;C_parameter&quot;,&quot;Mean recall score&quot;])</span></span>
+<span class="line"><span>    results_table[&quot;C_parameter&quot;] = c_param_range</span></span>
+<span class="line"><span>    # k-fold 表示K折的交叉验证，这里会得到两个索引集合：训练集 = indices[0]， 验证集 = indices[1]</span></span>
+<span class="line"><span>    j = 0</span></span>
+<span class="line"><span>    #循环遍历不同的参数</span></span>
+<span class="line"><span>    for c_param in c_param_range:</span></span>
+<span class="line"><span>        print(&#39;\n---------------------&#39;)</span></span>
+<span class="line"><span>        print(&#39;正则化惩罚力度：&#39;, c_param)</span></span>
+<span class="line"><span>        print(&#39;---------------------&#39;)</span></span>
+<span class="line"><span>        recall_accs = []</span></span>
+<span class="line"><span>        #一步步分解来执行交叉验证</span></span>
+<span class="line"><span>        for iteration, indices in enumerate(fold.split(y_train_data),start=1):</span></span>
+<span class="line"><span>            #指定算法模型，并且给定参数</span></span>
+<span class="line"><span>            Ir = LogisticRegression(C = c_param, penalty = &#39;l1&#39;,solver=&#39;liblinear&#39;)</span></span>
+<span class="line"><span>            #训练模型，注意不要给错索引，训练的时候传入的一定是训练集，所以X和Y的索引都是0</span></span>
+<span class="line"><span>            Ir.fit(X_train_date.iloc[indices[0],:],y_train_data.iloc[indices[0],:].values.ravel())</span></span>
+<span class="line"><span>            #建立好模型后，预测模型结果，这里用的就是验证集，索引为1</span></span>
+<span class="line"><span>            y_pred_undersample = Ir.predict(X_train_date.iloc[indices[1],:].values)</span></span>
+<span class="line"><span>            #预测结果明确后，就可以进行评估，这里recall_score需要传入预测值和真实值</span></span>
+<span class="line"><span>            recall_acc = recall_score(y_train_data.iloc[indices[1],:].values,y_pred_undersample)</span></span>
+<span class="line"><span>            #一会还要计算平均，所以吧每一步的结果都先保存起来</span></span>
+<span class="line"><span>            recall_accs.append(recall_acc)</span></span>
+<span class="line"><span>            print(&#39;Iteration&#39;,iteration,&quot;召回率 = &quot;,recall_acc)</span></span>
+<span class="line"><span>        #当执行完所有的交叉验证之后，计算平均结果</span></span>
+<span class="line"><span>        results_table.loc[j,&#39;Mean recall score&#39;] = np.mean(recall_accs)</span></span>
+<span class="line"><span>        j += 1</span></span>
+<span class="line"><span>        print(&#39;&#39;)</span></span>
+<span class="line"><span>        print(&#39;平均召回率&#39;,np.mean(recall_accs))</span></span>
+<span class="line"><span>        print(&#39;&#39;)</span></span>
+<span class="line"><span>    #找到最好的参数，哪一个Recall高，自然就是最好的</span></span>
+<span class="line"><span>    best_c = results_table.loc[results_table[&quot;Mean recall score&quot;].astype(&#39;float32&#39;).idxmax()][&#39;C_parameter&#39;]</span></span>
+<span class="line"><span>    #打印最好的结果</span></span>
+<span class="line"><span>    print(&quot;*************************&quot;)</span></span>
+<span class="line"><span>    print(&quot;效果最好的模型所选参数 = &quot;,best_c)</span></span>
+<span class="line"><span>    print(&quot;*************************&quot;)</span></span>
+<span class="line"><span>    return best_c</span></span>
+<span class="line"><span>best_c = printing_Kfold_scores(X_train_undersample,y_train_undersample)</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>最后将结果</p><figure><img src="/assets/1733548093-%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2024-12-07-130804-1024x439.BvjaN4fr.png" alt="" loading="lazy" decoding="async"></figure><p>类似于这样，警告自动忽视一下</p><!--]--><!--]--><!----><!----></article><!-- </Transition> --><!--]--><!--[--><!--[--><!--[--><div class="yun-sponsor-container flex-center flex-col" m="t-6"><button class="sponsor-button yun-icon-btn shadow hover:shadow-md" title="打赏" text="red-400"><div class="mt-2px" i-ri-heart-fill></div></button><div m="y-4" class="qrcode-container qrcode flex-center flex-col"><div class="sponsor-description" mb="4" text="sm">这是关于赞助的一些描述</div><div class="flex justify-around"><!--[--><!--]--></div></div></div><ul class="post-copyright" m="y-4"><li class="post-copyright-author"><strong>本文作者：</strong><span>凌渡冰点</span></li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89" target="_blank" title="本文链接">https://www.490633.xyz/posts/机器学习-逻辑回归项目（1）</a></li><li class="post-copyright-license"><strong>版权声明：</strong><span>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 ">CC BY-NC-SA</a> 许可协议。</span></li></ul><!--]--><!--]--><!--]--></div><!--]--></div><!----></div><!--[--><!--]--><!--[--><div class="post-nav"><div class="post-nav-item"><a href="/posts/python0" class="post-nav-prev" title="Python学习日记（0）"><div class="icon" i-ri-arrow-left-s-line></div><span class="title truncate" text="sm">Python学习日记（0）</span></a></div><div class="post-nav-item"><a href="/posts/pygame%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89" class="post-nav-next" title="Pygame学习笔记（5）"><span class="title truncate" text="sm">Pygame学习笔记（5）</span><div class="icon" i-ri-arrow-right-s-line></div></a></div></div><!--]--><!--[--><!--]--><!--[--><div class="yun-card flex-center overflow-hidden comment yun-comment sm:p-6 lg:px-12 xl:px-16" flex="col" min-h="100px" bg="$va-c-bg-light" w="full" p="4" data-v-17447266><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center" data-v-17447266><!--[--><!----><!--]--></div><!----></div><!--]--><!--[--><!--
+    Empty placeholder, meant to be overridden by the user (see demo/yun/components/YunAdBoard.vue).
+    `v-if="false"` renders a comment node instead of a real element: this avoids the SSR hydration
+    crash a raw `<template>` causes (#711), while still adding no gap to the parent flex layout,
+    which an empty `<div>` would (ab57216f).
+  --><!----><!--]--><!--[--><!--]--><!--[--><!--]--></div><!--]--></main><!--[--><!----><!----><!----><!--]--><!--]--></div><footer flex="~ col" class="relative yun-footer va-footer px-4 py-4 pt-0 text-$va-c-text-light w-full mt-14" bg="white dark:$va-c-bg-soft" text="center sm"><div class="yun-cloud absolute top--10 left-0 right-0"><svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" fill="var(--yun-c-cloud)"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><!----><div class="copyright flex justify-center items-center gap-2" p="1"><span> © <!--[-->2024 - <!--]--> 2026</span><a class="animate-pulse inline-flex" href="https://www.yunyoujun.cn/sponsors/" target="_blank" title="Sponsor YunYouJun"><div class="i-ri-cloud-line"></div></a><span>凌渡冰点</span></div><div class="powered" m="2"><span>由 <a href="https://github.com/YunYouJun/valaxy.git" target="_blank" rel="noopener">Valaxy</a> <span class="op-60">v1.2.0</span> 驱动</span><span mx-1>|</span><span><span>主题</span><span mx-1>-</span><a href="https://github.com/YunYouJun/valaxy.git" title="valaxy-theme-yun" target="_blank">Yun</a><span class="ml-1 op-60">v1.2.0</span></span></div><!--[--><!--]--><div class="yun-footer-gradient"></div></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"yun-app":{"bannerAnimationDone":false},"app":{"showLoading":true},"site":{},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://www.490633.xyz/#identity","@type":"Person","name":"凌渡冰点","url":"https://www.490633.xyz/","image":{"@id":"https://www.490633.xyz/#/schema/image/1"},"sameAs":["https://space.bilibili.com/421681448","/atom.xml"]},{"@id":"https://www.490633.xyz/#website","@type":"WebSite","dateModified":"2026-11-07T15:40:59.000Z","datePublished":"2024-12-07T12:50:59.000Z","inLanguage":"zh-CN","name":"机器学习——逻辑回归项目（1）","url":"https://www.490633.xyz/","publisher":{"@id":"https://www.490633.xyz/#identity"}},{"@id":"https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89#webpage","@type":"WebPage","dateModified":"2026-11-07T15:40:59.000Z","datePublished":"2024-12-07T12:50:59.000Z","description":"一个兴趣使然的个人小站","name":"机器学习——逻辑回归项目（1）","url":"https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89","isPartOf":{"@id":"https://www.490633.xyz/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89"]}]},{"@id":"https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89#article","dateModified":"2026-11-07T15:40:59.000Z","datePublished":"2024-12-07T12:50:59.000Z","headline":"机器学习——逻辑回归项目（1）","inLanguage":"zh-CN","thumbnailUrl":"https://www.490633.xyz/og/default.png","@type":["Article","BlogPosting"],"author":{"@id":"https://www.490633.xyz/#/schema/person/1"},"image":{"@id":"https://www.490633.xyz/#/schema/image/2"},"isPartOf":{"@id":"https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89#webpage"},"mainEntityOfPage":{"@id":"https://www.490633.xyz/posts/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E9%A1%B9%E7%9B%AE%EF%BC%881%EF%BC%89#webpage"},"publisher":{"@id":"https://www.490633.xyz/#identity"}},{"@id":"https://www.490633.xyz/#/schema/person/1","@type":"Person","name":"凌渡冰点","url":"https://www.490633.xyz"},{"@id":"https://www.490633.xyz/#/schema/image/1","@type":"ImageObject","contentUrl":"https://www.490633.xyz/avatar.webp","inLanguage":"zh-CN","url":"https://www.490633.xyz/avatar.webp"},{"@id":"https://www.490633.xyz/#/schema/image/2","@type":"ImageObject","contentUrl":"https://www.490633.xyz/og/default.png","inLanguage":"zh-CN","url":"https://www.490633.xyz/og/default.png"}]}</script>
+  <div id="valaxy-teleports"></div>
+  
+</body>
+</html>

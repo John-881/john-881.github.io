@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.BOdGZ0Ag.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.XKyaHtl9.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.CjdSPkFv.js">
+  <link rel="modulepreload" crossorigin href="/assets/reka-ui.CVRMFFNl.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.qU7AkdCC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.8e84d6cC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.CgVXZjRC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.D5Tmsjui.js">
+  <link rel="modulepreload" crossorigin href="/assets/medium-zoom.DPWCrKpi.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/@vueuse/motion.ChwBA6vB.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Dt3khUt3.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.BxnaRx5o.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CSNJ5ogk.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Dt3khUt3.js">
+<link rel="preload" href="/assets/none.DLM1AMsD.jpg" as="image">
+<link rel="preload" href="/assets/bg-img.kXdNMxcF.jpg" as="image">
+<link rel="preload" href="/assets/sidebar-bg-img.mp54gEws.webp" as="image">
+<link rel="modulepreload" crossorigin href="/assets/ubuntu-server.CxUqFM2U.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ubuntu server - 凌渡冰点的主页</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap">
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="一个兴趣使然的个人小站">
+<meta property="og:description" content="一个兴趣使然的个人小站">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="凌渡冰点的主页">
+<meta property="og:title" content="Ubuntu server">
+<meta property="og:image" content="https://www.490633.xyz/og/default.png">
+<meta property="og:image:alt" content="Ubuntu server">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.490633.xyz/posts/ubuntu-server">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="一个兴趣使然的个人小站">
+<meta name="twitter:image" content="https://www.490633.xyz/og/default.png">
+<meta name="twitter:title" content="Ubuntu server">
+<link rel="icon" href="/favicon-32x32.png" type="image/png">
+<meta name="generator" content="Valaxy 1.2.0">
+<link rel="canonical" href="https://www.490633.xyz/posts/ubuntu-server">
+<meta name="theme-color" content="#fff">
+<meta name="msapplication-TileColor" content="#fff">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!--[--><!--v-if--><div class="yun-page-header-gradient"></div><div class="yun-nav-menu z-$yun-z-nav-menu fixed bg-transparent" data-v-10432b09><!--  --><div class="inline-flex justify-start items-center flex-1" data-v-10432b09><button type="button" class="vt-hamburger menu-btn sidebar-toggle leading-4 size-12 lg:hidden!" aria-label="mobile navigation" aria-expanded="false" inline-flex cursor="pointer" hover="bg-white/80 dark:bg-black/80" z="$yun-z-menu-btn" data-v-10432b09><span class="vt-hamburger-container"><span class="vt-hamburger-top"></span><span class="vt-hamburger-middle"></span><span class="vt-hamburger-bottom"></span></span></button><a href="/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 data-v-10432b09><!--[--><div class="size-6 i-ri-home-4-line"></div><!--]--></a><div class="hidden lg:contents" data-v-10432b09><!--[--><a href="/nav/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="导航" data-v-10432b09><!--[--><div class="size-6 i-ri-compass-3-line"></div><!--]--></a><a href="/posts/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="文章" data-v-10432b09><!--[--><div class="size-6 i-ri-article-line"></div><!--]--></a><a href="/archives/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="时光轴" data-v-10432b09><!--[--><div class="size-6 i-ri-archive-line"></div><!--]--></a><a href="/categories/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="分类" data-v-10432b09><!--[--><div class="size-6 i-ri-folder-2-line"></div><!--]--></a><a href="/tags/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="标签" data-v-10432b09><!--[--><div class="size-6 i-ri-price-tag-3-line"></div><!--]--></a><a href="/links/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="友链" data-v-10432b09><!--[--><div class="size-6 i-ri-links-line"></div><!--]--></a><a href="/comment/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="留言板" data-v-10432b09><!--[--><div class="size-6 i-ri-chat-3-line"></div><!--]--></a><a href="/services/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="服务" data-v-10432b09><!--[--><div class="size-6 i-ri-service-line"></div><!--]--></a><!--]--></div></div><div class="flex flex-1 flex-center" data-v-10432b09><div flex="~ center col h-full" class="nav-menu-title-container cursor-pointer" data-v-10432b09><!----><span class="font-light truncate">凌渡冰点的主页</span></div></div><div class="inline-flex-center justify-end items-center flex-1" data-v-10432b09><!-- <template v-if="!app.isMobile && themeConfig.nav">
+          <template v-for="item in themeConfig.nav" :key="item.text">
+            <AppLink
+              v-if="'link' in item"
+              :to="item.link"
+              class="menu-btn inline-flex-center p-2 transition text-$va-c-text"
+              inline-flex cursor="pointer"
+              hover="bg-white/80 dark:bg-black/80"
+              z="$yun-z-menu-btn"
+            >
+              {{ item.text }}
+            </AppLink>
+            <template v-else-if="'items' in item" />
+          </template>
+        </template> --><button class="yun-icon-btn rounded-none! hidden sm:inline-flex" title="切换语言" style="color:var(--va-c-text);" data-v-10432b09><div i-ri-translate class="transition transform"></div></button><button type="button" class="yun-icon-btn yun-toggle-dark rounded-none!" title="切换深色模式" aria-label="切换深色模式" data-v-10432b09><div i="ri-sun-line dark:ri-moon-line"></div></button><!--[--><button class="yun-search-btn yun-icon-btn yun-search-action popup-trigger" title="搜索"><div i-ri-search-line aria-hidden="true"></div></button><!--[--><!--v-if--><!--]--><!--]--></div></div><!----><!--v-if--><!----><!--[--><div class="yun-bg"></div><!--]--><!----><button type="button" class="back-to-top yun-icon-btn" aria-label="回到顶部" title="回到顶部" tabindex="-1" aria-hidden="true" style="--yun-back-top-progress:0deg;"><div class="back-to-top-arrow" i-ri-arrow-up-s-line aria-hidden="true"></div></button><!--]--><!--[--><!--]--><!----><!--]--><div class="min-h-screen flex flex-col"><!----><div class="mt-12 md:mt-24 yun-layout-wrapper-content yun-layout-wrapper__content"><!--[--><div class="yun-layout-left gap-4 sticky top-$yun-margin-top w-80"><!--[--><!--[--><div class="yun-card flex-center overflow-hidden p-4 min-h-sm" flex="~ col gap-1" min-h="100px" bg="$va-c-bg-light" data-v-17447266><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center" data-v-17447266><!--[--><div class="site-info gap-1 items-center text-center" flex="~ col" p="t-8"><a href="/about" class="site-author-avatar inline-flex-center"><div class="relative yun-author-avatar"><div class="absolute size-full avatar-bg bg-image-$yun-home-hero-image-background-image filter-blur-2xl op-30"></div><img class="rounded-full size-full bg-white dark:bg-white/20 p-1 m-0 absolute" src="/avatar.webp" alt="avatar"><span class="site-author-status absolute" title="在写代码">🩵</span></div></a><a href="/about" class="site-author-name font-black font-serif text-$va-c-text op-80 hover:op-100 flex-center">凌渡冰点</a><a href="/about/site" class="site-name text-lg leading-loose">凌渡冰点的主页</a><h4 class="site-subtitle block op-70" text="xs">Next Generation Static Blog Framework.</h4><div class="site-description">一个兴趣使然的个人小站</div></div><div class="yun-gradient-line my-2 op-20"></div><nav class="site-nav" text-xl mt-2><a href="/archives/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="归档" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-archive-line"></div><div class="text-2xl icon-active i-ri-archive-fill"></div><span class="text-xs">归档</span></div><span class="count text-base text-black/80 dark:text-white/80">31</span></a><a href="/categories/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="分类" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-folder-2-line"></div><div class="text-2xl icon-active i-ri-folder-2-fill"></div><span class="text-xs">分类</span></div><span class="count text-base text-black/80 dark:text-white/80">5</span></a><a href="/tags/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="标签" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-price-tag-3-line"></div><div class="text-2xl icon-active i-ri-price-tag-3-fill"></div><span class="text-xs">标签</span></div><span class="count text-base text-black/80 dark:text-white/80">22</span></a></nav><div class="yun-gradient-line my-2 op-20"></div><div class="links-of-author"><!--[--><a class="links-of-author-item yun-icon-btn" rel="noopener" href="https://space.bilibili.com/421681448" title="哔哩哔哩" target="_blank" style="color:#FF8EB3;"><div class="i-ri-bilibili-line icon"></div></a><a class="links-of-author-item yun-icon-btn" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange;"><div class="i-ri-rss-line icon"></div></a><!--]--></div><div class="yun-gradient-line my-2 op-20"></div><div class="links flex-center"><!--[--><a href="/nav/" class="va-link link-item yun-icon-btn" inline-flex title="导航" style="color:coral;"><!--[--><div class="i-ri-compass-3-line icon size-6"></div><!--]--></a><a href="/posts/" class="va-link link-item yun-icon-btn" inline-flex title="文章" style="color:var(--va-c-primary);"><!--[--><div class="i-ri-article-line icon size-6"></div><!--]--></a><a href="/archives/" class="va-link link-item yun-icon-btn" inline-flex title="时光轴" style="color:deepskyblue;"><!--[--><div class="i-ri-archive-line icon size-6"></div><!--]--></a><a href="/categories/" class="va-link link-item yun-icon-btn" inline-flex title="分类" style="color:orange;"><!--[--><div class="i-ri-folder-2-line icon size-6"></div><!--]--></a><a href="/tags/" class="va-link link-item yun-icon-btn" inline-flex title="标签" style="color:mediumseagreen;"><!--[--><div class="i-ri-price-tag-3-line icon size-6"></div><!--]--></a><a href="/links/" class="va-link link-item yun-icon-btn" inline-flex title="友链" style="color:dodgerblue;"><!--[--><div class="i-ri-links-line icon size-6"></div><!--]--></a><a href="/comment/" class="va-link link-item yun-icon-btn" inline-flex title="留言板" style="color:hotpink;"><!--[--><div class="i-ri-chat-3-line icon size-6"></div><!--]--></a><a href="/services/" class="va-link link-item yun-icon-btn" inline-flex title="服务" style="color:slateblue;"><!--[--><div class="i-ri-service-line icon size-6"></div><!--]--></a><!--]--></div><!--]--></div><!----></div><!--[--><!--
+    Empty placeholder, meant to be overridden by the user (see demo/yun/components/YunAdBoard.vue).
+    `v-if="false"` renders a comment node instead of a real element: this avoids the SSR hydration
+    crash a raw `<template>` causes (#711), while still adding no gap to the parent flex layout,
+    which an empty `<div>` would (ab57216f).
+  --><!----><!--]--><!--]--><!--]--></div><!----><main class="yun-main lt-md:w-full" flex="~ center"><!--[--><div class="content w-full md:w-3xl lg:w-2xl xl:w-2xl 2xl:w-4xl" flex="~ col grow" p="lt-md:0"><div class="yun-card flex-center overflow-hidden" flex="col" min-h="100px" bg="$va-c-bg-light" m="0" data-v-17447266><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center" data-v-17447266><!--[--><!----><div class="mt-8 mb-4"><!--[--><header class="post-header"><h1 p="2" text="2xl center" font="serif black" style="color:" class="post-title flex-center"><!----><span inline-flex class="leading-none">Ubuntu server</span></h1></header><!--]--></div><!--[--><!--[--><!--[--><!--[--><!----><div flex="~ center" text="sm" class="post-meta-col post-meta gap-4"><div class="post-time flex items-center gap-4"><span class="posted-time inline-flex-center gap-1" title="发表于2024-10-27 18:07:18"><div class="inline-block" i-ri-calendar-line></div><time class="op-80">2024-10-27</time></span><span class="edited-time inline-flex-center gap-1" title="更新于2026-04-07 16:27:45"><div i-ri-calendar-2-line></div><time class="op-80">2026-04-07</time></span></div><!--[--><!--]--><div class="inline-flex-center gap-4"><div class="inline-flex-center post-counter gap-4"><span class="word-count inline-flex-center gap-1" title="本文字数"><div class="inline-block" i-ri-file-word-line></div><span class="op-80">436</span></span><span class="reading-time inline-flex-center gap-1" title="阅读时长"><div i-ri-timer-line></div><time class="op-80">3m</time></span></div><div class="inline-flex gap-4" text="sm" h="5"><!----><div inline-flex justify="center" items="center" title="评论数"><div inline-flex i-ri-chat-4-line></div><span ml-1 inline-flex class="waline-comment-count op-80" data-path="/posts/ubuntu-server"></span></div></div><!----></div></div><!--]--><!----><div class="inline-flex mt-2" text="sm" py="1"><a href="/categories?category=%E7%8E%A9%E6%9C%BA" class="transition post-category inline-flex-center text-xs border-$va-c-divider" px-2 h="7" border rounded-full hover="bg-blue-500 text-white"><div m="x-1" inline-flex i-ri-folder-2-line></div><span>玩机</span></a><span mx="2"></span><div class="post-tags inline-flex" items="center" gap="1" flex="wrap 1" justify="end"><!--[--><a href="/tags/?tag=server" class="transition post-tag inline-flex-center text-xs border-$va-c-divider" px-2 h="7" rounded-full border hover="bg-blue-500"><span>server</span></a><a href="/tags/?tag=Ubuntu" class="transition post-tag inline-flex-center text-xs border-$va-c-divider" px-2 h="7" rounded-full border hover="bg-blue-500"><span>Ubuntu</span></a><a href="/tags/?tag=%E6%9C%8D%E5%8A%A1%E5%99%A8" class="transition post-tag inline-flex-center text-xs border-$va-c-divider" px-2 h="7" rounded-full border hover="bg-blue-500"><span>服务器</span></a><a href="/tags/?tag=%E9%83%A8%E7%BD%B2" class="transition post-tag inline-flex-center text-xs border-$va-c-divider" px-2 h="7" rounded-full border hover="bg-blue-500"><span>部署</span></a><!--]--></div></div><!--]--><!--]--><!--]--><div p="x-4 b-8" class="sm:px-6 lg:px-12 xl:px-16" w="full"><!--[--><!--]--><!--[--><!-- <Transition appear> --><article class="markdown-body"><!--[--><!----><!----><!--[--><!--]--><!--[--><p>经历种种艰辛，终于把Ubuntu server 安装好了，在安装过程中我通过以下流程初步部署好了服务器</p><h2 id="使用root用户登录ssh终端" tabindex="-1">使用root用户登录ssh终端 <a class="header-anchor" href="#使用root用户登录ssh终端" aria-label="Permalink to &quot;使用root用户登录ssh终端&quot;">​</a></h2><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>sudo passwd root</span></span>
+<span class="line"><span>sudo vim /etc/ssh/sshd_config</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>改为PermitRootLogin yes</p><p>:wq保存并退出</p><p>接下来是</p><h2 id="开机自动挂载硬盘" tabindex="-1">开机自动挂载硬盘 <a class="header-anchor" href="#开机自动挂载硬盘" aria-label="Permalink to &quot;开机自动挂载硬盘&quot;">​</a></h2><p>正常情况下只需要</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>fdisk -l</span></span>
+<span class="line"><span>lsblk</span></span>
+<span class="line"><span>df -h</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>一些命令查看需要挂载的磁盘</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>sudo vim /etc/fstab</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>在最下面添加一行</p><p>例：</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>/dev/sdb1 /data ext4 defaults 0 0</span></span></code></pre><button class="code-block-unfold-btn"></button></div><ul><li>第一列 需要挂载的设备</li><li>第二列 挂载点</li><li>第三列 文件系统</li><li>第四列 一般为defaults自动挂载</li><li>第五列 为<strong>Linux dump</strong>备份选项 <ul><li>0：不使用Linux dump。现在通常不使用，为0即可</li><li>1：使用Linux dump</li></ul></li><li>第六列 为<strong>fsck</strong>选项，即开机是否使用fsck检查磁盘 <ul><li>0：表示不检验</li><li>1：挂载点为(/)根目录的分区填写为1</li><li>其他分区为2，系统按照数字从小到大依次检查</li></ul></li><li>重启系统生效</li></ul><h2 id="对硬盘进行分区操作" tabindex="-1">对硬盘进行分区操作 <a class="header-anchor" href="#对硬盘进行分区操作" aria-label="Permalink to &quot;对硬盘进行分区操作&quot;">​</a></h2><p>GPT分区表需要使用parted命令工具进行分区操作</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>parted</span></span>
+<span class="line"><span># help</span></span>
+<span class="line"><span>select /dev/sdx (选择需要分区的磁盘</span></span>
+<span class="line"><span>mklabel gpt</span></span>
+<span class="line"><span>mkpart</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>(交互式分区)</p><p>起始点建议从1开始，不然会提示4K未对齐</p><p>分区完毕输入quit回车退出</p><p>安装1panel面板</p><p>目前国内docker无法正常安装，需要使用以下命令先安装docker，再进行安装1panel</p><div class="language-"><button title="Copy code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>curl https://install.1panel.live/docker-install -o docker-install &amp;&amp; sudo bash ./docker-install &amp;&amp; rm -f ./docker-install</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Ubuntu命令</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sudo bash quick_start.sh</span></span></code></pre><button class="code-block-unfold-btn"></button></div><!--]--><!--]--><!----><!----></article><!-- </Transition> --><!--]--><!--[--><!--[--><!--[--><div class="yun-sponsor-container flex-center flex-col" m="t-6"><button class="sponsor-button yun-icon-btn shadow hover:shadow-md" title="打赏" text="red-400"><div class="mt-2px" i-ri-heart-fill></div></button><div m="y-4" class="qrcode-container qrcode flex-center flex-col"><div class="sponsor-description" mb="4" text="sm">这是关于赞助的一些描述</div><div class="flex justify-around"><!--[--><!--]--></div></div></div><ul class="post-copyright" m="y-4"><li class="post-copyright-author"><strong>本文作者：</strong><span>凌渡冰点</span></li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://www.490633.xyz/posts/ubuntu-server" target="_blank" title="本文链接">https://www.490633.xyz/posts/ubuntu-server</a></li><li class="post-copyright-license"><strong>版权声明：</strong><span>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 ">CC BY-NC-SA</a> 许可协议。</span></li></ul><!--]--><!--]--><!--]--></div><!--]--></div><!----></div><!--[--><!--]--><!--[--><div class="post-nav"><div class="post-nav-item"><a href="/posts/no-title" class="post-nav-prev" title="无题"><div class="icon" i-ri-arrow-left-s-line></div><span class="title truncate" text="sm">无题</span></a></div><div class="post-nav-item"><a href="/posts/%E8%92%B2%E5%85%AC%E8%8B%B1x3a%E6%95%91%E7%A0%96%E6%8C%87%E5%8D%97" class="post-nav-next" title="蒲公英X3A救砖指南"><span class="title truncate" text="sm">蒲公英X3A救砖指南</span><div class="icon" i-ri-arrow-right-s-line></div></a></div></div><!--]--><!--[--><!--]--><!--[--><div class="yun-card flex-center overflow-hidden comment yun-comment sm:p-6 lg:px-12 xl:px-16" flex="col" min-h="100px" bg="$va-c-bg-light" w="full" p="4" data-v-17447266><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center" data-v-17447266><!--[--><!----><!--]--></div><!----></div><!--]--><!--[--><!--
+    Empty placeholder, meant to be overridden by the user (see demo/yun/components/YunAdBoard.vue).
+    `v-if="false"` renders a comment node instead of a real element: this avoids the SSR hydration
+    crash a raw `<template>` causes (#711), while still adding no gap to the parent flex layout,
+    which an empty `<div>` would (ab57216f).
+  --><!----><!--]--><!--[--><!--]--><!--[--><!--]--></div><!--]--></main><!--[--><!----><!----><!----><!--]--><!--]--></div><footer flex="~ col" class="relative yun-footer va-footer px-4 py-4 pt-0 text-$va-c-text-light w-full mt-14" bg="white dark:$va-c-bg-soft" text="center sm"><div class="yun-cloud absolute top--10 left-0 right-0"><svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" fill="var(--yun-c-cloud)"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><!----><div class="copyright flex justify-center items-center gap-2" p="1"><span> © <!--[-->2024 - <!--]--> 2026</span><a class="animate-pulse inline-flex" href="https://www.yunyoujun.cn/sponsors/" target="_blank" title="Sponsor YunYouJun"><div class="i-ri-cloud-line"></div></a><span>凌渡冰点</span></div><div class="powered" m="2"><span>由 <a href="https://github.com/YunYouJun/valaxy.git" target="_blank" rel="noopener">Valaxy</a> <span class="op-60">v1.2.0</span> 驱动</span><span mx-1>|</span><span><span>主题</span><span mx-1>-</span><a href="https://github.com/YunYouJun/valaxy.git" title="valaxy-theme-yun" target="_blank">Yun</a><span class="ml-1 op-60">v1.2.0</span></span></div><!--[--><!--]--><div class="yun-footer-gradient"></div></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"yun-app":{"bannerAnimationDone":false},"app":{"showLoading":true},"site":{},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://www.490633.xyz/#identity","@type":"Person","name":"凌渡冰点","url":"https://www.490633.xyz/","image":{"@id":"https://www.490633.xyz/#/schema/image/1"},"sameAs":["https://space.bilibili.com/421681448","/atom.xml"]},{"@id":"https://www.490633.xyz/#website","@type":"WebSite","dateModified":"2026-04-07T08:27:45.000Z","datePublished":"2024-10-27T10:07:18.000Z","inLanguage":"zh-CN","name":"Ubuntu server","url":"https://www.490633.xyz/","publisher":{"@id":"https://www.490633.xyz/#identity"}},{"@id":"https://www.490633.xyz/posts/ubuntu-server#webpage","@type":"WebPage","dateModified":"2026-04-07T08:27:45.000Z","datePublished":"2024-10-27T10:07:18.000Z","description":"一个兴趣使然的个人小站","name":"Ubuntu server","url":"https://www.490633.xyz/posts/ubuntu-server","isPartOf":{"@id":"https://www.490633.xyz/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://www.490633.xyz/posts/ubuntu-server"]}]},{"@id":"https://www.490633.xyz/posts/ubuntu-server#article","dateModified":"2026-04-07T08:27:45.000Z","datePublished":"2024-10-27T10:07:18.000Z","headline":"Ubuntu server","inLanguage":"zh-CN","thumbnailUrl":"https://www.490633.xyz/og/default.png","@type":["Article","BlogPosting"],"author":{"@id":"https://www.490633.xyz/#/schema/person/1"},"image":{"@id":"https://www.490633.xyz/#/schema/image/2"},"isPartOf":{"@id":"https://www.490633.xyz/posts/ubuntu-server#webpage"},"mainEntityOfPage":{"@id":"https://www.490633.xyz/posts/ubuntu-server#webpage"},"publisher":{"@id":"https://www.490633.xyz/#identity"}},{"@id":"https://www.490633.xyz/#/schema/person/1","@type":"Person","name":"凌渡冰点","url":"https://www.490633.xyz"},{"@id":"https://www.490633.xyz/#/schema/image/1","@type":"ImageObject","contentUrl":"https://www.490633.xyz/avatar.webp","inLanguage":"zh-CN","url":"https://www.490633.xyz/avatar.webp"},{"@id":"https://www.490633.xyz/#/schema/image/2","@type":"ImageObject","contentUrl":"https://www.490633.xyz/og/default.png","inLanguage":"zh-CN","url":"https://www.490633.xyz/og/default.png"}]}</script>
+  <div id="valaxy-teleports"></div>
+  
+</body>
+</html>

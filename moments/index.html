@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.BOdGZ0Ag.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.XKyaHtl9.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.CjdSPkFv.js">
+  <link rel="modulepreload" crossorigin href="/assets/reka-ui.CVRMFFNl.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.qU7AkdCC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.8e84d6cC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.CgVXZjRC.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.D5Tmsjui.js">
+  <link rel="modulepreload" crossorigin href="/assets/medium-zoom.DPWCrKpi.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/@vueuse/motion.ChwBA6vB.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Dt3khUt3.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.BxnaRx5o.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CSNJ5ogk.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Dt3khUt3.js">
+<link rel="preload" href="/assets/none.DLM1AMsD.jpg" as="image">
+<link rel="preload" href="/assets/bg-img.kXdNMxcF.jpg" as="image">
+<link rel="preload" href="/assets/sidebar-bg-img.mp54gEws.webp" as="image">
+<link rel="modulepreload" crossorigin href="/assets/moments.D2ScqdKx.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>说说 - 凌渡冰点的主页</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap">
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="值得记录的日常">
+<meta property="og:description" content="值得记录的日常">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="凌渡冰点的主页">
+<meta property="og:title" content="说说">
+<meta property="og:image" content="https://www.490633.xyz/og/default.png">
+<meta property="og:image:alt" content="说说">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.490633.xyz/moments/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="值得记录的日常">
+<meta name="twitter:image" content="https://www.490633.xyz/og/default.png">
+<meta name="twitter:title" content="说说">
+<link rel="icon" href="/favicon-32x32.png" type="image/png">
+<meta name="generator" content="Valaxy 1.2.0">
+<link rel="canonical" href="https://www.490633.xyz/moments/">
+<meta name="theme-color" content="#fff">
+<meta name="msapplication-TileColor" content="#fff">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!--[--><!--v-if--><div class="yun-page-header-gradient"></div><div class="yun-nav-menu z-$yun-z-nav-menu fixed bg-transparent" data-v-10432b09><!--  --><div class="inline-flex justify-start items-center flex-1" data-v-10432b09><button type="button" class="vt-hamburger menu-btn sidebar-toggle leading-4 size-12 lg:hidden!" aria-label="mobile navigation" aria-expanded="false" inline-flex cursor="pointer" hover="bg-white/80 dark:bg-black/80" z="$yun-z-menu-btn" data-v-10432b09><span class="vt-hamburger-container"><span class="vt-hamburger-top"></span><span class="vt-hamburger-middle"></span><span class="vt-hamburger-bottom"></span></span></button><a href="/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 data-v-10432b09><!--[--><div class="size-6 i-ri-home-4-line"></div><!--]--></a><div class="hidden lg:contents" data-v-10432b09><!--[--><a href="/nav/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="导航" data-v-10432b09><!--[--><div class="size-6 i-ri-compass-3-line"></div><!--]--></a><a href="/posts/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="文章" data-v-10432b09><!--[--><div class="size-6 i-ri-article-line"></div><!--]--></a><a href="/archives/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="时光轴" data-v-10432b09><!--[--><div class="size-6 i-ri-archive-line"></div><!--]--></a><a href="/categories/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="分类" data-v-10432b09><!--[--><div class="size-6 i-ri-folder-2-line"></div><!--]--></a><a href="/tags/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="标签" data-v-10432b09><!--[--><div class="size-6 i-ri-price-tag-3-line"></div><!--]--></a><a href="/links/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="友链" data-v-10432b09><!--[--><div class="size-6 i-ri-links-line"></div><!--]--></a><a href="/comment/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="留言板" data-v-10432b09><!--[--><div class="size-6 i-ri-chat-3-line"></div><!--]--></a><a href="/services/" class="va-link size-12 inline-flex-center cursor-pointer z-$yun-z-nav-menu text-$va-c-text" hover="bg-white/80 dark:bg-black/80 op-100" op-80 title="服务" data-v-10432b09><!--[--><div class="size-6 i-ri-service-line"></div><!--]--></a><!--]--></div></div><div class="flex flex-1 flex-center" data-v-10432b09><div flex="~ center col h-full" class="nav-menu-title-container cursor-pointer" data-v-10432b09><!----><span class="font-light truncate">凌渡冰点的主页</span></div></div><div class="inline-flex-center justify-end items-center flex-1" data-v-10432b09><!-- <template v-if="!app.isMobile && themeConfig.nav">
+          <template v-for="item in themeConfig.nav" :key="item.text">
+            <AppLink
+              v-if="'link' in item"
+              :to="item.link"
+              class="menu-btn inline-flex-center p-2 transition text-$va-c-text"
+              inline-flex cursor="pointer"
+              hover="bg-white/80 dark:bg-black/80"
+              z="$yun-z-menu-btn"
+            >
+              {{ item.text }}
+            </AppLink>
+            <template v-else-if="'items' in item" />
+          </template>
+        </template> --><button class="yun-icon-btn rounded-none! hidden sm:inline-flex" title="切换语言" style="color:var(--va-c-text);" data-v-10432b09><div i-ri-translate class="transition transform"></div></button><button type="button" class="yun-icon-btn yun-toggle-dark rounded-none!" title="切换深色模式" aria-label="切换深色模式" data-v-10432b09><div i="ri-sun-line dark:ri-moon-line"></div></button><!--[--><button class="yun-search-btn yun-icon-btn yun-search-action popup-trigger" title="搜索"><div i-ri-search-line aria-hidden="true"></div></button><!--[--><!--v-if--><!--]--><!--]--></div></div><!----><!--v-if--><!----><!--[--><div class="yun-bg"></div><!--]--><!----><button type="button" class="back-to-top yun-icon-btn" aria-label="回到顶部" title="回到顶部" tabindex="-1" aria-hidden="true" style="--yun-back-top-progress:0deg;"><div class="back-to-top-arrow" i-ri-arrow-up-s-line aria-hidden="true"></div></button><!--]--><!--[--><!--]--><!----><!--]--><div class="min-h-screen flex flex-col" data-v-362b6d1c><!----><div class="mt-12 md:mt-24 yun-layout-wrapper-content yun-layout-wrapper__content"><!--[--><div class="yun-layout-left gap-4 sticky top-$yun-margin-top w-80" data-v-362b6d1c><!--[--><!--[--><div class="yun-card flex-center overflow-hidden p-4 min-h-sm" flex="~ col gap-1" min-h="100px" bg="$va-c-bg-light" data-v-17447266><!----><!----><div class="yun-card-body relative" w="full" flex="~ col" items="center" data-v-17447266><!--[--><div class="site-info gap-1 items-center text-center" flex="~ col" p="t-8"><a href="/about" class="site-author-avatar inline-flex-center"><div class="relative yun-author-avatar"><div class="absolute size-full avatar-bg bg-image-$yun-home-hero-image-background-image filter-blur-2xl op-30"></div><img class="rounded-full size-full bg-white dark:bg-white/20 p-1 m-0 absolute" src="/avatar.webp" alt="avatar"><span class="site-author-status absolute" title="在写代码">🩵</span></div></a><a href="/about" class="site-author-name font-black font-serif text-$va-c-text op-80 hover:op-100 flex-center">凌渡冰点</a><a href="/about/site" class="site-name text-lg leading-loose">凌渡冰点的主页</a><h4 class="site-subtitle block op-70" text="xs">Next Generation Static Blog Framework.</h4><div class="site-description">一个兴趣使然的个人小站</div></div><div class="yun-gradient-line my-2 op-20"></div><nav class="site-nav" text-xl mt-2><a href="/archives/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="归档" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-archive-line"></div><div class="text-2xl icon-active i-ri-archive-fill"></div><span class="text-xs">归档</span></div><span class="count text-base text-black/80 dark:text-white/80">31</span></a><a href="/categories/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="分类" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-folder-2-line"></div><div class="text-2xl icon-active i-ri-folder-2-fill"></div><span class="text-xs">分类</span></div><span class="count text-base text-black/80 dark:text-white/80">5</span></a><a href="/tags/" class="post-classify-nav-item gap-1 w-20 p-2 rounded transition op-80" flex="~ col center" title="标签" hover="bg-$va-c-bg-soft op-100"><div flex="~ col" class="text-$va-c-text inline-flex-center gap-1"><!-- Use CSS to toggle icons based on router-link-active class to avoid SSR hydration mismatch --><div class="text-2xl icon-default i-ri-price-tag-3-line"></div><div class="text-2xl icon-active i-ri-price-tag-3-fill"></div><span class="text-xs">标签</span></div><span class="count text-base text-black/80 dark:text-white/80">22</span></a></nav><div class="yun-gradient-line my-2 op-20"></div><div class="links-of-author"><!--[--><a class="links-of-author-item yun-icon-btn" rel="noopener" href="https://space.bilibili.com/421681448" title="哔哩哔哩" target="_blank" style="color:#FF8EB3;"><div class="i-ri-bilibili-line icon"></div></a><a class="links-of-author-item yun-icon-btn" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange;"><div class="i-ri-rss-line icon"></div></a><!--]--></div><div class="yun-gradient-line my-2 op-20"></div><div class="links flex-center"><!--[--><a href="/nav/" class="va-link link-item yun-icon-btn" inline-flex title="导航" style="color:coral;"><!--[--><div class="i-ri-compass-3-line icon size-6"></div><!--]--></a><a href="/posts/" class="va-link link-item yun-icon-btn" inline-flex title="文章" style="color:var(--va-c-primary);"><!--[--><div class="i-ri-article-line icon size-6"></div><!--]--></a><a href="/archives/" class="va-link link-item yun-icon-btn" inline-flex title="时光轴" style="color:deepskyblue;"><!--[--><div class="i-ri-archive-line icon size-6"></div><!--]--></a><a href="/categories/" class="va-link link-item yun-icon-btn" inline-flex title="分类" style="color:orange;"><!--[--><div class="i-ri-folder-2-line icon size-6"></div><!--]--></a><a href="/tags/" class="va-link link-item yun-icon-btn" inline-flex title="标签" style="color:mediumseagreen;"><!--[--><div class="i-ri-price-tag-3-line icon size-6"></div><!--]--></a><a href="/links/" class="va-link link-item yun-icon-btn" inline-flex title="友链" style="color:dodgerblue;"><!--[--><div class="i-ri-links-line icon size-6"></div><!--]--></a><a href="/comment/" class="va-link link-item yun-icon-btn" inline-flex title="留言板" style="color:hotpink;"><!--[--><div class="i-ri-chat-3-line icon size-6"></div><!--]--></a><a href="/services/" class="va-link link-item yun-icon-btn" inline-flex title="服务" style="color:slateblue;"><!--[--><div class="i-ri-service-line icon size-6"></div><!--]--></a><!--]--></div><!--]--></div><!----></div><!--[--><!--
+    Empty placeholder, meant to be overridden by the user (see demo/yun/components/YunAdBoard.vue).
+    `v-if="false"` renders a comment node instead of a real element: this avoids the SSR hydration
+    crash a raw `<template>` causes (#711), while still adding no gap to the parent flex layout,
+    which an empty `<div>` would (ab57216f).
+  --><!----><!--]--><!--]--><!--]--></div><main class="yun-main yun-moments-main lt-md:w-full" flex="~ center" data-v-362b6d1c><div class="content w-full md:w-3xl lg:w-2xl xl:w-2xl 2xl:w-4xl" data-v-362b6d1c><section class="valaxy-moments" aria-labelledby="valaxy-moments-title-v-0" data-v-362b6d1c data-v-b5119f5a><!--[--><!--[--><div class="yun-moments-header" data-v-362b6d1c><header class="post-header" data-v-362b6d1c><h1 id="valaxy-moments-title-v-0" p="2" text="2xl center" font="serif black" style="color:undefined" class="post-title flex-center"><!----><span inline-flex class="leading-none">说说</span></h1></header><p data-v-362b6d1c>值得记录的日常</p></div><!--]--><!--]--><div class="valaxy-moments-list" data-v-b5119f5a><!----><!--[--><!--[--><!--[--><section class="valaxy-moments-month" data-v-b5119f5a><h2 class="valaxy-moments-period" data-v-b5119f5a>2026 / 03</h2><!--[--><article class="valaxy-moment-card" id="moments-2026-03" data-v-b5119f5a data-v-ece0645c><header class="valaxy-moment-header" data-v-ece0645c><img src="/avatar.webp" alt="凌渡冰点 avatar" class="valaxy-moment-avatar" decoding="async" height="48" loading="lazy" width="48" data-v-ece0645c><div class="valaxy-moment-identity" data-v-ece0645c><strong data-v-ece0645c>凌渡冰点</strong><time datetime="2026-03-24T17:36:37.000Z" data-v-ece0645c>2026-03-25 01:36</time></div><!----></header><h2 class="valaxy-moment-title" data-v-ece0645c>出了点问题，但问题不大</h2><div id="valaxy-moment-content-v-1" class="valaxy-moment-content" data-v-ece0645c><!-- Local Markdown files are trusted author content. --><!-- eslint-disable-next-line vue/no-v-html --><div class="markdown-body" data-v-ece0645c><p>今天看网站运行有点慢了，就想着重启一下服务，结果一重启就炸了，openresty直接起不来了，额，好好排查一下，发现docker镜像貌似损坏了，怎么重建都没有用，只好卸载重装，然后折腾多域名，又给整崩了，总算是抢修回来了，现在本站多了一个</p>
+<p><a href="https://blog.554762.xyz" target="_blank" rel="noreferrer">[备用域名1](https://blog.554762.xyz)</a></p>
+<p><a href="https://blog.849833.xyz" target="_blank" rel="noreferrer">[备用域名2](https://blog.849833.xyz)</a></p>
+<p>[progressbar progress=&quot;100&quot;][/progressbar]</p>
+</div></div><!----><!----><!----></article><!--]--></section><section class="valaxy-moments-month" data-v-b5119f5a><h2 class="valaxy-moments-period" data-v-b5119f5a>2026 / 01</h2><!--[--><article class="valaxy-moment-card" id="moments-2026-01" data-v-b5119f5a data-v-ece0645c><header class="valaxy-moment-header" data-v-ece0645c><img src="/avatar.webp" alt="凌渡冰点 avatar" class="valaxy-moment-avatar" decoding="async" height="48" loading="lazy" width="48" data-v-ece0645c><div class="valaxy-moment-identity" data-v-ece0645c><strong data-v-ece0645c>凌渡冰点</strong><time datetime="2026-01-13T17:37:48.000Z" data-v-ece0645c>2026-01-14 01:37</time></div><!----></header><h2 class="valaxy-moment-title" data-v-ece0645c>最近在研究的东西</h2><div id="valaxy-moment-content-v-2" class="valaxy-moment-content" data-v-ece0645c><!-- Local Markdown files are trusted author content. --><!-- eslint-disable-next-line vue/no-v-html --><div class="markdown-body" data-v-ece0645c><p>最近又在研究服务器上的一些技术，发现了一个开源的PaaS云平台Dokploy，这里要感谢一下猫猫博客，我从他的博文里看到了很多新奇的项目，很受用，于是去尝试了一下，发现确实很方便，我就把我目前其中一个服务器的项目全部迁移到了Dokploy平台，虽然大部分是英文，但是熟悉了以后并不算很难理解，还是很OK，这里最好的一点就是Dokploy可以自动部署证书，只要把DNS解析到服务器，就会自动完成HTTPS证书的部署，还可以连接到Github，和Vercel这些平台类似，以后自己写的项目可以方便地部署到上面，是一个很大的进步。<a href="https://catcat.blog/dokploy-deploy" target="_blank" rel="noreferrer">https://catcat.blog/dokploy-deploy</a></p>
+</div></div><!----><!----><!----></article><article class="valaxy-moment-card" data-v-b5119f5a data-v-ece0645c><header class="valaxy-moment-header" data-v-ece0645c><img src="/avatar.webp" alt="凌渡冰点 avatar" class="valaxy-moment-avatar" decoding="async" height="48" loading="lazy" width="48" data-v-ece0645c><div class="valaxy-moment-identity" data-v-ece0645c><strong data-v-ece0645c>凌渡冰点</strong><time datetime="2026-01-03T08:53:00.000Z" data-v-ece0645c>2026-01-03 16:53</time></div><!----></header><h2 class="valaxy-moment-title" data-v-ece0645c>大改造！</h2><div id="valaxy-moment-content-v-3" class="valaxy-moment-content" data-v-ece0645c><!-- Local Markdown files are trusted author content. --><!-- eslint-disable-next-line vue/no-v-html --><div class="markdown-body" data-v-ece0645c><p>[progressbar progress=&quot;100&quot;][/progressbar] 最近给博客网站进行了一次大升级，把所有的部分都升级了，是升级到wordpress6.9的全新升级，我创建了原网站的副本，只把内容迁移过来，防止兼容性问题，我感觉之前的主题太重了，会影响到我的网站性能，于是就换了Argon，插件也进行了精简，优化了缓存，设置了自动刷新，有助于提升网站的实时性和性能。这些事情也实实在在地在做，我也从中体会到了写代码的乐趣吧，希望未来可以学习到更多东西。 新建了个项目，希望可以慢慢做出想要的东西。 [github author=&quot;John-881&quot; project=&quot;usable-tools&quot; /]</p>
+</div></div><!----><!----><!----></article><!--]--></section><!--]--><!--]--><!--[--><!--[--><section class="valaxy-moments-month" data-v-b5119f5a><h2 class="valaxy-moments-period" data-v-b5119f5a>2025 / 11</h2><!--[--><article class="valaxy-moment-card" id="moments-2025-11" data-v-b5119f5a data-v-ece0645c><header class="valaxy-moment-header" data-v-ece0645c><img src="/avatar.webp" alt="凌渡冰点 avatar" class="valaxy-moment-avatar" decoding="async" height="48" loading="lazy" width="48" data-v-ece0645c><div class="valaxy-moment-identity" data-v-ece0645c><strong data-v-ece0645c>凌渡冰点</strong><time datetime="2025-11-14T13:08:28.000Z" data-v-ece0645c>2025-11-14 21:08</time></div><!----></header><h2 class="valaxy-moment-title" data-v-ece0645c>测试一下Nginx Helper</h2><div id="valaxy-moment-content-v-4" class="valaxy-moment-content" data-v-ece0645c><!-- Local Markdown files are trusted author content. --><!-- eslint-disable-next-line vue/no-v-html --><div class="markdown-body" data-v-ece0645c><p>如题，今天优化了一些缓存设置，看看是否生效 可以可以，效果很好，满足需求了 还另外自己编译加了一个brotli压缩，速度又快了一点</p>
+</div></div><!----><!----><!----></article><!--]--></section><section class="valaxy-moments-month" data-v-b5119f5a><h2 class="valaxy-moments-period" data-v-b5119f5a>2025 / 10</h2><!--[--><article class="valaxy-moment-card" id="moments-2025-10" data-v-b5119f5a data-v-ece0645c><header class="valaxy-moment-header" data-v-ece0645c><img src="/avatar.webp" alt="凌渡冰点 avatar" class="valaxy-moment-avatar" decoding="async" height="48" loading="lazy" width="48" data-v-ece0645c><div class="valaxy-moment-identity" data-v-ece0645c><strong data-v-ece0645c>凌渡冰点</strong><time datetime="2025-10-12T07:17:49.000Z" data-v-ece0645c>2025-10-12 15:17</time></div><!----></header><h2 class="valaxy-moment-title" data-v-ece0645c>聊聊最近</h2><div id="valaxy-moment-content-v-5" class="valaxy-moment-content" data-v-ece0645c><!-- Local Markdown files are trusted author content. --><!-- eslint-disable-next-line vue/no-v-html --><div class="markdown-body" data-v-ece0645c><p>最近正在学习前端知识，现在初步了解了HTML的基本结构和CSS的初步用法，打算学好这些知识真正做出真正意义上自己的网页，要记的有些多，不过我会加油的，还学了点Python，想写点小程序、小游戏，希望我可以坚持下去，以前有很多事情只是三分钟热度就过去了，现在我真正想做一些可以持久的事情，也在这里记录一下吧，言尽于此</p>
+</div></div><!----><!----><!----></article><!--]--></section><section class="valaxy-moments-month" data-v-b5119f5a><h2 class="valaxy-moments-period" data-v-b5119f5a>2025 / 09</h2><!--[--><article class="valaxy-moment-card" id="moments-2025-09" data-v-b5119f5a data-v-ece0645c><header class="valaxy-moment-header" data-v-ece0645c><img src="/avatar.webp" alt="凌渡冰点 avatar" class="valaxy-moment-avatar" decoding="async" height="48" loading="lazy" width="48" data-v-ece0645c><div class="valaxy-moment-identity" data-v-ece0645c><strong data-v-ece0645c>凌渡冰点</strong><time datetime="2025-09-06T12:11:02.000Z" data-v-ece0645c>2025-09-06 20:11</time></div><!----></header><h2 class="valaxy-moment-title" data-v-ece0645c>将要返校</h2><div id="valaxy-moment-content-v-6" class="valaxy-moment-content" data-v-ece0645c><!-- Local Markdown files are trusted author content. --><!-- eslint-disable-next-line vue/no-v-html --><div class="markdown-body" data-v-ece0645c><p>今天是2025.9.6，是我在2025的暑假的倒数第二天，明天我就要踏上返校的路了，这个暑假我都没怎么出门，基本上天天窝在家里，比起在学校的时间，我在家里感觉要更舒适，床更大也更安静，跟家里人也更好聊天，不用顾虑太多。但是代价也有，因为在家里没有氛围，也是怠惰了，没有学到什么东西，新的学年开始了，接下来，又要努力做好一些事情了，明年就要专升本了，我应该要提起精神努力学习专升本课程了，祝未来的自己学习顺利，越战越勇</p>
+</div></div><!----><!----><!----></article><article class="valaxy-moment-card" data-v-b5119f5a data-v-ece0645c><header class="valaxy-moment-header" data-v-ece0645c><img src="/avatar.webp" alt="凌渡冰点 avatar" class="valaxy-moment-avatar" decoding="async" height="48" loading="lazy" width="48" data-v-ece0645c><div class="valaxy-moment-identity" data-v-ece0645c><strong data-v-ece0645c>凌渡冰点</strong><time datetime="2025-09-01T13:44:00.000Z" data-v-ece0645c>2025-09-01 21:44</time></div><!----></header><h2 class="valaxy-moment-title" data-v-ece0645c>累了困了</h2><div id="valaxy-moment-content-v-7" class="valaxy-moment-content" data-v-ece0645c><!-- Local Markdown files are trusted author content. --><!-- eslint-disable-next-line vue/no-v-html --><div class="markdown-body" data-v-ece0645c></div></div><!----><div class="valaxy-moment-images-1 is-zoomable valaxy-moment-images markdown-body" aria-label="共 1 张图片" data-v-ece0645c><!--[--><img src="/images/2025/12/68b55b4078002-1024x1024.jpg" class="valaxy-moment-image" alt="动态图片 1" decoding="async" loading="lazy" data-v-ece0645c><!--]--></div><!----></article><!--]--></section><!--]--><!--]--><!--]--></div><!----></section></div></main><button type="button" class="xl:hidden toc-btn shadow-md fixed yun-icon-btn z-20 bg-$va-c-bg-soft" opacity="75" right="4" bottom="19" aria-label="addon.moments.timeline" aria-expanded="false" aria-controls="yun-page-outline" data-v-362b6d1c><div i-ri-time-line data-v-362b6d1c></div></button><!----><aside id="yun-page-outline" flex="~ col" class="va-card yun-aside min-h-sm rounded-2" text="center" overflow="auto" data-v-362b6d1c><div class="yun-aside-mobile-header"><span>addon.moments.timeline</span><button type="button" class="yun-aside-close yun-icon-btn" aria-label="关闭目录"><span i-ri-close-line aria-hidden="true"></span></button></div><div class="w-full" flex="~ col" pb-2><!----><div class="flex-grow"></div><div class="custom-container"><!--[--><div class="valaxy-moments-timeline" data-v-362b6d1c data-v-54b5067b><!--[--><h2 m="t-6 b-2" font="serif black" data-v-362b6d1c>时间线</h2><!--]--><nav aria-label="时间线" data-v-54b5067b><!--[--><section data-v-54b5067b><strong data-v-54b5067b>2026</strong><!--[--><button type="button" data-v-54b5067b><span data-v-54b5067b>03 月</span><small data-v-54b5067b>1</small></button><button type="button" data-v-54b5067b><span data-v-54b5067b>01 月</span><small data-v-54b5067b>2</small></button><!--]--></section><section data-v-54b5067b><strong data-v-54b5067b>2025</strong><!--[--><button type="button" data-v-54b5067b><span data-v-54b5067b>11 月</span><small data-v-54b5067b>1</small></button><button type="button" data-v-54b5067b><span data-v-54b5067b>10 月</span><small data-v-54b5067b>1</small></button><button type="button" data-v-54b5067b><span data-v-54b5067b>09 月</span><small data-v-54b5067b>2</small></button><!--]--></section><!--]--></nav></div><!--]--></div></div></aside><!--]--></div><footer flex="~ col" class="relative yun-footer va-footer px-4 py-4 pt-0 text-$va-c-text-light w-full mt-14" bg="white dark:$va-c-bg-soft" text="center sm"><div class="yun-cloud absolute top--10 left-0 right-0"><svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" fill="var(--yun-c-cloud)"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><!----><div class="copyright flex justify-center items-center gap-2" p="1"><span> © <!--[-->2024 - <!--]--> 2026</span><a class="animate-pulse inline-flex" href="https://www.yunyoujun.cn/sponsors/" target="_blank" title="Sponsor YunYouJun"><div class="i-ri-cloud-line"></div></a><span>凌渡冰点</span></div><div class="powered" m="2"><span>由 <a href="https://github.com/YunYouJun/valaxy.git" target="_blank" rel="noopener">Valaxy</a> <span class="op-60">v1.2.0</span> 驱动</span><span mx-1>|</span><span><span>主题</span><span mx-1>-</span><a href="https://github.com/YunYouJun/valaxy.git" title="valaxy-theme-yun" target="_blank">Yun</a><span class="ml-1 op-60">v1.2.0</span></span></div><!--[--><!--]--><div class="yun-footer-gradient"></div></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"yun-app":{"bannerAnimationDone":false},"app":{"showLoading":true},"site":{},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://www.490633.xyz/#identity","@type":"Person","name":"凌渡冰点","url":"https://www.490633.xyz/","image":{"@id":"https://www.490633.xyz/#/schema/image/1"},"sameAs":["https://space.bilibili.com/421681448","/atom.xml"]},{"@id":"https://www.490633.xyz/#website","@type":"WebSite","inLanguage":"zh-CN","name":"说说","url":"https://www.490633.xyz/","publisher":{"@id":"https://www.490633.xyz/#identity"}},{"@id":"https://www.490633.xyz/moments/#webpage","@type":"WebPage","description":"值得记录的日常","name":"说说","url":"https://www.490633.xyz/moments/","isPartOf":{"@id":"https://www.490633.xyz/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://www.490633.xyz/moments/"]}]},{"@id":"https://www.490633.xyz/#/schema/image/1","@type":"ImageObject","contentUrl":"https://www.490633.xyz/avatar.webp","inLanguage":"zh-CN","url":"https://www.490633.xyz/avatar.webp"}]}</script>
+  <div id="valaxy-teleports"></div>
+  
+</body>
+</html>

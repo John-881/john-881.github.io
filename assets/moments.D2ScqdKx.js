@@ -1,0 +1,1 @@
+import{G as e,Jt as t,Sr as n,Vt as r,Z as i,bn as a,ft as o,t as s}from"./framework.CjdSPkFv.js";import{g as c}from"./theme.Dt3khUt3.js";import"./reka-ui.CVRMFFNl.js";var l={};function u(s,l){let u=c;return r(),e(u,null,i({_:2},[s.$slots.header?{name:`header`,fn:a(e=>[t(s.$slots,`header`,n(o(e)))]),key:`0`}:void 0]),1024)}var d=s(l,[[`render`,u]]);export{d as default};
