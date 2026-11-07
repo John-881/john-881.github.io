@@ -153,3 +153,4 @@ git checkout main
 - 处置：`PATCH /zones/<zone_id>/settings/rocket_loader` 置为 `off`（已复查）。**此设置必须保持 `off`**，重新打开会让开屏动画再次消失。
 - 图标：`public/avatar.webp` 生成 `favicon.ico` / `favicon-16x16.png` / `favicon-32x32.png` / `apple-touch-icon.png`（并替换 `pwa-192x192.png`、`pwa-512x512.png`）；`site.config.ts` 的 `favicon` 改为 `/favicon-32x32.png`；`valaxy.config.ts` 的 `ssgOptions.onFinished` 增加 `injectIcons()`，为所有 SSG HTML 补 `apple-touch-icon` 与 16x16 link。
 - 部署：Cloudflare Pages 部署 ID `8c248021`（`https://8c248021.zeroice-blog.pages.dev`）；GitHub 提交 `ea365a3` 推送后 Actions 发布到 `gh-pages`（`f0ff411`）。
+- 后续（同日）：Rocket Loader 关闭后手机端动画恢复，但电脑端仍不显示——原因是 `valaxy-theme-yun@1.2.0` 自上游 `012ba2ea`（#765，2026-10-17）起会读取 `prefers-reduced-motion: reduce`，系统开启「减少动态效果」时跳过开屏动画（云游君站点部署的是该提交之前的版本，故不受影响）。处置：新增 `components/YunBanner.vue` 覆盖主题组件并去掉该判断（只影响开屏动画，其他动画仍尊重系统设置），重新构建后双端部署。
