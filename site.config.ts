@@ -58,9 +58,9 @@ export default defineSiteConfig({
 
   orderBy: 'date',
   lastUpdated: true,
-  favicon: '/favicon.svg',
+  favicon: '/favicon-32x32.png',
 
   // 组件路由（/、/posts、/moments 等没有 .md 源的页面）在 Valaxy 里只会拿到 siteConfig.frontmatter；
-  // 缺了它，这些页面的 og:image 会兜底成 siteConfig.favicon（/favicon.svg），与 48 篇 markdown 的分享卡不一致。
+  // 缺了它，这些页面的 og:image 会兜底成 siteConfig.favicon（/favicon-32x32.png），与 48 篇 markdown 的分享卡不一致。
   frontmatter: { ogImage: '/og/default.png' },
 })

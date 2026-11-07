@@ -8,7 +8,7 @@ import { addonMoments } from 'valaxy-addon-moments'
 import { addonWaline } from './node_modules/valaxy-addon-waline/node/index'
 // F11 修复用：valaxy.config.ts 只在 Node 侧被加载（客户端拿到的是 valaxy:config 虚拟模块），
 // 因此这里可以安全地直接 import node:fs / node:path。
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 // add icons what you will need
@@ -86,6 +86,38 @@ async function cleanSitemap() {
   }
   catch (e) {
     console.warn('[sitemap] 清洗 dist/sitemap.xml 失败（不影响构建）：', e)
+  }
+}
+
+// 图标收口：Valaxy 只会按 site.config.ts 的 favicon 输出一条 <link rel="icon">。
+// iOS 添加到主屏、部分浏览器仍会去找 apple-touch-icon / 16x16，这里在 SSG 跑完时统一补上，
+// 与 GitHub Pages、Cloudflare Pages 两侧构建保持同一结果。失败只告警，绝不让构建失败。
+async function injectIcons() {
+  try {
+    const dist = resolve(process.cwd(), 'dist')
+    if (!existsSync(dist))
+      return
+    let patched = 0
+    for (const rel of readdirSync(dist, { recursive: true })) {
+      if (!String(rel).endsWith('.html'))
+        continue
+      const file = resolve(dist, String(rel))
+      const html = readFileSync(file, 'utf8')
+      if (html.includes('rel="apple-touch-icon"'))
+        continue
+      const next = html.replace(
+        /(<link rel="icon" href="\/favicon-32x32\.png">)/,
+        '$1<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">',
+      )
+      if (next !== html) {
+        writeFileSync(file, next)
+        patched++
+      }
+    }
+    console.log(`[icons] 已为 ${patched} 个 HTML 注入 apple-touch-icon 与 16x16 favicon`)
+  }
+  catch (e) {
+    console.warn('[icons] 注入图标失败（不影响构建）：', e)
   }
 }
 
@@ -248,7 +280,10 @@ export default defineValaxyConfig<UserThemeConfig>({
   // 之后、build:after 钩子之前执行的回调（见 node_modules/valaxy/dist/shared/valaxy.CRodiDWz.mjs:7333-7340）。
   vite: {
     ssgOptions: {
-      onFinished: cleanSitemap,
+      onFinished: async () => {
+        await cleanSitemap()
+        await injectIcons()
+      },
     },
     // 体检优化：theme.js 单 chunk 0.65MB 触发 >500kB 警告。其中大部分体积来自
     // 被同步打包进 theme bundle 的第三方库（reka-ui、medium-zoom）。valaxy 用
