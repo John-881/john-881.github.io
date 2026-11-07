@@ -52,7 +52,7 @@ ogImage: /og/default.png
 - 站点地址（URL）：<https://www.490633.xyz>
 - 站长：凌渡冰点
 - 介绍：一个兴趣使然的个人小站，主要发一些日常和技术文章，偶尔分享点资源，写点心得经验
-- 站点图标：<https://www.490633.xyz/favicon.svg>
+- 站点图标：<https://www.490633.xyz/avatar.webp>
 - RSS：<https://www.490633.xyz/atom.xml>
 
 ## 小伙伴们

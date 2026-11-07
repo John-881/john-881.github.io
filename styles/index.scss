@@ -97,3 +97,16 @@
     padding: 0.6rem 0.7rem;
   }
 }
+
+// 暗色模式背景图遮罩：避免浅色文字与背景图融为一体。
+// .yun-bg 是 fixed 全屏背景层（z-index -1，opacity 由 --yun-bg-img-opacity 控制，配置里是 1）。
+// 这里用 ::after 叠一层黑色遮罩，只让背景图变暗、不影响文字层级。
+// 强度用 --yun-bg-dark-overlay 调整（0~1，越大越暗）。bg-dark.webp 平均亮度 185、p90=241，
+// 0.65 遮罩后平均亮度降到约 65，白色文字可读。
+html.dark .yun-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / var(--yun-bg-dark-overlay, 0.65));
+  pointer-events: none;
+}

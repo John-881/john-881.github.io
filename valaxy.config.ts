@@ -103,6 +103,18 @@ export default defineValaxyConfig<UserThemeConfig>({
     banner: {
       enable: true,
       title: '凌渡冰点的主页',
+      cloud: {
+        enable: true, // 首页下方的流动云动画
+      },
+      // 动画持续时间（仅 nimbo 模式）
+      duration: 500, // 持续时间越小，动画越快
+    },
+
+    bg_image: {
+      enable: true,
+      url: '/images/bg.webp',
+      dark: '/images/bg-dark.webp', // 深色模式
+      opacity: 1,
     },
 
     nav: [
@@ -237,6 +249,32 @@ export default defineValaxyConfig<UserThemeConfig>({
   vite: {
     ssgOptions: {
       onFinished: cleanSitemap,
+    },
+    // 体检优化：theme.js 单 chunk 0.65MB 触发 >500kB 警告。其中大部分体积来自
+    // 被同步打包进 theme bundle 的第三方库（reka-ui、medium-zoom）。valaxy 用
+    // rolldownOptions.output.codeSplitting.groups 做代码分割，且默认 groups 会
+    // 替换用户配置的 groups（replaceArrMerge），所以这里必须完整覆盖默认 groups
+    // 并追加 reka-ui / medium-zoom 两条（priority 20，与 dayjs 等同级）。
+    build: {
+      rolldownOptions: {
+        output: {
+          codeSplitting: {
+            groups: [
+              { name: 'framework', test: /[\\/]@vue[\\/](runtime|shared|reactivity)|plugin-vue:export-helper|\0vite/, priority: 30 },
+              { name: 'group-icons', test: /virtual:group-icons\.css/, priority: 25 },
+              { name: 'reka-ui', test: /[\\/]reka-ui[\\/]/, priority: 20 },
+              { name: 'medium-zoom', test: /[\\/]medium-zoom[\\/]/, priority: 20 },
+              { name: 'chunks/dayjs', test: /[\\/]dayjs[\\/]/, priority: 20 },
+              { name: 'chunks/vue-i18n', test: /[\\/]vue-i18n[\\/]/, priority: 20 },
+              { name: 'chunks/vue-router', test: /[\\/]vue-router[\\/]/, priority: 20 },
+              { name: 'chunks/nprogress', test: /[\\/]nprogress[\\/]/, priority: 20 },
+              { name: 'chunks/pinia', test: /[\\/]pinia[\\/]/, priority: 20 },
+              { name: 'chunks/@vueuse/motion', test: /[\\/]@vueuse[\\/]motion[\\/]/, priority: 20 },
+              { name: 'theme', test: /valaxy-theme-yun/, priority: 10 },
+            ],
+          },
+        },
+      },
     },
   },
 })

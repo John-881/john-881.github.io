@@ -11,11 +11,16 @@ export default defineSiteConfig({
     name: '凌渡冰点',
     // 不填 avatar / email / link 时会落回 Valaxy 默认值（https://valaxy.site/valaxy-logo.png、
     // i@valaxy.site、https://valaxy.site），并直接出现在 RSS/atom/feed.json 与每页作者头像（alt="avatar"）里。
-    // TODO: 换成真实头像；intro 尚未提供。
-    avatar: '/favicon.svg',
+    // 头像图片放进 public/（例如 public/avatar.webp），这里写 /avatar.webp 即可。
+    // 头像右下角的状态表情由主题 YunAuthorAvatar.vue 读取 status 渲染；message 留空则鼠标悬浮不显示提示。
+    avatar: '/avatar.webp',
     email: 'zeroice007@126.com',
     // TODO: 域名确定后与第 5 行的 url 一起替换。
     link: 'https://www.490633.xyz',
+    status: {
+      emoji: '🩵',
+      message: '在写代码',
+    },
   },
 
   social: [
