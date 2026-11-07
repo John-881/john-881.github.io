@@ -144,3 +144,12 @@ git checkout main
 - 绑定 `www.490633.xyz`、`490633.xyz`，状态均为 `active`。
 - 验证：www/根域/pages.dev 均 200；`/links/` 200。
 - 旧 DNS：根域 A/AAAA 与 `zeroice-blog.490633.xyz` CNAME 已删除；MX/TXT/NS 保留。
+
+## 9. 2026-11-07 开屏动画故障与站点图标更新
+
+- 现象：首页开屏动画（Yun `nimbo` banner，约 1s 的大字/横线入场）不再出现。
+- 排查：`valaxy.config.ts` 的 `themeConfig.banner.enable` 一直为 `true`；`dist/` 内包含 YunBanner 组件，线上 HTML 的 assets 列表与本地 `dist/` 完全一致 → 排除「配置被关闭」「构建产物未包含」「缓存旧版」三种可能。
+- 根因：Cloudflare zone `490633.xyz` 开启了 **Rocket Loader**。它把站点 HTML 的 `<script type="module">` 改写成延迟执行类型并注入 `/cdn-cgi/scripts/.../rocket-loader.min.js`，Vue SPA 被推迟到 DOMContentLoaded 之后才执行，开屏动画首帧被跳过；GitHub Pages 侧没有这一层改写。
+- 处置：`PATCH /zones/<zone_id>/settings/rocket_loader` 置为 `off`（已复查）。**此设置必须保持 `off`**，重新打开会让开屏动画再次消失。
+- 图标：`public/avatar.webp` 生成 `favicon.ico` / `favicon-16x16.png` / `favicon-32x32.png` / `apple-touch-icon.png`（并替换 `pwa-192x192.png`、`pwa-512x512.png`）；`site.config.ts` 的 `favicon` 改为 `/favicon-32x32.png`；`valaxy.config.ts` 的 `ssgOptions.onFinished` 增加 `injectIcons()`，为所有 SSG HTML 补 `apple-touch-icon` 与 16x16 link。
+- 部署：Cloudflare Pages 部署 ID `8c248021`（`https://8c248021.zeroice-blog.pages.dev`）；GitHub 提交 `ea365a3` 推送后 Actions 发布到 `gh-pages`（`f0ff411`）。
